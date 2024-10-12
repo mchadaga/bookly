@@ -7,7 +7,7 @@
   <div class="flex flex-row rounded-lg w-full bg-primary w-full margin-16px">
     <div class="navbar-brand">
       <a
-        class="navbar-item {% if request.path == '/' %}is-active{% endif %}"
+        class="{% if request.path == '/' %}is-active{% endif %}"
         href="{% url 'web:home' %}"
       >
         <img class="homepage-logo" src="{% static 'images/longlogo4x.png' %}"
@@ -68,6 +68,7 @@
             <a
               class="button is-primary is-outlined"
               href="{% url 'account_signup' %}"
+              
               >{% translate "Sign Up" %}</a
             >
             <a
