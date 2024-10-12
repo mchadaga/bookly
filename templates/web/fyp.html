@@ -1,32 +1,64 @@
 {% comment %} {{hooks}} {% endcomment %}
 
-{% for hook in hooks %}
+{% for item in hook_data %}
     <div class="text-content" style="display: none;">
-        <h1>{{hook.hook_text}}</h1>
+        <h1>{{item.hook.hook_text}}</h1>
+        {% for para in item.paragraphs %}
+            {% for sentence in para.sentences %}
+                <p class="sentence" style="display: none;">{{ sentence.sentence_text }}</p>
+            {% endfor %}
+        {% endfor %}
     </div>
 {% endfor %}
 
+<style>
+    .text-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+    .sentence {
+        font-size: 1.5rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+</style>
+
 <script>
     const textContents = document.querySelectorAll('.text-content');
-    let currentIndex = -1;
+    let currentContentIndex = -1;
+    let currentSentenceIndex = -1;
 
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
+
+            window.speechSynthesis.cancel();
             // Hide the current text content if any
-            if (currentIndex >= 0) {
-                textContents[currentIndex].style.display = 'none';
+            if (currentContentIndex >= 0) {
+                textContents[currentContentIndex].style.display = 'none';
+                const sentences = textContents[currentContentIndex].querySelectorAll('.sentence');
+                sentences.forEach(sentence => sentence.style.display = 'none');
             }
 
             // Randomly select a new text content
-            currentIndex = Math.floor(Math.random() * textContents.length);
-            textContents[currentIndex].style.display = 'block';
+            currentContentIndex = Math.floor(Math.random() * textContents.length);
+            textContents[currentContentIndex].style.display = 'block';
+            currentSentenceIndex = -1;
 
             // Get the name of the current text content
-            const name = textContents[currentIndex].querySelector('h1').textContent;
+            const name = textContents[currentContentIndex].querySelector('h1').textContent;
 
             // Use TTS to read the name aloud
             const utterance = new SpeechSynthesisUtterance(name);
-            window.speechSynthesis.speak(utterance);
+            setTimeout(() => window.speechSynthesis.speak(utterance), 100);
+        } else if (event.code === 'Space') {
+            event.preventDefault(); // Prevent scrolling
+            if (currentContentIndex >= 0) {
+                const sentences = textContents[currentContentIndex].querySelectorAll('.sentence');
+                if (currentSentenceIndex < sentences.length - 1) {
+                    currentSentenceIndex++;
+                    sentences[currentSentenceIndex].style.display = 'block';
+                }
+            }
         }
     });
 </script>
