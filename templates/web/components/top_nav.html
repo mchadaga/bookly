@@ -1,7 +1,8 @@
 {% load i18n %}
 {% load static %}
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="container">
+<nav class="navbar flex flex-row w-full items-center justify-center fixed bg-transparent" role="navigation" aria-label="main navigation">
+
+  <div class="flex flex-row rounded-lg w-full bg-primary w-full margin-16px">
     <div class="navbar-brand">
       <a class="navbar-item {% if request.path == '/' %}is-active{% endif %}" href="{% url 'web:home' %}">
         <img class="homepage-logo" src="{% static 'images/longlogo4x.png' %}" alt="{% translate "HookBook Logo" %}">
@@ -12,6 +13,8 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
+
+    <div class="flex-grow"> </div>
     <div class="navbar-menu">
       <div class="navbar-start">
         <!--add additional links here if you want-->
@@ -50,3 +53,5 @@
     </div>
   </div>
 </nav>
+<div class="bg-transparent" style="height: 128px;"></div>
+

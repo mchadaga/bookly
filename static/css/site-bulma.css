@@ -10682,7 +10682,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 :root {
-  --primary: hsl(217, 71%, 53%);
+  --primary: #65748D;
   --danger: hsl(348, 86%, 61%);
   --success: hsl(153, 53%, 53%);
   --gray: hsl(0, 0%, 71%);
@@ -10721,12 +10721,10 @@ p {
 }
 
 .navbar-menu {
-  background-color: var(--body-background-color);
   color: var(--text-light);
 }
 
 .navbar {
-  background-color: var(--body-background-color);
   color: var(--text-light);
 }
 
@@ -10808,6 +10806,74 @@ select {
   background-color: rgb(255, 0, 0);
 }
 
+.rounded-lg {
+  border-radius: 3rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.w-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+  max-width: 75%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.margin-16px {
+  margin: 16px;
+}
+
+.gradient-primary {
+  background: linear-gradient(to top, #65748D, #1C2027);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
 #fullpage-form-wrapper {
   display: flex;
   justify-content: center;
@@ -10820,7 +10886,6 @@ select {
 @media screen and (min-width: 769px) {
   #fullpage-form {
     border-radius: 0.3em;
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
     background-color: hsl(0, 0%, 100%);
   }
 }
@@ -10842,9 +10907,6 @@ select {
   margin-bottom: 1.5em;
 }
 
-.navbar {
-  box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
-}
 @media screen and (max-width: 1023px) {
   .navbar .navbar-item.is-active, .navbar .pg-breadcrumbs li:not(:first-child) .navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar .navbar-item.pg-breadcrumb-active {
     background-color: inherit;
@@ -10895,7 +10957,6 @@ select {
   .app-card {
     padding: 2em;
     border-radius: 0.3em;
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
   }
   .app-card:not(.notification) {
     background-color: white;
@@ -10997,7 +11058,6 @@ select {
   #plans #plan-wrapper .plan {
     max-width: 480px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
   }
 }
 #plans #plan-wrapper .plan .plan-summary {
