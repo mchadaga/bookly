@@ -1,15 +1,11 @@
 {% comment %} {{hooks}} {% endcomment %}
 
-{% for item in hook_data %}
-    <div class="text-content" style="display: none;">
-        <h1>{{item.hook.hook_text}}</h1>
-        {% for para in item.paragraphs %}
-            {% for sentence in para.sentences %}
-                <p class="sentence" style="display: none;">{{ sentence.sentence_text }}</p>
-            {% endfor %}
-        {% endfor %}
-    </div>
-{% endfor %}
+<div id="text-content" class="text-content" style="display: none;">
+    <h1 id="hook-text"></h1>
+    <div id="paragraphs"></div>
+</div>
+
+<div id="clicked-textcontents" style="font-size: 0.8em; margin-top: 20px;"></div>
 
 <style>
     .text-content h1 {
@@ -24,41 +20,88 @@
 </style>
 
 <script>
-    const textContents = document.querySelectorAll('.text-content');
-    let currentContentIndex = -1;
     let currentSentenceIndex = -1;
+    let currentTextContentId = null;
+
+    function fetchRandomTextContent() {
+        fetch('{% url "app:get_random_textcontent" %}')
+            .then(response => response.json())
+            .then(data => {
+                currentTextContentId = data.id;
+                document.getElementById('hook-text').textContent = data.hook;
+                const paragraphsContainer = document.getElementById('paragraphs');
+                paragraphsContainer.innerHTML = '';
+                data.paragraphs.forEach(paragraph => {
+                    paragraph.sentences.forEach(sentence => {
+                        const p = document.createElement('p');
+                        p.className = 'sentence';
+                        p.style.display = 'none';
+                        p.textContent = sentence.sentence_text;
+                        paragraphsContainer.appendChild(p);
+                    });
+                });
+                currentSentenceIndex = -1;
+                document.getElementById('text-content').style.display = 'block';
+                
+                speakHook(data.hook);
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    function speakHook(text) {
+        setTimeout(() => {
+            const utterance = new SpeechSynthesisUtterance(text);
+            window.speechSynthesis.speak(utterance);
+        }, 100);
+    }
+
+    function trackTextContentClick() {
+        if (currentTextContentId) {
+            fetch('{% url "app:track_textcontent_click" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: `textcontent_id=${currentTextContentId}`
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    updateClickedTextContents();
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    }
+
+    function updateClickedTextContents() {
+        fetch('{% url "app:get_user_textcontents" %}')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('clicked-textcontents');
+                container.innerHTML = 'Clicked TextContents: ' + data.map(tc => tc.name).join(', ');
+            })
+            .catch(error => console.error('Error:', error));
+    }
 
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-
             window.speechSynthesis.cancel();
-            // Hide the current text content if any
-            if (currentContentIndex >= 0) {
-                textContents[currentContentIndex].style.display = 'none';
-                const sentences = textContents[currentContentIndex].querySelectorAll('.sentence');
-                sentences.forEach(sentence => sentence.style.display = 'none');
-            }
-
-            // Randomly select a new text content
-            currentContentIndex = Math.floor(Math.random() * textContents.length);
-            textContents[currentContentIndex].style.display = 'block';
-            currentSentenceIndex = -1;
-
-            // Get the name of the current text content
-            const name = textContents[currentContentIndex].querySelector('h1').textContent;
-
-            // Use TTS to read the name aloud
-            const utterance = new SpeechSynthesisUtterance(name);
-            setTimeout(() => window.speechSynthesis.speak(utterance), 100);
+            fetchRandomTextContent();
         } else if (event.code === 'Space') {
-            event.preventDefault(); // Prevent scrolling
-            if (currentContentIndex >= 0) {
-                const sentences = textContents[currentContentIndex].querySelectorAll('.sentence');
-                if (currentSentenceIndex < sentences.length - 1) {
-                    currentSentenceIndex++;
-                    sentences[currentSentenceIndex].style.display = 'block';
+            event.preventDefault();
+            const sentences = document.querySelectorAll('.sentence');
+            if (currentSentenceIndex < sentences.length - 1) {
+                currentSentenceIndex++;
+                sentences[currentSentenceIndex].style.display = 'block';
+                if (currentSentenceIndex === 0) {
+                    trackTextContentClick();
                 }
             }
         }
     });
+
+    fetchRandomTextContent();
+    updateClickedTextContents();
 </script>

@@ -25,6 +25,9 @@ class TextContent(models.Model):
     completed = models.IntegerField(default=0)
     # enrichments = GenericRelation(Enrichment)
 
+class UserTextContent(models.Model):
+    user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    textcontent = models.ForeignKey(TextContent, on_delete=models.CASCADE, null=True)
 
 class Assignment(models.Model):
     teacher = models.ForeignKey(

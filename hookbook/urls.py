@@ -29,6 +29,7 @@ from drf_spectacular.views import (
 
 from apps.teams.urls import team_urlpatterns as single_team_urls
 from apps.web.urls import team_urlpatterns as web_team_urls
+from apps.app.urls import urlpatterns as app_urls
 from apps.web.sitemaps import StaticViewSitemap
 
 
@@ -61,6 +62,7 @@ urlpatterns = [
     path("users/", include("apps.users.urls")),
     path("teams/", include("apps.teams.urls")),
     path("", include("apps.web.urls")),
+    path("app/", include("apps.app.urls")),
     path("pegasus/", include("pegasus.apps.examples.urls")),
     path("pegasus/employees/", include("pegasus.apps.employees.urls")),
     path("openai/", include("apps.openai_example.urls")),
