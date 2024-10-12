@@ -286,7 +286,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "HookBook",
-    "DESCRIPTION": "HookBook uses AI to solve the attention span problem in K-12 education.",
+    "DESCRIPTION": "Building readers, 1 story at a time.",
     "VERSION": "0.1.0",
     "SERVE_INCLUDE_SCHEMA": False,
     "SWAGGER_UI_SETTINGS": {

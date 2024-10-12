@@ -6,15 +6,15 @@ default_context:
   css_theme: default
   database: sqlite
   deploy_platform: heroku
-  description: HookBook uses AI to solve the attention span problem in K-12 education.
-  domain_name: hookbook.com
+  description: Building readers 1 story at a time
+  domain_name: zenlearner.com
   email: mchadaga1@gmail.com
   enable_google_login: y
   enable_twitter_login: n
   front_end_framework: htmx
   post_process: n
-  project_name: HookBook
-  project_slug: hookbook
+  project_name: ZenLearner
+  project_slug: zenlearner
   stripe_payment_mode: both
   subscription_billing_model: default
   use_2fa: y

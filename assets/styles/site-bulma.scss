@@ -85,5 +85,45 @@ p {
   color: var(--body-background-color);
 }
 
+.pg-subtitle {
+  color: var(--text-light);
+}
+
+.footer {
+  background-color: var(--body-background-color);
+}
+
+.select select {
+  border-color: var(--text-light);
+  color: var(--text-light);
+  background-color: var(--body-background-color);
+}
+
+/* Remove default arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  padding-right: 2.5em; /* Space for our custom arrow */
+}
+
+/* Custom arrow using pseudo-element */
+.select::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows clicking through the arrow */
+  color: var(--text-light);
+}
+
+/* Styles for light mode */
+.select::after {
+  color: #4a4a4a; /* Default color for light mode */
+}
+
+
 @import "app/bulma/_all";
 @import "pegasus/bulma";
