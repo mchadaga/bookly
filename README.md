@@ -4,12 +4,20 @@ ZenLearner uses AI to solve the attention span problem in K-12 education.
 
 ## Installation
 
-Setup a virtualenv and install requirements
+1. Install Python3.9
+
+2. Setup a virtualenv and install requirements
 (this example uses [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)):
 
 ```bash
 mkvirtualenv zenlearner -p python3.9
 pip install -r requirements/dev-requirements.txt
+```
+
+If you are having issues with mkvirtualenv, run the below
+
+```bash
+python3.9 -m venv venv && source venv/bin/activate && pip install -r requirements/dev-requirements.txt
 ```
 
 ## Running server
