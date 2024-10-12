@@ -3,7 +3,7 @@ from .settings import *
 DEBUG = False
 
 # fix ssl mixed content issues
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 # Django security checklist settings.
 # More details here: https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -25,9 +25,8 @@ CSRF_COOKIE_SECURE = True
 USE_HTTPS_IN_ABSOLUTE_URLS = True
 
 ALLOWED_HOSTS = [
-    '*',  # update with your production hosts
+    "*",  # update with your production hosts
 ]
-
 
 
 # Your email config goes here.
@@ -41,12 +40,14 @@ ALLOWED_HOSTS = [
 #     "MAILGUN_SENDER_DOMAIN": env('MAILGUN_SENDER_DOMAIN', default=None),
 # }
 
-SERVER_EMAIL = 'noreply@zenlearner.com'
-DEFAULT_FROM_EMAIL = 'mchadaga1@gmail.com'
-ADMINS = [('Your Name', 'mchadaga1@gmail.com'),]
+SERVER_EMAIL = "noreply@hookbook.com"
+DEFAULT_FROM_EMAIL = "mchadaga1@gmail.com"
+ADMINS = [
+    ("Your Name", "mchadaga1@gmail.com"),
+]
 
 # Mailchimp setup
 
 # set these values if you want to subscribe people to a mailchimp list after they sign up.
-MAILCHIMP_API_KEY = env('MAILCHIMP_API_KEY', default=None)
-MAILCHIMP_LIST_ID = env('MAILCHIMP_LIST_ID', default=None)
+MAILCHIMP_API_KEY = env("MAILCHIMP_API_KEY", default=None)
+MAILCHIMP_LIST_ID = env("MAILCHIMP_LIST_ID", default=None)

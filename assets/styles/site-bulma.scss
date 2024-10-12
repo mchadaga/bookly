@@ -5,8 +5,10 @@
 $link: hsl(217, 71%, 53%);  // copied from bulma
 $primary: $link;  // make link-blue the primary color
 $bg-grey: hsl(0, 0%, 98%);
+$bg-black: rgb(0,0,0);
+
 $default-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
-$body-background-color: $bg-grey;
+$body-background-color: $bg-black;
 
 $navbar-item-active-color: $link;
 $menu-item-active-background-color: $link;
@@ -18,7 +20,110 @@ $menu-item-active-background-color: $link;
   --danger: #{$danger};
   --success: #{$success};
   --gray: #{$grey-light};
+
+
+
+  --bulma-background: #121212;
+  --bulma-text: #f3f3f3;
+  --bulma-link: rgb(222, 202, 202);
+  --bulma-link-hover: #363636;
+  
+  /* Override Bulma variables */
+  --body-background-color: var(--bulma-background);
+  --body-color: var(--bulma-text);
+  --link: var(--bulma-link);
+  --link-hover: var(--bulma-link-hover);
+  --text-light: var(--bulma-text);
 }
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+p {
+  color: var(--text-light);
+}
+
+
+.title {
+  color: var(--text-light);
+  font-size: 2rem;
+}
+
+.navbar-menu {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.navbar {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.container {
+  background-color: var(--body-background-color);
+}
+
+
+.button.is-secondary.is-outlined {
+  background-color: transparent;
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-secondary.is-outlined:hover {
+  background-color: var(--text-light);
+  color: var(--body-background-color);
+}
+
+.pg-subtitle {
+  color: var(--text-light);
+}
+
+.footer {
+  background-color: var(--body-background-color);
+}
+
+.select select {
+  border-color: var(--text-light);
+  color: var(--text-light);
+  background-color: var(--body-background-color);
+}
+
+/* Remove default arrow */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+  padding-right: 2.5em; /* Space for our custom arrow */
+}
+
+/* Custom arrow using pseudo-element */
+.select::after {
+  content: '\25BC'; /* Unicode character for a down arrow */
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  pointer-events: none; /* Allows clicking through the arrow */
+  color: var(--text-light);
+}
+
+/* Styles for light mode */
+.select::after {
+  color: #4a4a4a; /* Default color for light mode */
+}
+
 
 @import "app/bulma/_all";
 @import "pegasus/bulma";

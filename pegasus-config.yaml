@@ -6,7 +6,7 @@ default_context:
   css_theme: default
   database: sqlite
   deploy_platform: heroku
-  description: ZenLearner uses AI to solve the attention span problem in K-12 education.
+  description: Building readers 1 story at a time
   domain_name: zenlearner.com
   email: mchadaga1@gmail.com
   enable_google_login: y

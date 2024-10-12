@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * ZenLearner
- * ZenLearner uses AI to solve the attention span problem in K-12 education.
+ * HookBook
+ * HookBook uses AI to solve the attention span problem in K-12 education.
  *
  * The version of the OpenAPI document: 0.1.0
  * 
@@ -15,12 +15,12 @@
 
 import * as runtime from '../runtime';
 import type {
-  Invitation,
-  PaginatedInvitationList,
-  PaginatedTeamList,
-  PatchedInvitation,
-  PatchedTeam,
-  Team,
+    Invitation,
+    PaginatedInvitationList,
+    PaginatedTeamList,
+    PatchedInvitation,
+    PatchedTeam,
+    Team,
 } from '../models';
 import {
     InvitationFromJSON,
@@ -104,11 +104,11 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsCreateRaw(requestParameters: InvitationsCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Invitation>> {
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsCreate.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsCreate.');
         }
 
         if (requestParameters.invitation === null || requestParameters.invitation === undefined) {
-            throw new runtime.RequiredError('invitation','Required parameter requestParameters.invitation was null or undefined when calling invitationsCreate.');
+            throw new runtime.RequiredError('invitation', 'Required parameter requestParameters.invitation was null or undefined when calling invitationsCreate.');
         }
 
         const queryParameters: any = {};
@@ -146,11 +146,11 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsDestroyRaw(requestParameters: InvitationsDestroyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invitationsDestroy.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling invitationsDestroy.');
         }
 
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsDestroy.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsDestroy.');
         }
 
         const queryParameters: any = {};
@@ -184,7 +184,7 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsListRaw(requestParameters: InvitationsListRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<PaginatedInvitationList>> {
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsList.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsList.');
         }
 
         const queryParameters: any = {};
@@ -223,11 +223,11 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsPartialUpdateRaw(requestParameters: InvitationsPartialUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Invitation>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invitationsPartialUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling invitationsPartialUpdate.');
         }
 
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsPartialUpdate.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsPartialUpdate.');
         }
 
         const queryParameters: any = {};
@@ -265,11 +265,11 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsRetrieveRaw(requestParameters: InvitationsRetrieveRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Invitation>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invitationsRetrieve.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling invitationsRetrieve.');
         }
 
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsRetrieve.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsRetrieve.');
         }
 
         const queryParameters: any = {};
@@ -304,15 +304,15 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async invitationsUpdateRaw(requestParameters: InvitationsUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Invitation>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling invitationsUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling invitationsUpdate.');
         }
 
         if (requestParameters.teamSlug === null || requestParameters.teamSlug === undefined) {
-            throw new runtime.RequiredError('teamSlug','Required parameter requestParameters.teamSlug was null or undefined when calling invitationsUpdate.');
+            throw new runtime.RequiredError('teamSlug', 'Required parameter requestParameters.teamSlug was null or undefined when calling invitationsUpdate.');
         }
 
         if (requestParameters.invitation === null || requestParameters.invitation === undefined) {
-            throw new runtime.RequiredError('invitation','Required parameter requestParameters.invitation was null or undefined when calling invitationsUpdate.');
+            throw new runtime.RequiredError('invitation', 'Required parameter requestParameters.invitation was null or undefined when calling invitationsUpdate.');
         }
 
         const queryParameters: any = {};
@@ -350,7 +350,7 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async teamsCreateRaw(requestParameters: TeamsCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Team>> {
         if (requestParameters.team === null || requestParameters.team === undefined) {
-            throw new runtime.RequiredError('team','Required parameter requestParameters.team was null or undefined when calling teamsCreate.');
+            throw new runtime.RequiredError('team', 'Required parameter requestParameters.team was null or undefined when calling teamsCreate.');
         }
 
         const queryParameters: any = {};
@@ -388,7 +388,7 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async teamsDestroyRaw(requestParameters: TeamsDestroyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling teamsDestroy.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling teamsDestroy.');
         }
 
         const queryParameters: any = {};
@@ -457,7 +457,7 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async teamsPartialUpdateRaw(requestParameters: TeamsPartialUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Team>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling teamsPartialUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling teamsPartialUpdate.');
         }
 
         const queryParameters: any = {};
@@ -495,7 +495,7 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async teamsRetrieveRaw(requestParameters: TeamsRetrieveRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Team>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling teamsRetrieve.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling teamsRetrieve.');
         }
 
         const queryParameters: any = {};
@@ -530,11 +530,11 @@ export class TeamsApi extends runtime.BaseAPI {
      */
     async teamsUpdateRaw(requestParameters: TeamsUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Team>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling teamsUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling teamsUpdate.');
         }
 
         if (requestParameters.team === null || requestParameters.team === undefined) {
-            throw new runtime.RequiredError('team','Required parameter requestParameters.team was null or undefined when calling teamsUpdate.');
+            throw new runtime.RequiredError('team', 'Required parameter requestParameters.team was null or undefined when calling teamsUpdate.');
         }
 
         const queryParameters: any = {};

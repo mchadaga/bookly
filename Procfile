@@ -1,3 +1,3 @@
 release: python manage.py migrate
-web: gunicorn zenlearner.wsgi --log-file -
-worker: celery -A zenlearner worker -l INFO --beat --concurrency 2
+web: gunicorn hookbook.wsgi --log-file -
+worker: celery -A hookbook worker -l INFO --beat --concurrency 2

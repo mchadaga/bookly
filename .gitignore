@@ -4,8 +4,8 @@
 db.sqlite3
 .sass-cache/
 celerybeat-schedule
-zenlearner/localsettings.py
-zenlearner/local.py
+HookBook/localsettings.py
+HookBook/local.py
 static_root/
 node_modules/
 openapitools.json
@@ -22,6 +22,10 @@ _dist/
 # Virtualenv
 venv/
 
-# uncomment these lines after setting up the front-end build pipeline in dev and production
-# static/css/
-# static/js/
+
+
+#uncomment these lines after setting up the front-end build pipeline in dev and production
+#static/css/
+#static/js
+./static/js/** 
+static/js/app-bundle.js

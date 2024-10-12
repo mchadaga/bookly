@@ -1,16 +1,16 @@
-# ZenLearner
+# HookBook
 
-ZenLearner uses AI to solve the attention span problem in K-12 education.
+HookBook uses AI to solve the attention span problem in K-12 education.
 
 ## Installation
 
 1. Install Python3.9
 
 2. Setup a virtualenv and install requirements
-(this example uses [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)):
+   (this example uses [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/)):
 
 ```bash
-mkvirtualenv zenlearner -p python3.9
+mkvirtualenv hookbook -p python3.9
 pip install -r requirements/dev-requirements.txt
 ```
 
@@ -47,13 +47,13 @@ Celery can be used to run background tasks.
 You can run it using:
 
 ```bash
-celery -A zenlearner worker -l INFO
+celery -A hookbook worker -l INFO
 ```
 
 Or with celery beat (for scheduled tasks):
 
 ```bash
-celery -A zenlearner worker -l INFO -B
+celery -A hookbook worker -l INFO -B
 ```
 
 ## Updating translations
