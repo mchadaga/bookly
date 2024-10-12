@@ -1,0 +1,26 @@
+{% extends "web/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load form_tags %}
+{% block body %}
+<div id="fullpage-form-wrapper">
+    <div id="fullpage-form">
+        <h1 class="title is-size-4">{% translate "Sign In" %}</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% render_text_input form.login %}
+            {% render_text_input form.password %}
+            <input class="button is-primary is-fullwidth" type="submit" value="{% translate "Sign In" %}">
+            <p class="has-text-centered">{% translate "or" %}</p>
+            {% include 'account/components/social/login_with_google_button.html' %}
+            <hr>
+            <div class="field has-text-centered">
+                <a class="muted-link" href="{% url 'account_reset_password' %}">
+                    {% translate "Forgot password?" %}
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

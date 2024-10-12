@@ -1,0 +1,51 @@
+{% load i18n %}
+<aside class="menu">
+  <p class="menu-label is-hidden-tablet-only">
+    {% translate "Application" %}
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{% url 'web:home' %}" {% if active_tab == 'dashboard' %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa fa-home"></i></span><span class="is-hidden-tablet-only">{% translate "Dashboard" %}</span>
+      </a>
+    </li>
+    {% include "web/components/team_nav.html" %}
+    <li>
+      <a href="{% url 'openai_example:openai_home' %}" {% if active_tab == 'openai' %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa-regular fa-comments"></i></span><span class="is-hidden-tablet-only">{% translate "OpenAI Demos" %}</span>
+      </a>
+    </li>
+  </ul>
+  <p class="menu-label is-hidden-tablet-only">
+    {% translate "My Account" %}
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{% url 'users:user_profile' %}" {% if active_tab == 'profile' %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa fa-user"></i></span><span class="is-hidden-tablet-only">{% translate "Profile" %}</span>
+      </a>
+    </li>
+    {% if user.has_usable_password %}
+    <li>
+      <a href="{% url 'account_change_password' %}" {% if 'accounts/password/change' in request.path %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa fa-unlock-alt"></i></span><span class="is-hidden-tablet-only">{% translate "Change Password" %}</span>
+      </a>
+    </li>
+    {% endif %}
+    <li>
+      <a href="{% url 'account_logout' %}" {% if 'accounts/logout' in request.path %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa fa-sign-out"></i></span><span class="is-hidden-tablet-only">{% translate "Sign out" %}</span>
+      </a>
+    </li>
+  </ul>
+  <p class="menu-label is-hidden-tablet-only">
+    {% translate "Teams" %}
+  </p>
+  <ul class="menu-list">
+    <li>
+      <a href="{% url 'teams:manage_teams' %}" {% if 'teams' in request.path %}class="is-active"{% endif %}>
+        <span class="pg-icon"><i class="fa fa-group"></i></span><span class="is-hidden-tablet-only">{% translate "Teams" %}</span>
+      </a>
+    </li>
+  </ul>
+</aside>

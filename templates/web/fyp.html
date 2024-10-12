@@ -1,0 +1,32 @@
+{% comment %} {{hooks}} {% endcomment %}
+
+{% for hook in hooks %}
+    <div class="text-content" style="display: none;">
+        <h1>{{hook.hook_text}}</h1>
+    </div>
+{% endfor %}
+
+<script>
+    const textContents = document.querySelectorAll('.text-content');
+    let currentIndex = -1;
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            // Hide the current text content if any
+            if (currentIndex >= 0) {
+                textContents[currentIndex].style.display = 'none';
+            }
+
+            // Randomly select a new text content
+            currentIndex = Math.floor(Math.random() * textContents.length);
+            textContents[currentIndex].style.display = 'block';
+
+            // Get the name of the current text content
+            const name = textContents[currentIndex].querySelector('h1').textContent;
+
+            // Use TTS to read the name aloud
+            const utterance = new SpeechSynthesisUtterance(name);
+            window.speechSynthesis.speak(utterance);
+        }
+    });
+</script>

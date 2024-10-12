@@ -1,0 +1,45 @@
+{% extends "web/base.html" %}
+{% load i18n %}
+{% load static %}
+{% load form_tags %}
+{% block body %}
+<div id="fullpage-form-wrapper">
+    <div id="fullpage-form">
+        <h1 class="title is-size-4">Sign Up</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.non_field_errors }}
+            {% if invitation %}
+              <div class="field">
+                <p>
+                    {% blocktranslate with team_name=invitation.team.name email=invitation.email %}
+                    You're signing up to join "{{ team_name }}" as "{{ email }}".
+                    {% endblocktranslate %}
+                </p>
+              </div>
+              <input type="hidden" name="{{ form.email.name }}" value="{{ invitation.email }}"/>
+              <input type="hidden" name="invitation_id" value="{{ invitation.id }}">
+              {{ form.invitation_id.errors }}
+              {{ form.email.errors }}
+            {% else %}
+              {% render_text_input form.email %}
+              {% render_text_input form.team_name %}
+            {% endif %}
+            {% render_text_input form.password1 %}
+            {% if project_settings.ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE %}
+              {% render_text_input form.password2 %}
+            {% endif %}
+            <input class="button is-primary is-fullwidth" type="submit" value="Sign Up">
+            <p class="has-text-centered">or</p>
+            {% include 'account/components/social/login_with_google_button.html' %}
+            <hr>
+            <div class="field has-text-centered has-text-grey">
+                {% translate "Already have account?" %}
+                <a class="muted-link" href="{% url 'account_login' %}">
+                    {% translate "Go to sign in." %}
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

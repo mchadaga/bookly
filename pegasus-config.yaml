@@ -1,0 +1,32 @@
+default_context:
+  _pegasus_version: 2023.3.5
+  author_name: Mani Chadaga
+  ci: none
+  css_framework: bulma
+  css_theme: default
+  database: sqlite
+  deploy_platform: heroku
+  description: ZenLearner uses AI to solve the attention span problem in K-12 education.
+  domain_name: zenlearner.com
+  email: mchadaga1@gmail.com
+  enable_google_login: y
+  enable_twitter_login: n
+  front_end_framework: htmx
+  post_process: n
+  project_name: ZenLearner
+  project_slug: zenlearner
+  stripe_payment_mode: both
+  subscription_billing_model: default
+  use_2fa: y
+  use_api_keys: y
+  use_cloud_media_storage: n
+  use_debug_toolbar: n
+  use_docker: n
+  use_examples: y
+  use_impersonation: n
+  use_openai: y
+  use_sentry: n
+  use_subscriptions: n
+  use_teams: y
+  use_translations: y
+  use_wagtail: n

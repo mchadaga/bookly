@@ -1,0 +1,14 @@
+{% load i18n %}
+{% load team_tags %}
+{% if request.team %}
+  <li>
+    <a href="{% url 'teams_example:player_list' request.team.slug %}" {% if active_tab == 'teams_example' %}class="is-active"{% endif %}>
+      <span class="pg-icon"><i class="fa fa-rocket"></i></span><span class="is-hidden-tablet-only">{% translate "Example App" %}</span>
+    </a>
+  </li>
+  <li>
+    <a href="{% url 'single_team:manage_team' request.team.slug %}" {% if active_tab == 'manage-team' %}class="is-active"{% endif %}>
+      <span class="pg-icon"><i class="fa fa-gear"></i></span><span class="is-hidden-tablet-only">{% translate "My Team" %}</span>
+    </a>
+  </li>
+{% endif %}

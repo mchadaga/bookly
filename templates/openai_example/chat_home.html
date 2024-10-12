@@ -1,0 +1,22 @@
+{% extends 'web/app/app_base.html' %}
+{% load form_tags %}
+{% block app %}
+<nav aria-label="breadcrumbs">
+  <ol class="pg-breadcrumbs">
+    <li class=""><a href="{% url 'openai_example:openai_home' %}">OpenAI Demos</a></li>
+    <li class="pg-breadcrumb-active" aria-current="page">ChatGPT</li>
+  </ol>
+</nav>
+<div class="app-card">
+  <h1 class="pg-title">ChatGPT Example App</h1>
+  <h2 class="pg-subtitle">Quickly embed ChatGPT inside your Django application.</h2>
+  <form method="post">
+    {% csrf_token %}
+    {% render_form_fields form %}
+    <input class="pg-button-primary" type="submit" value="Generate Response!">
+  </form>
+{% if prompt_response %}
+  <div class="mt-2" style="white-space: pre-line;">{{ prompt_response }}</div>
+{% endif %}
+</div>
+{% endblock %}
