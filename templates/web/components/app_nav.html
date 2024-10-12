@@ -10,11 +10,7 @@
       </a>
     </li>
     {% include "web/components/team_nav.html" %}
-    <li>
-      <a href="{% url 'openai_example:openai_home' %}" {% if active_tab == 'openai' %}class="is-active"{% endif %}>
-        <span class="pg-icon"><i class="fa-regular fa-comments"></i></span><span class="is-hidden-tablet-only">{% translate "OpenAI Demos" %}</span>
-      </a>
-    </li>
+
   </ul>
   <p class="menu-label is-hidden-tablet-only">
     {% translate "My Account" %}
