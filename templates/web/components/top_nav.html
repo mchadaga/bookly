@@ -1,9 +1,10 @@
 {% load i18n %}
+{% load static %}
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="container">
     <div class="navbar-brand">
       <a class="navbar-item {% if request.path == '/' %}is-active{% endif %}" href="{% url 'web:home' %}">
-          {{project_meta.NAME}}
+        <img class="homepage-logo" src="{% static 'images/longlogo4x.png' %}" alt="{% translate "HookBook Logo" %}">
       </a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="nav-menu">
         <span aria-hidden="true"></span>

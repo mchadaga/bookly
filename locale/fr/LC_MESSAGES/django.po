@@ -1069,7 +1069,8 @@ msgstr "Galerie d'exemples"
 
 #: templates/web/landing_page.html:14
 msgid "Building readers, 1 story at a time."
-msgstr ""
+msgstr "Construire des lecteurs, une histoire à la fois."
+
 
 #: templates/web/landing_page.html:18
 msgid "Create account"
