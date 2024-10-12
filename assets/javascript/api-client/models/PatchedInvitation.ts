@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * ZenLearner
- * ZenLearner uses AI to solve the attention span problem in K-12 education.
+ * HookBook
+ * HookBook uses AI to solve the attention span problem in K-12 education.
  *
  * The version of the OpenAPI document: 0.1.0
  * 
@@ -82,7 +82,7 @@ export function PatchedInvitationFromJSONTyped(json: any, ignoreDiscriminator: b
         return json;
     }
     return {
-        
+
         'id': !exists(json, 'id') ? undefined : json['id'],
         'team': !exists(json, 'team') ? undefined : json['team'],
         'email': !exists(json, 'email') ? undefined : json['email'],
@@ -100,7 +100,7 @@ export function PatchedInvitationToJSON(value?: PatchedInvitation | null): any {
         return null;
     }
     return {
-        
+
         'team': value.team,
         'email': value.email,
         'role': RoleEnumToJSON(value.role),

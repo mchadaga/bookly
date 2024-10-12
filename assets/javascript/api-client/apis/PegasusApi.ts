@@ -1,8 +1,8 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * ZenLearner
- * ZenLearner uses AI to solve the attention span problem in K-12 education.
+ * HookBook
+ * HookBook uses AI to solve the attention span problem in K-12 education.
  *
  * The version of the OpenAPI document: 0.1.0
  * 
@@ -15,10 +15,10 @@
 
 import * as runtime from '../runtime';
 import type {
-  AggregateEmployeeData,
-  Employee,
-  PaginatedEmployeeList,
-  PatchedEmployee,
+    AggregateEmployeeData,
+    Employee,
+    PaginatedEmployeeList,
+    PatchedEmployee,
 } from '../models';
 import {
     AggregateEmployeeDataFromJSON,
@@ -97,7 +97,7 @@ export class PegasusApi extends runtime.BaseAPI {
      */
     async employeesCreateRaw(requestParameters: EmployeesCreateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Employee>> {
         if (requestParameters.employee === null || requestParameters.employee === undefined) {
-            throw new runtime.RequiredError('employee','Required parameter requestParameters.employee was null or undefined when calling employeesCreate.');
+            throw new runtime.RequiredError('employee', 'Required parameter requestParameters.employee was null or undefined when calling employeesCreate.');
         }
 
         const queryParameters: any = {};
@@ -135,7 +135,7 @@ export class PegasusApi extends runtime.BaseAPI {
      */
     async employeesDestroyRaw(requestParameters: EmployeesDestroyRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<void>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling employeesDestroy.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling employeesDestroy.');
         }
 
         const queryParameters: any = {};
@@ -204,7 +204,7 @@ export class PegasusApi extends runtime.BaseAPI {
      */
     async employeesPartialUpdateRaw(requestParameters: EmployeesPartialUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Employee>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling employeesPartialUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling employeesPartialUpdate.');
         }
 
         const queryParameters: any = {};
@@ -242,7 +242,7 @@ export class PegasusApi extends runtime.BaseAPI {
      */
     async employeesRetrieveRaw(requestParameters: EmployeesRetrieveRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Employee>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling employeesRetrieve.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling employeesRetrieve.');
         }
 
         const queryParameters: any = {};
@@ -277,11 +277,11 @@ export class PegasusApi extends runtime.BaseAPI {
      */
     async employeesUpdateRaw(requestParameters: EmployeesUpdateRequest, initOverrides?: RequestInit | runtime.InitOverrideFunction): Promise<runtime.ApiResponse<Employee>> {
         if (requestParameters.id === null || requestParameters.id === undefined) {
-            throw new runtime.RequiredError('id','Required parameter requestParameters.id was null or undefined when calling employeesUpdate.');
+            throw new runtime.RequiredError('id', 'Required parameter requestParameters.id was null or undefined when calling employeesUpdate.');
         }
 
         if (requestParameters.employee === null || requestParameters.employee === undefined) {
-            throw new runtime.RequiredError('employee','Required parameter requestParameters.employee was null or undefined when calling employeesUpdate.');
+            throw new runtime.RequiredError('employee', 'Required parameter requestParameters.employee was null or undefined when calling employeesUpdate.');
         }
 
         const queryParameters: any = {};
