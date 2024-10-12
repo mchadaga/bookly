@@ -6,6 +6,8 @@ from apps.teams.models import Team
 from django.contrib.contenttypes.fields import GenericForeignKey, GenericRelation
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import User
+from django.db import models
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 # Create your models here.
 
@@ -24,6 +26,23 @@ class TextContent(models.Model):
     team = models.ForeignKey(Team, on_delete=models.CASCADE, null=True)
     completed = models.IntegerField(default=0)
     # enrichments = GenericRelation(Enrichment)
+
+class TextContentSimilarity(models.Model):
+    text_content_1 = models.ForeignKey(TextContent, on_delete=models.CASCADE, related_name='similarities_as_first')
+    text_content_2 = models.ForeignKey(TextContent, on_delete=models.CASCADE, related_name='similarities_as_second')
+    similarity_score = models.FloatField(
+        validators=[MinValueValidator(-1.0), MaxValueValidator(1.0)]
+    )
+
+    class Meta:
+        unique_together = ['text_content_1', 'text_content_2']
+        indexes = [
+            models.Index(fields=['text_content_1', 'text_content_2']),
+            models.Index(fields=['similarity_score']),
+        ]
+
+    def __str__(self):
+        return f"Similarity between {self.text_content_1.id} and {self.text_content_2.id}: {self.similarity_score}"
 
 class UserTextContent(models.Model):
     user = models.ForeignKey(AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
