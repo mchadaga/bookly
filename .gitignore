@@ -4,8 +4,8 @@
 db.sqlite3
 .sass-cache/
 celerybeat-schedule
-zenlearner/localsettings.py
-zenlearner/local.py
+HookBook/localsettings.py
+HookBook/local.py
 static_root/
 node_modules/
 openapitools.json

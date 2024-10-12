@@ -10677,7 +10677,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 .footer {
-  background-color: rgb(25,25,25);
+  background-color: hsl(0, 0%, 98%);
   padding: 3rem 1.5rem 6rem;
 }
 
@@ -10686,6 +10686,63 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --danger: hsl(348, 86%, 61%);
   --success: hsl(153, 53%, 53%);
   --gray: hsl(0, 0%, 71%);
+  --bulma-background: #121212;
+  --bulma-text: #f3f3f3;
+  --bulma-link: rgb(222, 202, 202);
+  --bulma-link-hover: #363636;
+  /* Override Bulma variables */
+  --body-background-color: var(--bulma-background);
+  --body-color: var(--bulma-text);
+  --link: var(--bulma-link);
+  --link-hover: var(--bulma-link-hover);
+  --text-light: var(--bulma-text);
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+p {
+  color: var(--text-light);
+}
+
+.title, .pg-title {
+  color: var(--text-light);
+  font-size: 2rem;
+}
+
+.navbar-menu {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.navbar {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.container {
+  background-color: var(--body-background-color);
+}
+
+.button.is-secondary.is-outlined, .is-secondary.is-outlined.pg-button-light, .is-secondary.pg-button-danger, .is-secondary.pg-button-secondary, .is-secondary.is-outlined.pg-button-primary {
+  background-color: transparent;
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-secondary.is-outlined:hover, .is-secondary.is-outlined.pg-button-light:hover, .is-secondary.pg-button-danger:hover, .is-secondary.pg-button-secondary:hover, .is-secondary.is-outlined.pg-button-primary:hover {
+  background-color: var(--text-light);
+  color: var(--body-background-color);
 }
 
 #fullpage-form-wrapper {

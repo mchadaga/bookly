@@ -20,6 +20,69 @@ $menu-item-active-background-color: $link;
   --danger: #{$danger};
   --success: #{$success};
   --gray: #{$grey-light};
+
+
+
+  --bulma-background: #121212;
+  --bulma-text: #f3f3f3;
+  --bulma-link: rgb(222, 202, 202);
+  --bulma-link-hover: #363636;
+  
+  /* Override Bulma variables */
+  --body-background-color: var(--bulma-background);
+  --body-color: var(--bulma-text);
+  --link: var(--bulma-link);
+  --link-hover: var(--bulma-link-hover);
+  --text-light: var(--bulma-text);
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+p {
+  color: var(--text-light);
+}
+
+
+.title {
+  color: var(--text-light);
+  font-size: 2rem;
+}
+
+.navbar-menu {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.navbar {
+  background-color: var(--body-background-color);
+  color: var(--text-light);
+}
+
+.container {
+  background-color: var(--body-background-color);
+}
+
+
+.button.is-secondary.is-outlined {
+  background-color: transparent;
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-secondary.is-outlined:hover {
+  background-color: var(--text-light);
+  color: var(--body-background-color);
 }
 
 @import "app/bulma/_all";
