@@ -107,3 +107,11 @@ On Linux-based systems you can watch for changes using the following:
 ```bash
 find . -name '*.py' | entr python ./manage.py test apps.utils.tests.test_slugs
 ```
+
+
+
+###Generating translations:
+
+```bash
+django-admin makemessages -l
+```
