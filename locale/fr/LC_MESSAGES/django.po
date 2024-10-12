@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-25 13:39+0000\n"
+"POT-Creation-Date: 2024-10-12 14:01-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,419 +12,358 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-msgid ""
-"Sorry, that page requires an active subscription. You've been redirected."
-msgstr ""
-
-msgid ""
-"Sorry, that page requires a higher subscription tier. Upgrade your plan to "
-"continue."
-msgstr ""
-
-msgid "Product"
-msgstr ""
-
-msgid "Whoops, we couldn't find a subscription associated with your account!"
-msgstr ""
-
-#, python-brace-format
-msgid ""
-"Unable to select a \"{interval}\" plan for {self.product}. Have you setup "
-"your Stripe objects and run ./manage.py bootstrap_subscriptions? You can "
-"also hide this plan interval by removing it from ACTIVE_PLAN_INTERVALS in "
-"apps/subscriptions/metadata.py"
-msgstr ""
-
-msgid "Annual"
-msgstr ""
-
-msgid "Monthly"
-msgstr ""
-
-msgid "Weekly"
-msgstr ""
-
-msgid "Daily"
-msgstr ""
-
-msgid "Custom"
-msgstr ""
-
-msgid "You're getting two months free by choosing an Annual plan!"
-msgstr ""
-
-msgid "Upgrade to annual pricing to get two free months."
-msgstr ""
-
-msgid "Good choice!"
-msgstr ""
-
-msgid "Starter"
-msgstr ""
-
-msgid "For hobbyists and side-projects"
-msgstr ""
-
-msgid "Up to 100 Widgets"
-msgstr ""
-
-msgid "Unlimited Widget Editing"
-msgstr ""
-
-msgid "Standard"
-msgstr ""
-
-msgid "For small businesses and teams"
-msgstr ""
-
-msgid "Up to 500 Widgets"
-msgstr ""
-
-msgid "Advanced Widget Editing Features"
-msgstr ""
-
-msgid "Premium"
-msgstr ""
-
-msgid "Unlimited Widgets"
-msgstr ""
-
-msgid "All Features"
-msgstr ""
-
-msgid "Priority Support and Training"
-msgstr ""
-
-#, python-brace-format
-msgid "No Product with ID \"{product_meta.stripe_id}\" found! "
-msgstr ""
-
-msgid ""
-"It looks like you do not have any Products in your database. In order to use "
-"subscriptions you first have to setup Stripe billing and sync it with your "
-"local data."
-msgstr ""
-
-msgid "The associated Stripe Subscription object, if it exists"
-msgstr ""
-
-msgid "Updated every time an event that might trigger billing happens."
-msgstr ""
-
-msgid "Used for determining when to next sync with Stripe."
-msgstr ""
-
-#, fuzzy, python-brace-format
-#| msgid "Subscription Demo"
-msgid "Subscription | {team}"
-msgstr "Démo d'abonnement"
-
-#, fuzzy, python-brace-format
-#| msgid "Subscription Demo"
-msgid "Subscription Demo | {team}"
-msgstr "Démo d'abonnement"
-
-msgid "Successfully recorded {} units for metered billing."
-msgstr ""
-
-msgid ""
-"It looks like you don't have any metered subscriptions set up. Sign up for a "
-"subscription with metered usage to use this UI."
-msgstr ""
-
-msgid "Multiple Products"
-msgstr ""
-
-#, python-brace-format
-msgid "Every {interval}"
-msgstr ""
-
-#, python-brace-format
-msgid "Every {count} {interval}s"
-msgstr ""
-
+#: apps/teams/forms.py:14 apps/teams/forms.py:16
 msgid "Team Name (Optional)"
 msgstr ""
 
+#: apps/teams/forms.py:49
 msgid ""
 "That invitation could not be found. Please double check your invitation link "
 "or sign in to continue."
 msgstr ""
 
+#: apps/teams/forms.py:55
 msgid ""
 "It looks like that invitation link has expired. Please request a new "
 "invitation or sign in to continue."
 msgstr ""
 
+#: apps/teams/forms.py:62
 msgid ""
 "You must sign up with the email address that the invitation was sent to."
 msgstr ""
 
+#: apps/teams/forms.py:84
 msgid "Team Name"
 msgstr ""
 
+#: apps/teams/forms.py:85
 msgid "Team ID"
 msgstr ""
 
+#: apps/teams/forms.py:88
 msgid "Your team name."
 msgstr ""
 
+#: apps/teams/forms.py:89
 msgid "A unique ID for your team. No spaces are allowed!"
 msgstr ""
 
+#: apps/teams/forms.py:104 apps/teams/views/api_views.py:72
 msgid ""
 "There is already a pending invitation for {}. You can resend it by clicking "
 "\"Resend Invitation\"."
 msgstr ""
 
+#: apps/teams/helpers.py:12 templates/web/components/team_nav.html:11
 msgid "My Team"
 msgstr "Mon Équipe"
 
+#: apps/teams/invitations.py:17
 msgid "You're invited to {}!"
 msgstr ""
 
+#: apps/teams/models.py:83
 #, fuzzy
 #| msgid "Teams"
 msgid "Team"
 msgstr "Équipes"
 
+#: apps/teams/models.py:99
 msgid "Activate this flag for these teams."
 msgstr ""
 
-msgid "Updating team membership must be done through the team object!"
-msgstr ""
-
-msgid "Manage Teams"
-msgstr ""
-
-msgid "Team details saved!"
-msgstr ""
-
-#, fuzzy, python-brace-format
-#| msgid "My Team"
-msgid "My Team | {team}"
-msgstr "Mon Équipe"
-
-msgid "Create Team"
-msgstr ""
-
-#, python-brace-format
-msgid "The \"{team}\" team was successfully deleted"
-msgstr ""
-
+#: apps/teams/views/invitation_views.py:23
 #, python-brace-format
 msgid ""
 "It looks like you're already a member of {team}. You've been redirected."
 msgstr ""
 
+#: apps/teams/views/invitation_views.py:32
 msgid "Please log in again to accept your invitation."
 msgstr ""
 
+#: apps/teams/views/invitation_views.py:36
+#: apps/teams/views/invitation_views.py:57
 msgid "Sorry, it looks like that invitation link has expired."
 msgstr ""
 
+#: apps/teams/views/invitation_views.py:41
 msgid "You successfully joined {}"
 msgstr ""
 
+#: apps/teams/views/manage_team_views.py:23
+msgid "Manage Teams"
+msgstr ""
+
+#: apps/teams/views/manage_team_views.py:35
+msgid "Team details saved!"
+msgstr ""
+
+#: apps/teams/views/manage_team_views.py:49
+#, fuzzy, python-brace-format
+#| msgid "My Team"
+msgid "My Team | {team}"
+msgstr "Mon Équipe"
+
+#: apps/teams/views/manage_team_views.py:70 templates/teams/list_teams.html:54
+msgid "Create Team"
+msgstr ""
+
+#: apps/teams/views/manage_team_views.py:78
+#, python-brace-format
+msgid "The \"{team}\" team was successfully deleted"
+msgstr ""
+
+#: apps/teams/views/membership_views.py:24
 msgid "Sorry, you don't have permission to access that page."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:31
 msgid "You don't have permission to edit team members in that team."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:33
 msgid "You aren't allowed to change your own role."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:40
 #, python-brace-format
 msgid "Role for {member} updated."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:62
 msgid "You don't have permission to remove others from that team."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:69
 msgid ""
 "You cannot remove the only administrator from a team. Make another team "
 "member an administrator and try again."
 msgstr ""
 
+#: apps/teams/views/membership_views.py:77
 #, python-brace-format
 msgid "{member} was removed from {team}."
 msgstr ""
 
+#: apps/teams_example/views.py:19
 #, fuzzy, python-brace-format
 #| msgid "Example App"
 msgid "Example App | {team}"
 msgstr "Exemple d'application"
 
+#: apps/users/forms.py:11 templates/teams/components/team_invitations.html:24
+#: templates/teams/team_membership_details.html:22
 msgid "Email"
 msgstr "E-mail"
 
+#: apps/users/forms.py:12
 msgid "Language"
 msgstr "Langue"
 
+#: apps/users/views.py:45
 msgid "Profile successfully saved."
 msgstr ""
 
+#: apps/users/views.py:51 templates/web/components/app_nav.html:25
+#: templates/web/components/top_nav.html:30
 msgid "Profile"
 msgstr "Profil"
 
+#: apps/users/views.py:66
 msgid "Success!"
 msgstr "Succès!"
 
+#: apps/users/views.py:77
 #, python-brace-format
 msgid ""
 "API Key created. Your key is: {key}. Save this somewhere safe - you will "
 "only see it once!"
 msgstr ""
 
+#: apps/users/views.py:93
 #, python-brace-format
 msgid ""
 "API Key {key} has been revoked. It can no longer be used to access the site."
 msgstr ""
 
+#: apps/web/views.py:18
 msgid ""
 "Teams are enabled but you have no teams. Create a team below to access the "
 "rest of the dashboard."
 msgstr ""
 
-#, fuzzy, python-brace-format
-#| msgid "%(team)s Dashboard"
-msgid "{team} Dashboard"
-msgstr "%(team)s Tableau de bord"
-
+#: hookbook/settings.py:225
 msgid "English"
 msgstr "Anglais"
 
+#: hookbook/settings.py:226
 msgid "French"
 msgstr "Français"
 
-#, fuzzy
-#| msgid "Pegasus Examples"
-msgid "Pegasus Template"
-msgstr "Pegasus Exemples"
-
-msgid "The most amazing SaaS application the world has ever seen"
+#: hookbook/settings.py:334
+msgid "HookBook"
 msgstr ""
 
+#: hookbook/settings.py:337
+msgid "HookBook uses AI to solve the attention span problem in K-12 education."
+msgstr ""
+
+#: templates/400.html:4
 msgid "Shucks. That was a bad request."
 msgstr ""
 
+#: templates/400.html:6 templates/500.html:6
 msgid ""
 "Please try again, and if you continue to get this message, contact support."
 msgstr ""
 
+#: templates/403.html:4
 msgid "Oops. You don't have permission to do that."
 msgstr ""
 
+#: templates/403.html:6
 msgid "If you think this is a mistake, contact support."
 msgstr ""
 
+#: templates/404.html:4
 msgid "Shucks. We couldn't find that."
 msgstr ""
 
+#: templates/404.html:6
 msgid ""
 "If you think this page should exist, double-check that you are signed in as "
 "the right person."
 msgstr ""
 
+#: templates/500.html:4
 msgid "Shucks. That's an error."
 msgstr ""
 
+#: templates/account/components/2fa.html:3
 msgid "Two-Factor Auth"
 msgstr ""
 
+#: templates/account/components/2fa.html:5
 msgid "You already have two-factor authentication enabled."
 msgstr ""
 
+#: templates/account/components/2fa.html:6
 msgid "Configure"
 msgstr ""
 
+#: templates/account/components/2fa.html:8
 msgid "You do not have two-factor authentication enabled."
 msgstr ""
 
+#: templates/account/components/2fa.html:9
 msgid "Enable"
 msgstr ""
 
+#: templates/account/components/api_keys.html:3
 msgid "API Keys"
 msgstr "Clés API"
 
+#: templates/account/components/api_keys.html:10
 msgid "Prefix"
 msgstr "Préfixe"
 
+#: templates/account/components/api_keys.html:11
 msgid "Created"
 msgstr "Établi"
 
+#: templates/account/components/api_keys.html:25
 msgid "Revoke"
 msgstr "Révoquer"
 
+#: templates/account/components/api_keys.html:36
 msgid "You haven't created any API keys yet. Create one below."
 msgstr "Vous n'avez pas encore lié de comptes sociaux. Créez-en un ci-dessous."
 
+#: templates/account/components/api_keys.html:41
 msgid "New API Key"
 msgstr "Nouvelle clé API"
 
+#: templates/account/components/profile_form.html:10
 msgid "Change Picture"
 msgstr "Changer la photo"
 
+#: templates/account/components/profile_form.html:18
 msgid "My Details"
 msgstr "Mes Details"
 
+#: templates/account/components/profile_form.html:28
 msgid "Save"
 msgstr "Sauvegarder"
 
+#: templates/account/components/social/login_with_google_button.html:8
 msgid "Continue with Google"
 msgstr "Continuer avec Google"
 
-msgid "Continue with Twitter"
-msgstr "Continuer avec Twitter"
-
+#: templates/account/components/social/social_accounts.html:3
 msgid "Connected Accounts"
 msgstr "Comptes connectés"
 
+#: templates/account/components/social/social_accounts.html:24
 msgid "You haven't linked any social accounts yet. Create one below."
 msgstr "Vous n'avez pas encore lié de comptes sociaux. Créez-en un ci-dessous."
 
+#: templates/account/email.html:4 templates/account/email.html:6
 msgid "E-mail Addresses"
 msgstr ""
 
+#: templates/account/email.html:8
 msgid "The following e-mail addresses are associated with your account:"
 msgstr ""
 
+#: templates/account/email.html:22
 msgid "Verified"
 msgstr ""
 
+#: templates/account/email.html:24
 msgid "Unverified"
 msgstr ""
 
+#: templates/account/email.html:26
 msgid "Primary"
 msgstr ""
 
+#: templates/account/email.html:32
 msgid "Make Primary"
 msgstr ""
 
+#: templates/account/email.html:33
 msgid "Re-send Verification"
 msgstr ""
 
+#: templates/account/email.html:34 templates/socialaccount/connections.html:35
 msgid "Remove"
 msgstr ""
 
+#: templates/account/email.html:40
 msgid "Warning:"
 msgstr ""
 
+#: templates/account/email.html:40
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 
+#: templates/account/email.html:45
 msgid "Add E-mail Address"
 msgstr ""
 
+#: templates/account/email.html:50
 msgid "Add E-mail"
 msgstr ""
 
+#: templates/account/email.html:58
 msgid "Do you really want to remove the selected e-mail address?"
 msgstr ""
 
+#: templates/account/email/email_confirmation_message.html:3
 #, python-format
 msgid ""
 "\n"
@@ -432,9 +371,12 @@ msgid ""
 "account.\n"
 msgstr ""
 
+#: templates/account/email/email_confirmation_message.html:7
+#: templates/account/email/email_confirmation_signup_message.html:8
 msgid "Confirm Email Address"
 msgstr ""
 
+#: templates/account/email/email_confirmation_signup_message.html:3
 #, python-format
 msgid ""
 "\n"
@@ -442,6 +384,7 @@ msgid ""
 "  Click the confirmation link below to activate your account.\n"
 msgstr ""
 
+#: templates/account/email/password_reset_key_message.html:3
 #, python-format
 msgid ""
 "\n"
@@ -449,9 +392,12 @@ msgid ""
 "  If you didn't request this, you can safely ignore this email.\n"
 msgstr ""
 
+#: templates/account/email/password_reset_key_message.html:8
+#: templates/account/email/password_reset_key_subject.txt:3
 msgid "Reset Password"
 msgstr ""
 
+#: templates/account/email/password_reset_key_message.txt:1
 #, python-format
 msgid ""
 "Hello,\n"
@@ -463,6 +409,7 @@ msgid ""
 "If you did not try to reset your password you can safely ignore this email.\n"
 msgstr ""
 
+#: templates/account/email/password_reset_key_message.txt:9
 #, python-format
 msgid ""
 "Thanks!\n"
@@ -470,9 +417,11 @@ msgid ""
 "The %(site_name)s team\n"
 msgstr ""
 
+#: templates/account/email_confirm.html:5
 msgid "Confirm E-mail Address"
 msgstr ""
 
+#: templates/account/email_confirm.html:9
 #, python-format
 msgid ""
 "\n"
@@ -481,9 +430,11 @@ msgid ""
 "    "
 msgstr ""
 
+#: templates/account/email_confirm.html:17
 msgid "Confirm"
 msgstr ""
 
+#: templates/account/email_confirm.html:23
 #, python-format
 msgid ""
 "\n"
@@ -493,46 +444,67 @@ msgid ""
 "    "
 msgstr ""
 
+#: templates/account/login.html:8 templates/account/login.html:14
+#: templates/web/components/top_nav.html:46 templates/web/landing_page.html:21
 msgid "Sign In"
 msgstr "S'identifier"
 
+#: templates/account/login.html:15
+#: venv/lib/python3.9/site-packages/django/utils/text.py:252
 msgid "or"
 msgstr "ou"
 
+#: templates/account/login.html:20
 msgid "Forgot password?"
 msgstr "Mot de passe oublié?"
 
+#: templates/account/logout.html:7
 msgid "Are you sure you want to sign out?"
 msgstr "Êtes-vous certain de vouloir vous déconnecter?"
 
+#: templates/account/logout.html:15
 #, fuzzy
 #| msgid "Sign out"
 msgid "Sign Out"
 msgstr "Déconnexion"
 
+#: templates/account/logout.html:20
 msgid "Home"
 msgstr ""
 
+#: templates/account/password_change.html:8
+#: templates/account/password_change.html:16
+#: templates/account/password_reset_from_key.html:5
+#: templates/account/password_reset_from_key.html:28
+#: templates/account/password_reset_from_key_done.html:4
+#: templates/web/components/app_nav.html:31
+#: templates/web/components/top_nav.html:34
 msgid "Change Password"
 msgstr "Changer le mot de passe"
 
+#: templates/account/password_reset.html:7
+#: templates/account/password_reset_done.html:5
 msgid "Password Reset"
 msgstr "Réinitialisation du mot de passe"
 
+#: templates/account/password_reset.html:11
 msgid ""
 "Forgot your password? Enter your e-mail address below, and we'll send you an "
 "e-mail allowing you to reset it."
 msgstr ""
 
+#: templates/account/password_reset.html:17
 msgid "Send Password Reset"
 msgstr ""
 
+#: templates/account/password_reset.html:20
 msgid ""
 "\n"
 "        Please contact us if you have any trouble resetting your password.\n"
 "      "
 msgstr ""
 
+#: templates/account/password_reset_done.html:10
 msgid ""
 "\n"
 "        We've sent you an e-mail. Please get in touch if you do not receive "
@@ -540,9 +512,11 @@ msgid ""
 "        "
 msgstr ""
 
+#: templates/account/password_reset_from_key.html:5
 msgid "Bad Token"
 msgstr ""
 
+#: templates/account/password_reset_from_key.html:10
 msgid ""
 "\n"
 "        The password reset link was invalid, possibly because it has already "
@@ -550,6 +524,7 @@ msgid ""
 "      "
 msgstr ""
 
+#: templates/account/password_reset_from_key.html:15
 #, python-format
 msgid ""
 "\n"
@@ -558,15 +533,18 @@ msgid ""
 "      "
 msgstr ""
 
+#: templates/account/password_reset_from_key.html:32
 msgid "Your password is now changed."
 msgstr ""
 
+#: templates/account/password_reset_from_key_done.html:7
 msgid ""
 "\n"
 "            Your password has been changed.\n"
 "            "
 msgstr ""
 
+#: templates/account/password_reset_from_key_done.html:13
 #, python-format
 msgid ""
 "\n"
@@ -575,9 +553,11 @@ msgid ""
 "            "
 msgstr ""
 
+#: templates/account/password_set.html:8 templates/account/password_set.html:14
 msgid "Set Password"
 msgstr "Définir le mot de passe"
 
+#: templates/account/signup.html:15
 #, python-format
 msgid ""
 "\n"
@@ -586,17 +566,21 @@ msgid ""
 "                    "
 msgstr ""
 
+#: templates/account/signup.html:37
 #, fuzzy
 #| msgid "Create account"
 msgid "Already have account?"
 msgstr "Créer un compte"
 
+#: templates/account/signup.html:39
 msgid "Go to sign in."
 msgstr ""
 
+#: templates/account/verification_sent.html:4
 msgid "Verify Your E-mail Address"
 msgstr ""
 
+#: templates/account/verification_sent.html:6
 msgid ""
 "\n"
 "        We have sent an e-mail to you for verification.\n"
@@ -604,217 +588,201 @@ msgid ""
 "        "
 msgstr ""
 
+#: templates/account/verification_sent.html:12
 msgid ""
 "\n"
 "        Please contact us if you do not receive it within a few minutes.\n"
 "        "
 msgstr ""
 
+#: templates/allauth_2fa/authenticate.html:7
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/authenticate.html:6
 msgid "Two-Factor Authentication"
 msgstr ""
 
+#: templates/allauth_2fa/authenticate.html:14
+#: templates/allauth_2fa/setup.html:23
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:33
 msgid "Verify"
 msgstr ""
 
+#: templates/allauth_2fa/backup_tokens.html:5
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/backup_tokens.html:6
 msgid "Two-Factor Authentication Backup Tokens"
 msgstr ""
 
+#: templates/allauth_2fa/backup_tokens.html:14
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/backup_tokens.html:17
 msgid ""
 "Backup tokens have been generated, but are not revealed here for security "
 "reasons. Press the button below to generate new ones."
 msgstr ""
 
+#: templates/allauth_2fa/backup_tokens.html:17
 msgid ""
 "No backup tokens have been created. Press the button below to generate some."
 msgstr ""
 
+#: templates/allauth_2fa/backup_tokens.html:23
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/backup_tokens.html:26
 msgid "Generate backup tokens"
 msgstr ""
 
+#: templates/allauth_2fa/backup_tokens.html:29
+#: templates/allauth_2fa/remove.html:7
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/remove.html:6
 msgid "Disable Two-Factor Authentication"
 msgstr ""
 
+#: templates/allauth_2fa/remove.html:8
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/remove.html:9
 msgid ""
 "Please enter a valid authentication token to disable two-factor "
 "authentication:"
 msgstr ""
 
+#: templates/allauth_2fa/remove.html:15
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/remove.html:15
 msgid "Disable Two-Factor"
 msgstr ""
 
+#: templates/allauth_2fa/setup.html:7
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:6
 msgid "Setup Two-Factor Authentication"
 msgstr ""
 
+#: templates/allauth_2fa/setup.html:8
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:10
 msgid "Step 1"
 msgstr ""
 
+#: templates/allauth_2fa/setup.html:10
 msgid ""
 "Scan the QR code below with a token generator of your choice (e.g. <a "
 "href=\"https://support.google.com/accounts/answer/1066447\" "
 "target=\"_blank\">Google Authenticator</a>)."
 msgstr ""
 
+#: templates/allauth_2fa/setup.html:14
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:20
 msgid "Step 2"
 msgstr ""
 
+#: templates/allauth_2fa/setup.html:15
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:24
 msgid "Input a token generated by the app:"
 msgstr ""
 
-msgid "Image Gallery"
-msgstr ""
-
+#: templates/pegasus/employees/htmx/new_employee_button.html:5
+#: templates/pegasus/employees/list_employees.html:44
 msgid "Add Employee"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:11
+#: templates/teams/list_teams.html:13
 msgid "Name"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:12
 msgid "Department"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:13
 msgid "Salary"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:27
+#: templates/teams/list_teams.html:28
 msgid "Edit"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:33
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:496
 msgid "Delete"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:52
 msgid "No Employees Yet!"
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:53
 msgid "Create your first employee below to get started."
 msgstr ""
 
+#: templates/pegasus/employees/list_employees.html:57
 msgid "Create Employee"
 msgstr ""
 
+#: templates/socialaccount/connections.html:5
+#: templates/socialaccount/connections.html:10
 msgid "Account Connections"
 msgstr ""
 
+#: templates/socialaccount/connections.html:8
 msgid "← Return to Profile"
 msgstr ""
 
+#: templates/socialaccount/connections.html:13
 msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
 
+#: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
 
+#: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
 msgstr ""
 
+#: templates/socialaccount/login.html:6
 #, python-format
 msgid "Connect %(provider)s"
 msgstr ""
 
+#: templates/socialaccount/login.html:8
 #, python-format
 msgid "You are about to connect a new third party account from %(provider)s."
 msgstr ""
 
+#: templates/socialaccount/login.html:10
 #, python-format
 msgid "Sign In Via %(provider)s"
 msgstr ""
 
+#: templates/socialaccount/login.html:12
 #, python-format
 msgid "You are about to sign in using a third party account from %(provider)s."
 msgstr ""
 
+#: templates/socialaccount/login.html:17
 msgid "Continue"
 msgstr "Continuer"
 
+#: templates/socialaccount/signup.html:6 templates/socialaccount/signup.html:9
+#: templates/socialaccount/signup.html:21
+#: templates/web/components/top_nav.html:45
 msgid "Sign Up"
 msgstr "S'inscrire"
 
+#: templates/socialaccount/signup.html:11
 #, python-format
 msgid ""
 "You are about to use your %(provider_name)s account to login to\n"
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
 
-msgid "Next Invoice"
-msgstr ""
-
-msgid "On"
-msgstr ""
-
-msgid "No further invoices"
-msgstr ""
-
-msgid "Renews"
-msgstr ""
-
-msgid "Off"
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"          Expires: %(end_date)s\n"
-"          "
-msgstr ""
-
-msgid "Pricing"
-msgstr ""
-
-msgid "Price"
-msgstr ""
-
-msgid "Quantity"
-msgstr ""
-
-msgid "Varies with usage"
-msgstr ""
-
-msgid "Metered Billing"
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"        You're subscribed to a plan that supports metered usage.\n"
-"        You can update the amount this subscription has used from the <a "
-"href=\"%(metered_billing_demo_url)s\">metered billing demo page</a>.\n"
-"      "
-msgstr ""
-
-msgid ""
-"\n"
-"        You aren't currently subscribed to a plan that supports metered "
-"usage.\n"
-"        To use the metered billing integration, first create and subscribe "
-"to a metered plan.\n"
-"        More details are available in\n"
-"        <a href=\"https://stripe.com/docs/products-prices/pricing-"
-"models#usage-based-pricing\" target=\"_blank\">the Stripe documentation</"
-"a>.\n"
-"      "
-msgstr ""
-
-msgid "Metered Billing Demo"
-msgstr ""
-
-msgid ""
-"\n"
-"        Use the form below to add usage data for your metered subscription.\n"
-"        This data will be saved and synchronized with Stripe for the next "
-"billing period.\n"
-"      "
-msgstr ""
-
-msgid "Add Usage"
-msgstr ""
-
+#: templates/teams/accept_invite.html:9
 msgid "Welcome!"
 msgstr ""
 
+#: templates/teams/accept_invite.html:13
 msgid "Accept Invitation?"
 msgstr ""
 
+#: templates/teams/accept_invite.html:15
 #, python-format
 msgid ""
 "\n"
@@ -822,6 +790,7 @@ msgid ""
 "            "
 msgstr ""
 
+#: templates/teams/accept_invite.html:26
 #, python-format
 msgid ""
 "\n"
@@ -831,276 +800,1903 @@ msgid ""
 "                  "
 msgstr ""
 
+#: templates/teams/accept_invite.html:34
+#: templates/web/components/app_nav.html:37
+#: templates/web/components/top_nav.html:38
 msgid "Sign out"
 msgstr "Déconnexion"
 
+#: templates/teams/accept_invite.html:42
 #, fuzzy
 #| msgid "Create account"
 msgid "Create Account to Accept"
 msgstr "Créer un compte"
 
+#: templates/teams/accept_invite.html:48
 msgid ""
 "Sorry, it looks like that invitation has already been accepted or expired."
 msgstr ""
 
+#: templates/teams/accept_invite.html:51
 msgid ""
 "If you think this is a mistake, ask your team administrator to invite you "
 "again!"
 msgstr ""
 
+#: templates/teams/components/delete_team_modal.html:6
+msgid "Really delete team?"
+msgstr "Vraiment supprimer l'équipe ?"
+
+#: templates/teams/components/delete_team_modal.html:7
+#: templates/teams/components/remove_member_modal.html:7
+msgid "Close"
+msgstr ""
+
+#: templates/teams/components/delete_team_modal.html:10
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "      This will permanently delete the <em><strong>%(team_name)s</"
+#| "strong></em> team and all associated data.\n"
+#| "      <strong>This action cannot be undone.</strong>\n"
+#| "      "
+msgid ""
+"\n"
+"      This will permanently delete the <em><strong>%(team_name)s</strong></"
+"em> team and all associated data.\n"
+"      "
+msgstr ""
+"\n"
+"Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</strong></"
+"em> et toutes les données associées.\n"
+"      <strong>Cette action ne peut pas être annulée.</strong>\n"
+"      "
+
+#: templates/teams/components/delete_team_modal.html:13
+msgid "This action cannot be undone."
+msgstr ""
+
+#: templates/teams/components/delete_team_modal.html:18
+msgid "I understand, permanently delete this team"
+msgstr "Je comprends, supprimer définitivement cette équipe"
+
+#: templates/teams/components/delete_team_modal.html:20
+#: templates/teams/components/remove_member_modal.html:29
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/teams/components/invitation_row.html:10
 msgid "Resend Invitation"
 msgstr ""
 
+#: templates/teams/components/invitation_row.html:14
 msgid "Cancel Invitation"
 msgstr ""
 
+#: templates/teams/components/remove_member_modal.html:6
+msgid "Leave team?"
+msgstr ""
+
+#: templates/teams/components/remove_member_modal.html:6
+msgid "Remove team member?"
+msgstr ""
+
+#: templates/teams/components/remove_member_modal.html:11
+#, python-format
+msgid ""
+"\n"
+"          You will be removed from the team: <em><strong>%(team_name)s</"
+"strong></em>.\n"
+"          After this, you will no longer be able to access any team pages, "
+"and will have to be invited again to regain access.\n"
+"        "
+msgstr ""
+
+#: templates/teams/components/remove_member_modal.html:16
+#, python-format
+msgid ""
+"\n"
+"          This will remove <em><strong>%(member_name)s</strong></em> from "
+"your team: <em>%(team_name)s</em>.\n"
+"          They will no longer be able to access any team pages, and will "
+"have to be invited again to regain access.\n"
+"        "
+msgstr ""
+
+#: templates/teams/components/remove_member_modal.html:26
+msgid "I understand, leave team"
+msgstr ""
+
+#: templates/teams/components/remove_member_modal.html:26
+msgid "I understand, remove team member"
+msgstr ""
+
+#: templates/teams/components/team_invitations.html:6
 msgid "Invite Team Members"
 msgstr ""
 
+#: templates/teams/components/team_invitations.html:12
 msgid "Send Invitation"
 msgstr ""
 
+#: templates/teams/components/team_invitations.html:19
 msgid "Pending Invitations"
 msgstr ""
 
+#: templates/teams/components/team_invitations.html:25
 msgid "Invited"
 msgstr ""
 
+#: templates/teams/components/team_invitations.html:26
+#: templates/teams/manage_team.html:37
 msgid "Role"
 msgstr ""
 
+#: templates/teams/components/team_invitations.html:39
 msgid "Any pending invitations will show up here until accepted."
 msgstr ""
 
+#: templates/teams/list_teams.html:8
 #, fuzzy
 #| msgid "My Team"
 msgid "My Teams"
 msgstr "Mon Équipe"
 
+#: templates/teams/list_teams.html:22
 #, fuzzy
 #| msgid "Dashboard"
 msgid "View Dashboard"
 msgstr "Tableau de bord"
 
+#: templates/teams/list_teams.html:28
 #, fuzzy
 #| msgid "My Details"
 msgid "View Details"
 msgstr "Mes Details"
 
+#: templates/teams/list_teams.html:39
 #, fuzzy
 #| msgid "My Team"
 msgid "Add Team"
 msgstr "Mon Équipe"
 
+#: templates/teams/list_teams.html:46
 msgid "Nothing Here"
 msgstr ""
 
+#: templates/teams/list_teams.html:49
 msgid "No Teams Yet!"
 msgstr ""
 
+#: templates/teams/list_teams.html:50
 msgid "Create your first team below to get started."
 msgstr ""
 
+#: templates/teams/manage_team.html:17
 msgid "Team Details"
 msgstr ""
 
+#: templates/teams/manage_team.html:24
 msgid "Save Details"
 msgstr ""
 
+#: templates/teams/manage_team.html:31
 msgid "Team Members"
 msgstr ""
 
+#: templates/teams/manage_team.html:36
 msgid "Member"
 msgstr ""
 
+#: templates/teams/manage_team.html:61
 msgid "Danger Zone"
 msgstr ""
 
+#: templates/teams/manage_team.html:64
 msgid "Delete Team"
 msgstr ""
 
+#: templates/teams/team_membership_details.html:26
 msgid "Date Joined"
 msgstr ""
 
+#: templates/teams/team_membership_details.html:34
 msgid "Update Role"
 msgstr ""
 
+#: templates/teams/team_membership_details.html:37
 msgid "You are not allowed to modify your own role."
 msgstr ""
 
+#: templates/teams/team_membership_details.html:42
 msgid "Leave Team"
 msgstr ""
 
+#: templates/teams/team_membership_details.html:44
 msgid "Remove from Team"
 msgstr ""
 
+#: templates/web/app_home.html:8 templates/web/landing_page.html:8
 msgid "Fly Away!"
 msgstr ""
 
+#: templates/web/app_home.html:11
 msgid "You're Signed In!"
 msgstr "Vous êtes connecté !"
 
+#: templates/web/app_home.html:13
 msgid "This is your application's logged in home page."
 msgstr "Il s'agit de la page d'accueil de connexion de votre application."
 
+#: templates/web/app_home.html:16
 #, python-format
 msgid "You're logged into the \"%(team_name)s\" Team."
 msgstr "Vous êtes connecté à l'équipe \"%(team_name)s\"."
 
-msgid "Copyright"
-msgstr "Droits d'auteur"
-
-msgid "Create account"
-msgstr "Créer un compte"
-
-msgid "Really delete team?"
-msgstr "Vraiment supprimer l'équipe ?"
-
-msgid "Close"
-msgstr ""
-
-#, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "      This will permanently delete the <em><strong>%(team_name)s</"
-#| "strong></em> team and all associated data.\n"
-#| "      <strong>This action cannot be undone.</strong>\n"
-#| "      "
-msgid ""
-"\n"
-"        This will permanently delete the <em><strong>%(team_name)s</strong></"
-"em> team and all associated data.\n"
-"        "
-msgstr ""
-"\n"
-"Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</strong></"
-"em> et toutes les données associées.\n"
-"      <strong>Cette action ne peut pas être annulée.</strong>\n"
-"      "
-
-msgid "This action cannot be undone."
-msgstr ""
-
-msgid "I understand, permanently delete this team"
-msgstr "Je comprends, supprimer définitivement cette équipe"
-
-msgid "Cancel"
-msgstr "Annuler"
-
-msgid "Leave team?"
-msgstr ""
-
-msgid "Remove team member?"
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"          You will be removed from the team: <em><strong>%(team_name)s</"
-"strong></em>.\n"
-"          After this, you will no longer be able to access any team pages, "
-"and will have to be invited again to regain access.\n"
-"          "
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"          This will remove <em><strong>%(member_name)s</strong></em> from "
-"your team: <em>%(team_name)s</em>.\n"
-"          They will no longer be able to access any team pages, and will "
-"have to be invited again to regain access.\n"
-"          "
-msgstr ""
-
-msgid "I understand, leave team"
-msgstr ""
-
-msgid "I understand, remove team member"
-msgstr ""
-
+#: templates/web/components/app_nav.html:4
 msgid "Application"
 msgstr "Application"
 
+#: templates/web/components/app_nav.html:9
 msgid "Dashboard"
 msgstr "Tableau de bord"
 
+#: templates/web/components/app_nav.html:15
 msgid "OpenAI Demos"
 msgstr ""
 
+#: templates/web/components/app_nav.html:20
+#: templates/web/components/top_nav.html:26
 msgid "My Account"
 msgstr "Mon Compte"
 
+#: templates/web/components/app_nav.html:42
+#: templates/web/components/app_nav.html:47
 msgid "Teams"
 msgstr "Équipes"
 
+#: templates/web/components/footer.html:5
+msgid "Copyright"
+msgstr "Droits d'auteur"
+
+#: templates/web/components/team_nav.html:6
 msgid "Example App"
 msgstr "Exemple d'application"
 
-msgid "Subscription Demo"
-msgstr "Démo d'abonnement"
-
-msgid "Subscription"
-msgstr "Abonnement"
-
-msgid "Blog"
-msgstr "Blog"
-
+#: templates/web/components/top_nav.html:21
 msgid "Examples Gallery"
 msgstr "Galerie d'exemples"
 
-msgid "Impersonate a User"
-msgstr "Usurper l'identité d'un utilisateur"
+#: templates/web/landing_page.html:14
+msgid "Building readers, 1 story at a time."
+msgstr "Construire des lecteurs, une histoire à la fois."
+
+
+#: templates/web/landing_page.html:18
+msgid "Create account"
+msgstr "Créer un compte"
+
+#: venv/lib/python3.9/site-packages/allauth_2fa/forms.py:18
+#: venv/lib/python3.9/site-packages/allauth_2fa/forms.py:33
+#: venv/lib/python3.9/site-packages/allauth_2fa/forms.py:66
+msgid "Token"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/allauth_2fa/forms.py:48
+#: venv/lib/python3.9/site-packages/allauth_2fa/forms.py:83
+msgid "The entered token is not valid"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/authenticate.html:16
+msgid "Authenticate"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/backup_tokens.html:20
+msgid "No tokens. Press the button below to generate some."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/allauth_2fa/templates/allauth_2fa/setup.html:14
+msgid ""
+"Scan the QR code below with a token generator of your choice (for instance "
+"Google Authenticator)."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/_termui_impl.py:496
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/_termui_impl.py:500
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1097
+msgid "Aborted!"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1282
+#: venv/lib/python3.9/site-packages/click/decorators.py:495
+msgid "Show this message and exit."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1313
+#: venv/lib/python3.9/site-packages/click/core.py:1339
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1357
+msgid "Options"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1383
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1399
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1605
+msgid "Commands"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1637
+msgid "Missing command."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:1715
+msgid "No such command {name!r}."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2271
+msgid "Value must be an iterable."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2291
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2734
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2764
+msgid "(dynamic)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2777
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/core.py:2790
+msgid "required"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/decorators.py:400
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/decorators.py:464
+msgid "Show the version and exit."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:43
+#: venv/lib/python3.9/site-packages/click/exceptions.py:79
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:71
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:120
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:122
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:178
+msgid "Missing argument"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:180
+msgid "Missing option"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:182
+msgid "Missing parameter"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:184
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:191
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:211
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:223
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:261
+msgid "unknown error"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/exceptions.py:268
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/parser.py:231
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/parser.py:413
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/parser.py:474
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/shell_completion.py:316
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/shell_completion.py:322
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:160
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:176
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:178
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:189
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:245
+msgid "Error: invalid input"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/termui.py:776
+msgid "Press any key to continue..."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:265
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:297
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:387
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:409
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:465
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:606
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:630
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:811
+#, fuzzy
+#| msgid "Profile"
+msgid "file"
+msgstr "Profil"
+
+#: venv/lib/python3.9/site-packages/click/types.py:813
+msgid "directory"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:815
+msgid "path"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:861
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:870
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:878
+#, python-brace-format
+msgid "{name} '{filename}' is a directory."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:887
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:896
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:905
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/click/types.py:972
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/contrib/messages/apps.py:15
+msgid "Messages"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/contrib/sitemaps/apps.py:8
+msgid "Site Maps"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/contrib/staticfiles/apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/contrib/syndication/apps.py:7
+#, fuzzy
+#| msgid "Application"
+msgid "Syndication"
+msgstr "Application"
+
+#. Translators: String used to replace omitted page numbers in elided page
+#. range generated by paginators, e.g. [1, 2, '…', 5, 6, 7, '…', 9, 10].
+#: venv/lib/python3.9/site-packages/django/core/paginator.py:30
+msgid "…"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/paginator.py:50
+msgid "That page number is not an integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/paginator.py:52
+msgid "That page number is less than 1"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/paginator.py:57
+msgid "That page contains no results"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:22
+msgid "Enter a valid value."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:104
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:751
+msgid "Enter a valid URL."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:164
+msgid "Enter a valid integer."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:175
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: venv/lib/python3.9/site-packages/django/core/validators.py:256
+msgid ""
+"Enter a valid “slug” consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:264
+msgid ""
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:276
+#: venv/lib/python3.9/site-packages/django/core/validators.py:284
+#: venv/lib/python3.9/site-packages/django/core/validators.py:313
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:293
+#: venv/lib/python3.9/site-packages/django/core/validators.py:314
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:305
+#: venv/lib/python3.9/site-packages/django/core/validators.py:312
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:348
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:354
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:389
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:398
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:407
+#, python-format
+msgid "Ensure this value is a multiple of step size %(limit_value)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:417
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:435
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has "
+"%(show_value)d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has "
+"%(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:458
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:347
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:386
+msgid "Enter a number."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:460
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:465
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:470
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:539
+#, python-format
+msgid ""
+"File extension “%(extension)s” is not allowed. Allowed extensions are: "
+"%(allowed_extensions)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/core/validators.py:600
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/base.py:1401
+#: venv/lib/python3.9/site-packages/django/forms/models.py:899
+msgid "and"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/base.py:1403
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/constraints.py:17
+#, python-format
+msgid "Constraint “%(name)s” is violated."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:129
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:130
+msgid "This field cannot be null."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:131
+msgid "This field cannot be blank."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:132
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or
+#. 'month'. Eg: "Title must be unique for pub_date year"
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:136
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:174
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1065
+#, python-format
+msgid "“%(value)s” value must be either True or False."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1066
+#, python-format
+msgid "“%(value)s” value must be either True, False, or None."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1068
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1118
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1222
+msgid "Comma-separated integers"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1323
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1327
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1462
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1331
+msgid "Date (without time)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1458
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1466
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1471
+msgid "Date (with time)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1595
+#, python-format
+msgid "“%(value)s” value must be a decimal number."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1597
+msgid "Decimal number"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1754
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1758
+#, fuzzy
+#| msgid "Subscription"
+msgid "Duration"
+msgstr "Abonnement"
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1810
+msgid "Email address"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1835
+msgid "File path"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1913
+#, python-format
+msgid "“%(value)s” value must be a float."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1915
+msgid "Floating point number"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1955
+#, python-format
+msgid "“%(value)s” value must be an integer."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:1957
+msgid "Integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2049
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2066
+msgid "Small integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2074
+msgid "IPv4 address"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2105
+msgid "IP address"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2198
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2199
+#, python-format
+msgid "“%(value)s” value must be either None, True or False."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2201
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2252
+msgid "Positive big integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2267
+msgid "Positive integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2282
+msgid "Positive small integer"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2298
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2334
+msgid "Text"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2409
+#, python-format
+msgid ""
+"“%(value)s” value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2413
+#, python-format
+msgid ""
+"“%(value)s” value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2417
+msgid "Time"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2525
+msgid "URL"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2549
+msgid "Raw binary data"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2614
+#, python-format
+msgid "“%(value)s” is not a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/__init__.py:2616
+msgid "Universally unique identifier"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:231
+msgid "File"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/files.py:391
+msgid "Image"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:18
+msgid "A JSON object"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/json.py:20
+msgid "Value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:918
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:920
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1227
+msgid "One-to-one relationship"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1284
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1286
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/db/models/fields/related.py:1334
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: venv/lib/python3.9/site-packages/django/forms/boundfield.py:176
+msgid ":?.!"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:91
+msgid "This field is required."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:298
+msgid "Enter a whole number."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:467
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1240
+msgid "Enter a valid date."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:490
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1241
+msgid "Enter a valid time."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:517
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:551
+msgid "Enter a valid duration."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:552
+#, python-brace-format
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:618
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:619
+msgid "No file was submitted."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:620
+msgid "The submitted file is empty."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:622
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:627
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:693
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:856
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:948
+#: venv/lib/python3.9/site-packages/django/forms/models.py:1572
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:950
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1069
+#: venv/lib/python3.9/site-packages/django/forms/models.py:1570
+msgid "Enter a list of values."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1070
+msgid "Enter a complete value."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1309
+msgid "Enter a valid UUID."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/fields.py:1339
+msgid "Enter a valid JSON."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: venv/lib/python3.9/site-packages/django/forms/forms.py:98
+msgid ":"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/forms.py:248
+#: venv/lib/python3.9/site-packages/django/forms/forms.py:332
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:63
+#, python-format
+msgid ""
+"ManagementForm data is missing or has been tampered with. Missing fields: "
+"%(field_names)s. You may need to file a bug report if the issue persists."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:67
+#, python-format
+msgid "Please submit at most %(num)d form."
+msgid_plural "Please submit at most %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:72
+#, python-format
+msgid "Please submit at least %(num)d form."
+msgid_plural "Please submit at least %(num)d forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:483
+#: venv/lib/python3.9/site-packages/django/forms/formsets.py:490
+msgid "Order"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:892
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:897
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:904
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:913
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:1344
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:1435
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/models.py:1574
+#, python-format
+msgid "“%(pk)s” is not a valid value."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/utils.py:226
+#, python-format
+msgid ""
+"%(datetime)s couldn’t be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:439
+msgid "Clear"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:440
+msgid "Currently"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:441
+#, fuzzy
+#| msgid "Change Picture"
+msgid "Change"
+msgstr "Changer la photo"
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:769
+msgid "Unknown"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:770
+msgid "Yes"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/forms/widgets.py:771
+msgid "No"
+msgstr ""
+
+#. Translators: Please do not add spaces around commas.
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:853
+msgid "yes,no,maybe"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:883
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:900
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:902
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:904
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:906
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:908
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/template/defaultfilters.py:910
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:77
+msgid "p.m."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:78
+msgid "a.m."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:83
+msgid "PM"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:84
+msgid "AM"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:155
+msgid "midnight"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dateformat.py:157
+msgid "noon"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:7
+msgid "Monday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:8
+msgid "Tuesday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:9
+msgid "Wednesday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:10
+msgid "Thursday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:11
+msgid "Friday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:12
+msgid "Saturday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:13
+msgid "Sunday"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:16
+msgid "Mon"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:17
+msgid "Tue"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:18
+msgid "Wed"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:19
+msgid "Thu"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:20
+msgid "Fri"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:21
+msgid "Sat"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:22
+msgid "Sun"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:25
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:26
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:27
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:28
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:29
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:30
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:31
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:32
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:33
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:34
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:35
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:36
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:39
+msgid "jan"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:40
+msgid "feb"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:41
+msgid "mar"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:42
+msgid "apr"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:43
+msgid "may"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:44
+msgid "jun"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:45
+msgid "jul"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:46
+msgid "aug"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:47
+msgid "sep"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:48
+msgid "oct"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:49
+msgid "nov"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:50
+msgid "dec"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:53
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:54
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:55
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:56
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:57
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:58
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:59
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:60
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:61
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:62
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:63
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:64
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:67
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:68
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:69
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:70
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:71
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:72
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:73
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:74
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:75
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:76
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:77
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/dates.py:78
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/text.py:76
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: venv/lib/python3.9/site-packages/django/utils/text.py:271
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:94
+msgid ", "
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:9
+#, python-format
+msgid "%(num)d year"
+msgid_plural "%(num)d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:10
+#, python-format
+msgid "%(num)d month"
+msgid_plural "%(num)d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:11
+#, python-format
+msgid "%(num)d week"
+msgid_plural "%(num)d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:12
+#, python-format
+msgid "%(num)d day"
+msgid_plural "%(num)d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:13
+#, python-format
+msgid "%(num)d hour"
+msgid_plural "%(num)d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/utils/timesince.py:14
+#, python-format
+msgid "%(num)d minute"
+msgid_plural "%(num)d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:111
+msgid "Forbidden"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:112
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:116
+msgid ""
+"You are seeing this message because this HTTPS site requires a “Referer "
+"header” to be sent by your web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:122
+msgid ""
+"If you have configured your browser to disable “Referer” headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for “same-"
+"origin” requests."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:127
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a "
+"rel=\"noreferrer\" …> for links to third-party sites."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:136
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:142
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for “same-origin” requests."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/csrf.py:148
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:44
+msgid "No year specified"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:64
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:115
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:214
+msgid "Date out of range"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:94
+msgid "No month specified"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:147
+msgid "No day specified"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:194
+msgid "No week specified"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:349
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:380
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:652
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/dates.py:692
+#, python-format
+msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/detail.py:56
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/list.py:70
+msgid "Page is not “last”, nor can it be converted to an int."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/list.py:77
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/generic/list.py:169
+#, python-format
+msgid "Empty list and “%(class_name)s.allow_empty” is False."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/static.py:38
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/static.py:40
+#, python-format
+msgid "“%(path)s” does not exist"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/static.py:79
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:7
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/django/views/templates/default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1284
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1337
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1341
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1345
+msgid "No response body"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1309
+#: venv/lib/python3.9/site-packages/drf_spectacular/openapi.py:1361
+msgid "Unspecified response body"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/drf_spectacular/plumbing.py:447
+#, python-format
+msgid "Token-based authentication with required prefix \"%s\""
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/drf_spectacular/views.py:44
+msgid ""
+"\n"
+"    OpenApi3 schema for this API. Format can be selected via content "
+"negotiation.\n"
+"\n"
+"    - YAML: application/vnd.oai.openapi\n"
+"    - JSON: application/vnd.oai.openapi+json\n"
+"    "
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/jsonfield/fields.py:48
+msgid "Enter valid JSON."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/jsonfield/forms.py:15
+#, python-format
+msgid "\"%(value)s\" value must be valid JSON."
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1309
+#, python-format
+msgid "Attempting to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1314
+#, python-format
+msgid "Connected to qpid with SASL mechanism %s"
+msgstr ""
+
+#: venv/lib/python3.9/site-packages/kombu/transport/qpid.py:1332
+#, python-format
+msgid "Unable to connect to qpid with SASL mechanism %s"
+msgstr ""
+
+#, fuzzy, python-brace-format
+#~| msgid "Subscription Demo"
+#~ msgid "Subscription | {team}"
+#~ msgstr "Démo d'abonnement"
+
+#, fuzzy, python-brace-format
+#~| msgid "Subscription Demo"
+#~ msgid "Subscription Demo | {team}"
+#~ msgstr "Démo d'abonnement"
+
+#, fuzzy, python-brace-format
+#~| msgid "%(team)s Dashboard"
+#~ msgid "{team} Dashboard"
+#~ msgstr "%(team)s Tableau de bord"
+
+#, fuzzy
+#~| msgid "Pegasus Examples"
+#~ msgid "Pegasus Template"
+#~ msgstr "Pegasus Exemples"
+
+#~ msgid "Continue with Twitter"
+#~ msgstr "Continuer avec Twitter"
 
 #, fuzzy, python-format
-#| msgid ""
-#| "\n"
-#| "      This will permanently delete the <em><strong>%(team_name)s</"
-#| "strong></em> team and all associated data.\n"
-#| "      <strong>This action cannot be undone.</strong>\n"
-#| "      "
-msgid ""
-"\n"
-"      This will permanently delete the <em><strong>%(team_name)s</strong></"
-"em> team and all associated data.\n"
-"      "
-msgstr ""
-"\n"
-"Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</strong></"
-"em> et toutes les données associées.\n"
-"      <strong>Cette action ne peut pas être annulée.</strong>\n"
-"      "
+#~| msgid ""
+#~| "\n"
+#~| "      This will permanently delete the <em><strong>%(team_name)s</"
+#~| "strong></em> team and all associated data.\n"
+#~| "      <strong>This action cannot be undone.</strong>\n"
+#~| "      "
+#~ msgid ""
+#~ "\n"
+#~ "        This will permanently delete the <em><strong>%(team_name)s</"
+#~ "strong></em> team and all associated data.\n"
+#~ "        "
+#~ msgstr ""
+#~ "\n"
+#~ "Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</"
+#~ "strong></em> et toutes les données associées.\n"
+#~ "      <strong>Cette action ne peut pas être annulée.</strong>\n"
+#~ "      "
+
+#~ msgid "Subscription Demo"
+#~ msgstr "Démo d'abonnement"
+
+#~ msgid "Blog"
+#~ msgstr "Blog"
+
+#~ msgid "Impersonate a User"
+#~ msgstr "Usurper l'identité d'un utilisateur"
 
 #, python-format
-msgid ""
-"\n"
-"          You will be removed from the team: <em><strong>%(team_name)s</"
-"strong></em>.\n"
-"          After this, you will no longer be able to access any team pages, "
-"and will have to be invited again to regain access.\n"
-"        "
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"          This will remove <em><strong>%(member_name)s</strong></em> from "
-"your team: <em>%(team_name)s</em>.\n"
-"          They will no longer be able to access any team pages, and will "
-"have to be invited again to regain access.\n"
-"        "
-msgstr ""
-
-#, python-format
-msgid ""
-"\n"
-"      This will permanently delete the <em><strong>%(team_name)s</strong></"
-"em> team and all associated data.\n"
-"      <strong>This action cannot be undone.</strong>\n"
-"      "
-msgstr ""
-"\n"
-"Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</strong></"
-"em> et toutes les données associées.\n"
-"      <strong>Cette action ne peut pas être annulée.</strong>\n"
-"      "
+#~ msgid ""
+#~ "\n"
+#~ "      This will permanently delete the <em><strong>%(team_name)s</"
+#~ "strong></em> team and all associated data.\n"
+#~ "      <strong>This action cannot be undone.</strong>\n"
+#~ "      "
+#~ msgstr ""
+#~ "\n"
+#~ "Cela supprimera définitivement l'équipe <em><strong>%(team_name)s</"
+#~ "strong></em> et toutes les données associées.\n"
+#~ "      <strong>Cette action ne peut pas être annulée.</strong>\n"
+#~ "      "

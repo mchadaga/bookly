@@ -10,9 +10,10 @@
     <div class="pg-column">
       <h1 class="title">{{project_meta.NAME}}</h1>
       <h2 class="pg-subtitle">
-        {{project_meta.DESCRIPTION}}
+        
+        {% translate "Building readers, 1 story at a time." %}
       </h2>
-      <p class="buttons">
+      <p class="buttons"> 
         <a class="pg-button-primary" href="{% url 'account_signup' %}">
           {% translate "Create account" %}
         </a>

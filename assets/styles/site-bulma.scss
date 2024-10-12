@@ -37,7 +37,7 @@ $menu-item-active-background-color: $link;
 }
 
 body {
-  background-color: var(--body-background-color);
+  background-color: var(--body-background-color)
   color: var(--body-color);
 }
 
@@ -123,6 +123,35 @@ select {
 .select::after {
   color: #4a4a4a; /* Default color for light mode */
 }
+
+.homepage-logo {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .homepage-logo {
+      max-width: 400px;  /* Larger size for bigger screens */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .homepage-logo {
+      max-width: 500px;  /* Even larger for very big screens */
+  }
+}
+
+.navbar-item img {
+  max-height: 3.5rem;
+}
+
+.debug {
+  background-color: rgb(255,0,0);
+}
+
+
+
 
 
 @import "app/bulma/_all";
