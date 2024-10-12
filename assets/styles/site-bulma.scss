@@ -227,5 +227,10 @@ select {
   min-height: 100vh;  
 }
 
+
+.navbar .navbar-item.is-active {
+  border-bottom: none; 
+}
+
 @import "app/bulma/_all";
 @import "pegasus/bulma";

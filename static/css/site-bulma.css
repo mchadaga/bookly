@@ -10874,6 +10874,10 @@ select {
   min-height: 100vh;
 }
 
+.navbar .navbar-item.is-active, .navbar .pg-breadcrumbs li:not(:first-child) .navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar .navbar-item.pg-breadcrumb-active {
+  border-bottom: none;
+}
+
 #fullpage-form-wrapper {
   display: flex;
   justify-content: center;
@@ -11015,10 +11019,10 @@ select {
   color: hsl(0, 0%, 100%);
 }
 #pricing-page-head .navbar-item, #pricing-page-head .navbar-item .navbar-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(28, 32, 39, 0.7);
 }
 #pricing-page-head .navbar-item:hover, #pricing-page-head .navbar-item .navbar-link:hover {
-  color: hsl(0, 0%, 100%);
+  color: rgb(28, 32, 39);
   background-color: inherit;
 }
 
