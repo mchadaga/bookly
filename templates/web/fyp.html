@@ -134,9 +134,12 @@
 
 
 
+
       let enteredPlaceholder = document.getElementById("entered-placeholder");
       let entered = document.getElementById("entered");
       let endStoryMsg = document.getElementById("endstorymsg"); 
+      let spacer = document.querySelector(".spacer");
+
 
       function fetchRandomTextContent() {
         const url = new URL(
@@ -276,17 +279,15 @@
             
 
 
-              spacer = document.getElementById("spacer");
 
 
-              const spacer = document.getElementById("spacer");
-              const offset = 250; // The offset in pixels
-              
-              const elementPosition = spacer.getBoundingClientRect().top + window.pageYOffset;
-              const offsetPosition = elementPosition - offset;
-              
-              window.scrollTo({
-                top: offsetPosition,
+              let offset = 250; // The offset in pixels
+              let elementPosition = spacer.getBoundingClientRect().top;
+              let offsetPosition = elementPosition - offset;
+
+              console.log(elementPosition)
+              window.scrollBy({
+                top: 60,
                 behavior: "smooth" // Use "smooth" or "auto"
               });
             
