@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.db.models import Prefetch, Q
-from apps.app.models import TextContent, Hook, Paragraph, Sentence, UserTextContent, TextContentSimilarity
+from apps.app.models import TextContent, Hook, Paragraph, Sentence, UserTextContent, TextContentSimilarity, Question
 from apps.teams.decorators import login_and_team_required
 from django.views.decorators.http import require_POST
 from django.utils import timezone
@@ -247,6 +247,8 @@ def question_handle(request):
                 if status == "complete" or status == "complete and detailed":
                     conversation_ended = True
 
+            print(json_data)
+
             # Return the response as a JSON object, including whether to end the conversation
             return JsonResponse({
                 "response": json_data,
@@ -261,3 +263,8 @@ def question_handle(request):
             return JsonResponse({"error": f"An unexpected error occurred: {str(e)}"}, status=500)
 
     return JsonResponse({"error": "Invalid request method"}, status=400)
+
+def get_question(request):
+    textcontent_id = request.GET.get('text_content_id')
+    question = Question.objects.filter(textcontent_id=textcontent_id).first()
+    return JsonResponse({'question': question.question, 'answer': question.answer})

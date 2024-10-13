@@ -140,6 +140,10 @@
       let currentTextContentId = null;
       let enteredStory = false;
       let storyFinished = false;
+
+      let question = null;
+      let answer = null;
+      
       let chatInputFocused = false;
       let chatHistory = [];
       let audioElement = new Audio();  // Add this line
@@ -150,6 +154,8 @@
       let spacer = document.querySelector(".spacer");
 
       let trackerSpacer = document.querySelector(".tracker-spacer");    
+
+      let modalOpen = false;  // Add this variable to track if the modal is open
 
 
       function triggerConfetti() {
@@ -325,7 +331,7 @@
           chatInput.focus();
         }
 
-        if (document.activeElement !== chatInput) {
+        if (document.activeElement !== chatInput && !modalOpen) {  // Add !modalOpen check
           if (event.key === "Enter") {
             endStoryMsg.style.display = 'none';
             enteredPlaceholder.style.display = 'block';
@@ -375,32 +381,42 @@
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
                 entered.placeholder = "Congrats on finishing this story! 🎉 Press [Enter] to read your next story"
-
-                let test =fetch('{% url "app:question_handle" %}', {
-                    method: "POST",
-                    body: 'formData',
-                  })
-                    .then((response) => {
-                      if (!response.ok) {
-                        throw new Error("Network response was not ok");
-                      }
-                      return response.json();
-                    })
-                    .then((data) => data.ai_response)
-                    .catch((error) => {
-                      console.error("Error:", error);
-                      return "Sorry, I couldn't process your question. Please try again.";
-                    });
-
-
-                console.log(test);
-
-
-
-
-
-
                 triggerConfetti();
+                //question_handle();
+
+              // Fetch a question from the getquestion endpoint
+              fetch(`{% url 'app:get_question' %}?text_content_id=${currentTextContentId}`)
+                .then(response => response.json())
+                .then(data => {
+                  if (data.question) {
+                    console.log(data.question);
+                    question = data.question;
+                    console.log(data.answer);
+                    answer = data.answer;
+                    // Create a bubble with the question
+                    const questionBubble = document.createElement('button');
+                    questionBubble.className = 'question-bubble';
+                    questionBubble.textContent = data.question;
+
+                    // Add click event listener to open the modal
+                    questionBubble.addEventListener('click', () => openQuestionModal(data.question, data.answer));
+
+                    // Insert the question bubble after the last sentence
+                    const lastSentence = document.querySelector('.sentence:last-child');
+                    if (lastSentence) {
+                      lastSentence.insertAdjacentElement('afterend', questionBubble);
+                    }
+
+                    // Scroll to the question bubble
+                    questionBubble.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'center',
+                      inline: 'nearest'
+                    });
+                  }
+                })
+                .catch(error => console.error('Error fetching question:', error));
+                
 
               // User has reached the last sentence
               storyFinished = true;
@@ -480,4 +496,113 @@
     display: inline-block;
 }
 </style>
+
+<script>
+// Add these new functions and HTML elements for the modal
+function openQuestionModal(question, answer) {
+  document.getElementById('questionText').textContent = question;
+  document.getElementById('questionModal').style.display = 'block';
+  document.getElementById('userAnswer').value = '';
+  document.getElementById('aiResponse').textContent = '';
+  modalOpen = true;  // Set modalOpen to true when opening the modal
+}
+
+function closeQuestionModal() {
+  document.getElementById('questionModal').style.display = 'none';
+  modalOpen = false;  // Set modalOpen to false when closing the modal
+}
+
+function submitAnswer() {
+  const userInput = document.getElementById('userAnswer').value;
+  const question = document.getElementById('questionText').textContent;
+
+  // Call the question_handle endpoint
+  fetch('{% url "app:question_handle" %}', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'X-CSRFToken': '{{ csrf_token }}'
+    },
+    body: `question=${encodeURIComponent(question)}&answer=${encodeURIComponent(answer)}&user_input=${encodeURIComponent(userInput)}`
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.response['STATUS'] == "complete" || data.response['STATUS'] == "complete and detailed"){
+        document.getElementById('aiResponse').textContent = "Complete. Great job!"
+    }
+    else{
+        document.getElementById('aiResponse').textContent = data.response['STATUS']+". "+data.response['NEXT QUESTION'];
+    }
+    if (data.conversation_ended) {
+      //closeQuestionModal();
+      triggerConfetti();
+    }
+  })
+  .catch(error => console.error('Error:', error));
+}
+</script>
+
+<div id="questionModal" class="modal" style="display: none; color: black;">
+  <div class="modal-content">
+    <span class="close" onclick="closeQuestionModal()">&times;</span>
+    <h2>Question</h2>
+    <p id="questionText" style="color: black;"></p>
+    <textarea id="userAnswer" rows="4" cols="50"></textarea>
+    <button onclick="submitAnswer()">Submit</button>
+    <div id="aiResponse"></div>
+  </div>
+</div>
+
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .question-bubble {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .question-bubble:hover {
+    background-color: #e0e0e0;
+  }
+</style>
+
 {% endblock %}
