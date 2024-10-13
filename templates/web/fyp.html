@@ -10,18 +10,71 @@
   </div>
 
   <input
+  placeholder = "Press [Space] to read further; Enter in any questions you have for HookBook AI here."
   id="entered"
   style="
     font-size: 16px;
     padding-left: 15px;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 75%;
-    rounded:2.5rem; 
+    bottom: 1vw;
+    left: 12.5vw;
+    width: 75vw;
+    border-radius:2.5rem; 
     height: 50px;
+    display: none;
+
+    "
+  />
+
+  <div
+  id = "entered-placeholder"
+  style="
+  font-size: 16px;
+  padding-left: 15px;
+  position: fixed;
+  bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+  border-radius:2.5rem; 
+  height: 50px;
+  display:block; 
+  font-size: 1.5rem;
+
   "
-/>
+    >
+
+    Press [Space] to read more
+
+  </div>
+
+
+  <div
+  
+  id = "endstorymsg"
+  style="
+  font-size: 16px;
+  padding-left: 15px;
+  position: fixed;
+  bottom: 1vw;
+    left: 50%;
+    transform: translateX(-50%);
+  border-radius:2.5rem; 
+  display:none; 
+  font-size: 1.5rem;
+  background:rgb(255,255,255);
+  border-radius: 1rem;
+  padding: 1rem;
+  color: rgb(0,0,0);
+  white-space: nowrap; 
+  
+  "
+
+
+    >
+  Congrats! You've finised this story 🎉! Press [Enter] to read your next story
+  </div>
+
+
   <div>
     {% comment %}
     <div
@@ -61,6 +114,7 @@
         margin: 1rem 0;
         padding: 0.5rem;
         border-radius: 5px;
+        color: #000;
       }
       .user-message {
         background-color: #e6f2ff;
@@ -77,6 +131,12 @@
       let storyFinished = false;
       let chatInputFocused = false;
       let chatHistory = [];
+
+
+
+      let enteredPlaceholder = document.getElementById("entered-placeholder");
+      let entered = document.getElementById("entered");
+      let endStoryMsg = document.getElementById("endstorymsg"); 
 
       function fetchRandomTextContent() {
         const url = new URL(
@@ -185,6 +245,10 @@
 
         if (document.activeElement !== chatInput) {
           if (event.key === "Enter") {
+            endStoryMsg.style.display = 'none';
+            enteredPlaceholder.style.display = 'block';
+            entered.style.display = 'none';
+
             if (storyFinished) {
               // User finished the story and wants to move to the next one
               storyFinished = false;
@@ -197,6 +261,10 @@
               fetchRandomTextContent();
             }
           } else if (event.code === "Space") {
+            enteredPlaceholder.style.display = 'none';
+            entered.style.display = 'block';
+
+
             event.preventDefault();
             const sentences = document.querySelectorAll(".sentence");
             if (currentSentenceIndex < sentences.length - 1) {
@@ -204,10 +272,14 @@
               sentences[currentSentenceIndex].style.display = "block";
               if (currentSentenceIndex === 0) {
                 // User entered the story
+             
+
                 enteredStory = true;
                 trackTextContentClick();
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
+                endStoryMsg.style.display = 'block'; 
+                entered.style.display = 'none';   
               // User has reached the last sentence
               storyFinished = true;
               // Optionally, you can display a message here to prompt the user to press Enter
@@ -221,6 +293,9 @@
           event.key === "Enter" &&
           chatInput.value.trim() !== ""
         ) {
+
+
+
           event.preventDefault();
           const userMessage = chatInput.value.trim();
           chatInput.value = "";
@@ -269,6 +344,7 @@
       updateClickedTextContents();
     </script>
 
-    {% endblock %}
   </div>
 </div>
+{% endblock %}
+
