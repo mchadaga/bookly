@@ -351,7 +351,7 @@ body {
 }
 
 a {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
   cursor: pointer;
   text-decoration: none;
 }
@@ -454,10 +454,10 @@ table th {
 }
 
 a.box:hover, a.box:focus {
-  box-shadow: 0 0.5em 1em -0.125em rgba(10.2, 10.2, 10.2, 0.1), 0 0 0 1px hsl(217, 71%, 53%);
+  box-shadow: 0 0.5em 1em -0.125em rgba(10.2, 10.2, 10.2, 0.1), 0 0 0 1px hsl(217, 100%, 62%);
 }
 a.box:active {
-  box-shadow: inset 0 1px 2px rgba(10.2, 10.2, 10.2, 0.2), 0 0 0 1px hsl(217, 71%, 53%);
+  box-shadow: inset 0 1px 2px rgba(10.2, 10.2, 10.2, 0.2), 0 0 0 1px hsl(217, 100%, 62%);
 }
 
 .button, .pg-button-light, .pg-button-danger, .pg-button-secondary, .pg-button-primary {
@@ -502,7 +502,7 @@ a.box:active {
   color: hsl(0, 0%, 21%);
 }
 .button:focus:not(:active), .pg-button-light:focus:not(:active), .pg-button-danger:focus:not(:active), .pg-button-secondary:focus:not(:active), .pg-button-primary:focus:not(:active), .button.is-focused:not(:active), .is-focused.pg-button-light:not(:active), .is-focused.pg-button-danger:not(:active), .is-focused.pg-button-secondary:not(:active), .is-focused.pg-button-primary:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .button:active, .pg-button-light:active, .pg-button-danger:active, .pg-button-secondary:active, .pg-button-primary:active, .button.is-active, .pg-breadcrumbs li:not(:first-child) .button.pg-breadcrumb-active, .is-active.pg-button-light, .pg-breadcrumbs li:not(:first-child) .pg-button-light.pg-breadcrumb-active, .is-active.pg-button-danger, .pg-breadcrumbs li:not(:first-child) .pg-button-danger.pg-breadcrumb-active, .is-active.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .pg-button-secondary.pg-breadcrumb-active, .is-active.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .pg-button-primary.pg-breadcrumb-active {
   border-color: hsl(0, 0%, 29%);
@@ -530,11 +530,11 @@ a.box:active {
 .button.is-ghost, .is-ghost.pg-button-light, .is-ghost.pg-button-danger, .is-ghost.pg-button-secondary, .is-ghost.pg-button-primary {
   background: none;
   border-color: transparent;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
   text-decoration: none;
 }
 .button.is-ghost:hover, .is-ghost.pg-button-light:hover, .is-ghost.pg-button-danger:hover, .is-ghost.pg-button-secondary:hover, .is-ghost.pg-button-primary:hover, .button.is-ghost.is-hovered, .is-ghost.is-hovered.pg-button-light, .is-ghost.is-hovered.pg-button-danger, .is-ghost.is-hovered.pg-button-secondary, .is-ghost.is-hovered.pg-button-primary {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
   text-decoration: underline;
 }
 .button.is-white, .is-white.pg-button-light, .is-white.pg-button-danger, .is-white.pg-button-secondary, .is-white.pg-button-primary {
@@ -870,12 +870,12 @@ a.box:active {
   color: #fff;
 }
 .button.is-primary, .is-primary.pg-button-light, .is-primary.pg-button-danger, .pg-button-secondary, .pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   border-color: transparent;
   color: #fff;
 }
 .button.is-primary:hover, .is-primary.pg-button-light:hover, .is-primary.pg-button-danger:hover, .pg-button-secondary:hover, .pg-button-primary:hover, .button.is-primary.is-hovered, .is-primary.is-hovered.pg-button-light, .is-primary.is-hovered.pg-button-danger, .is-hovered.pg-button-secondary, .is-hovered.pg-button-primary {
-  background-color: hsl(217, 71%, 50.5%);
+  background-color: hsl(217, 100%, 59.5%);
   border-color: transparent;
   color: #fff;
 }
@@ -884,21 +884,21 @@ a.box:active {
   color: #fff;
 }
 .button.is-primary:focus:not(:active), .is-primary.pg-button-light:focus:not(:active), .is-primary.pg-button-danger:focus:not(:active), .pg-button-secondary:focus:not(:active), .pg-button-primary:focus:not(:active), .button.is-primary.is-focused:not(:active), .is-primary.is-focused.pg-button-light:not(:active), .is-primary.is-focused.pg-button-danger:not(:active), .is-focused.pg-button-secondary:not(:active), .is-focused.pg-button-primary:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .button.is-primary:active, .is-primary.pg-button-light:active, .is-primary.pg-button-danger:active, .pg-button-secondary:active, .pg-button-primary:active, .button.is-primary.is-active, .pg-breadcrumbs li:not(:first-child) .button.is-primary.pg-breadcrumb-active, .is-primary.is-active.pg-button-light, .pg-breadcrumbs li:not(:first-child) .is-primary.pg-button-light.pg-breadcrumb-active, .is-primary.is-active.pg-button-danger, .pg-breadcrumbs li:not(:first-child) .is-primary.pg-button-danger.pg-breadcrumb-active, .is-active.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .pg-button-secondary.pg-breadcrumb-active, .is-active.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .pg-button-primary.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   border-color: transparent;
   color: #fff;
 }
 .button.is-primary[disabled], .is-primary[disabled].pg-button-light, .is-primary[disabled].pg-button-danger, [disabled].pg-button-secondary, [disabled].pg-button-primary, fieldset[disabled] .button.is-primary, fieldset[disabled] .is-primary.pg-button-light, fieldset[disabled] .is-primary.pg-button-danger, fieldset[disabled] .pg-button-secondary, fieldset[disabled] .pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   box-shadow: none;
 }
 .button.is-primary.is-inverted, .is-primary.is-inverted.pg-button-light, .is-primary.is-inverted.pg-button-danger, .is-inverted.pg-button-secondary, .is-inverted.pg-button-primary {
   background-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-primary.is-inverted:hover, .is-primary.is-inverted.pg-button-light:hover, .is-primary.is-inverted.pg-button-danger:hover, .is-inverted.pg-button-secondary:hover, .is-inverted.pg-button-primary:hover, .button.is-primary.is-inverted.is-hovered, .is-primary.is-inverted.is-hovered.pg-button-light, .is-primary.is-inverted.is-hovered.pg-button-danger, .is-inverted.is-hovered.pg-button-secondary, .is-inverted.is-hovered.pg-button-primary {
   background-color: rgb(242.25, 242.25, 242.25);
@@ -907,32 +907,32 @@ a.box:active {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-primary.is-loading::after, .button.is-primary.pg-is-loading::after, .is-primary.is-loading.pg-button-light::after, .is-primary.pg-button-light.pg-is-loading::after, .is-primary.is-loading.pg-button-danger::after, .is-primary.pg-button-danger.pg-is-loading::after, .is-loading.pg-button-secondary::after, .pg-button-secondary.pg-is-loading::after, .is-loading.pg-button-primary::after, .pg-button-primary.pg-is-loading::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-primary.is-outlined, .is-primary.is-outlined.pg-button-light, .is-primary.pg-button-danger, .pg-button-secondary, .is-outlined.pg-button-primary, .pg-button-primary.pg-button-danger {
   background-color: transparent;
-  border-color: hsl(217, 71%, 53%);
-  color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-primary.is-outlined:hover, .is-primary.is-outlined.pg-button-light:hover, .is-primary.pg-button-danger:hover, .pg-button-secondary:hover, .is-outlined.pg-button-primary:hover, .pg-button-primary.pg-button-danger:hover, .button.is-primary.is-outlined.is-hovered, .is-primary.is-outlined.is-hovered.pg-button-light, .is-primary.is-hovered.pg-button-danger, .is-hovered.pg-button-secondary, .is-outlined.is-hovered.pg-button-primary, .is-hovered.pg-button-primary.pg-button-danger, .button.is-primary.is-outlined:focus, .is-primary.is-outlined.pg-button-light:focus, .is-primary.pg-button-danger:focus, .pg-button-secondary:focus, .is-outlined.pg-button-primary:focus, .pg-button-primary.pg-button-danger:focus, .button.is-primary.is-outlined.is-focused, .is-primary.is-outlined.is-focused.pg-button-light, .is-primary.is-focused.pg-button-danger, .is-focused.pg-button-secondary, .is-outlined.is-focused.pg-button-primary, .is-focused.pg-button-primary.pg-button-danger {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .button.is-primary.is-outlined.is-loading::after, .button.is-primary.is-outlined.pg-is-loading::after, .is-primary.is-outlined.is-loading.pg-button-light::after, .is-primary.is-outlined.pg-button-light.pg-is-loading::after, .is-primary.is-loading.pg-button-danger::after, .is-primary.pg-button-danger.pg-is-loading::after, .is-loading.pg-button-secondary::after, .pg-button-secondary.pg-is-loading::after, .is-outlined.is-loading.pg-button-primary::after, .is-outlined.pg-button-primary.pg-is-loading::after, .is-loading.pg-button-primary.pg-button-danger::after, .pg-button-primary.pg-button-danger.pg-is-loading::after {
-  border-color: transparent transparent hsl(217, 71%, 53%) hsl(217, 71%, 53%) !important;
+  border-color: transparent transparent hsl(217, 100%, 62%) hsl(217, 100%, 62%) !important;
 }
 .button.is-primary.is-outlined.is-loading:hover::after, .button.is-primary.is-outlined.pg-is-loading:hover::after, .is-primary.is-outlined.is-loading.pg-button-light:hover::after, .is-primary.is-outlined.pg-button-light.pg-is-loading:hover::after, .is-primary.is-loading.pg-button-danger:hover::after, .is-primary.pg-button-danger.pg-is-loading:hover::after, .is-loading.pg-button-secondary:hover::after, .pg-button-secondary.pg-is-loading:hover::after, .is-outlined.is-loading.pg-button-primary:hover::after, .is-outlined.pg-button-primary.pg-is-loading:hover::after, .is-loading.pg-button-primary.pg-button-danger:hover::after, .pg-button-primary.pg-button-danger.pg-is-loading:hover::after, .button.is-primary.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-outlined.is-hovered.pg-is-loading::after, .is-primary.is-outlined.is-loading.is-hovered.pg-button-light::after, .is-primary.is-outlined.is-hovered.pg-button-light.pg-is-loading::after, .is-primary.is-loading.is-hovered.pg-button-danger::after, .is-primary.is-hovered.pg-button-danger.pg-is-loading::after, .is-loading.is-hovered.pg-button-secondary::after, .is-hovered.pg-button-secondary.pg-is-loading::after, .is-outlined.is-loading.is-hovered.pg-button-primary::after, .is-outlined.is-hovered.pg-button-primary.pg-is-loading::after, .is-loading.is-hovered.pg-button-primary.pg-button-danger::after, .is-hovered.pg-button-primary.pg-button-danger.pg-is-loading::after, .button.is-primary.is-outlined.is-loading:focus::after, .button.is-primary.is-outlined.pg-is-loading:focus::after, .is-primary.is-outlined.is-loading.pg-button-light:focus::after, .is-primary.is-outlined.pg-button-light.pg-is-loading:focus::after, .is-primary.is-loading.pg-button-danger:focus::after, .is-primary.pg-button-danger.pg-is-loading:focus::after, .is-loading.pg-button-secondary:focus::after, .pg-button-secondary.pg-is-loading:focus::after, .is-outlined.is-loading.pg-button-primary:focus::after, .is-outlined.pg-button-primary.pg-is-loading:focus::after, .is-loading.pg-button-primary.pg-button-danger:focus::after, .pg-button-primary.pg-button-danger.pg-is-loading:focus::after, .button.is-primary.is-outlined.is-loading.is-focused::after, .button.is-primary.is-outlined.is-focused.pg-is-loading::after, .is-primary.is-outlined.is-loading.is-focused.pg-button-light::after, .is-primary.is-outlined.is-focused.pg-button-light.pg-is-loading::after, .is-primary.is-loading.is-focused.pg-button-danger::after, .is-primary.is-focused.pg-button-danger.pg-is-loading::after, .is-loading.is-focused.pg-button-secondary::after, .is-focused.pg-button-secondary.pg-is-loading::after, .is-outlined.is-loading.is-focused.pg-button-primary::after, .is-outlined.is-focused.pg-button-primary.pg-is-loading::after, .is-loading.is-focused.pg-button-primary.pg-button-danger::after, .is-focused.pg-button-primary.pg-button-danger.pg-is-loading::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-primary.is-outlined[disabled], .is-primary.is-outlined[disabled].pg-button-light, .is-primary[disabled].pg-button-danger, [disabled].pg-button-secondary, .is-outlined[disabled].pg-button-primary, [disabled].pg-button-primary.pg-button-danger, fieldset[disabled] .button.is-primary.is-outlined, fieldset[disabled] .is-primary.is-outlined.pg-button-light, fieldset[disabled] .is-primary.pg-button-danger, fieldset[disabled] .pg-button-secondary, fieldset[disabled] .is-outlined.pg-button-primary, fieldset[disabled] .pg-button-primary.pg-button-danger {
   background-color: transparent;
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
   box-shadow: none;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-primary.is-inverted.is-outlined, .is-primary.is-inverted.is-outlined.pg-button-light, .is-primary.is-inverted.pg-button-danger, .is-inverted.pg-button-secondary, .is-inverted.is-outlined.pg-button-primary, .is-inverted.pg-button-primary.pg-button-danger {
   background-color: transparent;
@@ -941,10 +941,10 @@ a.box:active {
 }
 .button.is-primary.is-inverted.is-outlined:hover, .is-primary.is-inverted.is-outlined.pg-button-light:hover, .is-primary.is-inverted.pg-button-danger:hover, .is-inverted.pg-button-secondary:hover, .is-inverted.is-outlined.pg-button-primary:hover, .is-inverted.pg-button-primary.pg-button-danger:hover, .button.is-primary.is-inverted.is-outlined.is-hovered, .is-primary.is-inverted.is-outlined.is-hovered.pg-button-light, .is-primary.is-inverted.is-hovered.pg-button-danger, .is-inverted.is-hovered.pg-button-secondary, .is-inverted.is-outlined.is-hovered.pg-button-primary, .is-inverted.is-hovered.pg-button-primary.pg-button-danger, .button.is-primary.is-inverted.is-outlined:focus, .is-primary.is-inverted.is-outlined.pg-button-light:focus, .is-primary.is-inverted.pg-button-danger:focus, .is-inverted.pg-button-secondary:focus, .is-inverted.is-outlined.pg-button-primary:focus, .is-inverted.pg-button-primary.pg-button-danger:focus, .button.is-primary.is-inverted.is-outlined.is-focused, .is-primary.is-inverted.is-outlined.is-focused.pg-button-light, .is-primary.is-inverted.is-focused.pg-button-danger, .is-inverted.is-focused.pg-button-secondary, .is-inverted.is-outlined.is-focused.pg-button-primary, .is-inverted.is-focused.pg-button-primary.pg-button-danger {
   background-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-primary.is-inverted.is-outlined.is-loading:hover::after, .button.is-primary.is-inverted.is-outlined.pg-is-loading:hover::after, .is-primary.is-inverted.is-outlined.is-loading.pg-button-light:hover::after, .is-primary.is-inverted.is-outlined.pg-button-light.pg-is-loading:hover::after, .is-primary.is-inverted.is-loading.pg-button-danger:hover::after, .is-primary.is-inverted.pg-button-danger.pg-is-loading:hover::after, .is-inverted.is-loading.pg-button-secondary:hover::after, .is-inverted.pg-button-secondary.pg-is-loading:hover::after, .is-inverted.is-outlined.is-loading.pg-button-primary:hover::after, .is-inverted.is-outlined.pg-button-primary.pg-is-loading:hover::after, .is-inverted.is-loading.pg-button-primary.pg-button-danger:hover::after, .is-inverted.pg-button-primary.pg-button-danger.pg-is-loading:hover::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-primary.is-inverted.is-outlined.is-hovered.pg-is-loading::after, .is-primary.is-inverted.is-outlined.is-loading.is-hovered.pg-button-light::after, .is-primary.is-inverted.is-outlined.is-hovered.pg-button-light.pg-is-loading::after, .is-primary.is-inverted.is-loading.is-hovered.pg-button-danger::after, .is-primary.is-inverted.is-hovered.pg-button-danger.pg-is-loading::after, .is-inverted.is-loading.is-hovered.pg-button-secondary::after, .is-inverted.is-hovered.pg-button-secondary.pg-is-loading::after, .is-inverted.is-outlined.is-loading.is-hovered.pg-button-primary::after, .is-inverted.is-outlined.is-hovered.pg-button-primary.pg-is-loading::after, .is-inverted.is-loading.is-hovered.pg-button-primary.pg-button-danger::after, .is-inverted.is-hovered.pg-button-primary.pg-button-danger.pg-is-loading::after, .button.is-primary.is-inverted.is-outlined.is-loading:focus::after, .button.is-primary.is-inverted.is-outlined.pg-is-loading:focus::after, .is-primary.is-inverted.is-outlined.is-loading.pg-button-light:focus::after, .is-primary.is-inverted.is-outlined.pg-button-light.pg-is-loading:focus::after, .is-primary.is-inverted.is-loading.pg-button-danger:focus::after, .is-primary.is-inverted.pg-button-danger.pg-is-loading:focus::after, .is-inverted.is-loading.pg-button-secondary:focus::after, .is-inverted.pg-button-secondary.pg-is-loading:focus::after, .is-inverted.is-outlined.is-loading.pg-button-primary:focus::after, .is-inverted.is-outlined.pg-button-primary.pg-is-loading:focus::after, .is-inverted.is-loading.pg-button-primary.pg-button-danger:focus::after, .is-inverted.pg-button-primary.pg-button-danger.pg-is-loading:focus::after, .button.is-primary.is-inverted.is-outlined.is-loading.is-focused::after, .button.is-primary.is-inverted.is-outlined.is-focused.pg-is-loading::after, .is-primary.is-inverted.is-outlined.is-loading.is-focused.pg-button-light::after, .is-primary.is-inverted.is-outlined.is-focused.pg-button-light.pg-is-loading::after, .is-primary.is-inverted.is-loading.is-focused.pg-button-danger::after, .is-primary.is-inverted.is-focused.pg-button-danger.pg-is-loading::after, .is-inverted.is-loading.is-focused.pg-button-secondary::after, .is-inverted.is-focused.pg-button-secondary.pg-is-loading::after, .is-inverted.is-outlined.is-loading.is-focused.pg-button-primary::after, .is-inverted.is-outlined.is-focused.pg-button-primary.pg-is-loading::after, .is-inverted.is-loading.is-focused.pg-button-primary.pg-button-danger::after, .is-inverted.is-focused.pg-button-primary.pg-button-danger.pg-is-loading::after {
-  border-color: transparent transparent hsl(217, 71%, 53%) hsl(217, 71%, 53%) !important;
+  border-color: transparent transparent hsl(217, 100%, 62%) hsl(217, 100%, 62%) !important;
 }
 .button.is-primary.is-inverted.is-outlined[disabled], .is-primary.is-inverted.is-outlined[disabled].pg-button-light, .is-primary.is-inverted[disabled].pg-button-danger, .is-inverted[disabled].pg-button-secondary, .is-inverted.is-outlined[disabled].pg-button-primary, .is-inverted[disabled].pg-button-primary.pg-button-danger, fieldset[disabled] .button.is-primary.is-inverted.is-outlined, fieldset[disabled] .is-primary.is-inverted.is-outlined.pg-button-light, fieldset[disabled] .is-primary.is-inverted.pg-button-danger, fieldset[disabled] .is-inverted.pg-button-secondary, fieldset[disabled] .is-inverted.is-outlined.pg-button-primary, fieldset[disabled] .is-inverted.pg-button-primary.pg-button-danger {
   background-color: transparent;
@@ -953,26 +953,26 @@ a.box:active {
   color: #fff;
 }
 .button.is-primary.is-light, .is-primary.is-light.pg-button-light, .is-primary.is-light.pg-button-danger, .is-light.pg-button-secondary, .is-light.pg-button-primary {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-primary.is-light:hover, .is-primary.is-light.pg-button-light:hover, .is-primary.is-light.pg-button-danger:hover, .is-light.pg-button-secondary:hover, .is-light.pg-button-primary:hover, .button.is-primary.is-light.is-hovered, .is-primary.is-light.is-hovered.pg-button-light, .is-primary.is-light.is-hovered.pg-button-danger, .is-light.is-hovered.pg-button-secondary, .is-light.is-hovered.pg-button-primary {
-  background-color: hsl(217, 71%, 93.5%);
+  background-color: hsl(217, 100%, 93.5%);
   border-color: transparent;
-  color: hsl(217, 71%, 45%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-primary.is-light:active, .is-primary.is-light.pg-button-light:active, .is-primary.is-light.pg-button-danger:active, .is-light.pg-button-secondary:active, .is-light.pg-button-primary:active, .button.is-primary.is-light.is-active, .pg-breadcrumbs li:not(:first-child) .button.is-primary.is-light.pg-breadcrumb-active, .is-primary.is-light.is-active.pg-button-light, .pg-breadcrumbs li:not(:first-child) .is-primary.is-light.pg-button-light.pg-breadcrumb-active, .is-primary.is-light.is-active.pg-button-danger, .pg-breadcrumbs li:not(:first-child) .is-primary.is-light.pg-button-danger.pg-breadcrumb-active, .is-light.is-active.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .is-light.pg-button-secondary.pg-breadcrumb-active, .is-light.is-active.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .is-light.pg-button-primary.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 91%);
+  background-color: hsl(217, 100%, 91%);
   border-color: transparent;
-  color: hsl(217, 71%, 45%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-link, .is-link.pg-button-light, .is-link.pg-button-danger, .is-link.pg-button-secondary, .is-link.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   border-color: transparent;
   color: #fff;
 }
 .button.is-link:hover, .is-link.pg-button-light:hover, .is-link.pg-button-danger:hover, .is-link.pg-button-secondary:hover, .is-link.pg-button-primary:hover, .button.is-link.is-hovered, .is-link.is-hovered.pg-button-light, .is-link.is-hovered.pg-button-danger, .is-link.is-hovered.pg-button-secondary, .is-link.is-hovered.pg-button-primary {
-  background-color: hsl(217, 71%, 50.5%);
+  background-color: hsl(217, 100%, 59.5%);
   border-color: transparent;
   color: #fff;
 }
@@ -981,21 +981,21 @@ a.box:active {
   color: #fff;
 }
 .button.is-link:focus:not(:active), .is-link.pg-button-light:focus:not(:active), .is-link.pg-button-danger:focus:not(:active), .is-link.pg-button-secondary:focus:not(:active), .is-link.pg-button-primary:focus:not(:active), .button.is-link.is-focused:not(:active), .is-link.is-focused.pg-button-light:not(:active), .is-link.is-focused.pg-button-danger:not(:active), .is-link.is-focused.pg-button-secondary:not(:active), .is-link.is-focused.pg-button-primary:not(:active) {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .button.is-link:active, .is-link.pg-button-light:active, .is-link.pg-button-danger:active, .is-link.pg-button-secondary:active, .is-link.pg-button-primary:active, .button.is-link.is-active, .pg-breadcrumbs li:not(:first-child) .button.is-link.pg-breadcrumb-active, .is-link.is-active.pg-button-light, .pg-breadcrumbs li:not(:first-child) .is-link.pg-button-light.pg-breadcrumb-active, .is-link.is-active.pg-button-danger, .pg-breadcrumbs li:not(:first-child) .is-link.pg-button-danger.pg-breadcrumb-active, .is-link.is-active.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .is-link.pg-button-secondary.pg-breadcrumb-active, .is-link.is-active.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .is-link.pg-button-primary.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   border-color: transparent;
   color: #fff;
 }
 .button.is-link[disabled], .is-link[disabled].pg-button-light, .is-link[disabled].pg-button-danger, .is-link[disabled].pg-button-secondary, .is-link[disabled].pg-button-primary, fieldset[disabled] .button.is-link, fieldset[disabled] .is-link.pg-button-light, fieldset[disabled] .is-link.pg-button-danger, fieldset[disabled] .is-link.pg-button-secondary, fieldset[disabled] .is-link.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   box-shadow: none;
 }
 .button.is-link.is-inverted, .is-link.is-inverted.pg-button-light, .is-link.is-inverted.pg-button-danger, .is-link.is-inverted.pg-button-secondary, .is-link.is-inverted.pg-button-primary {
   background-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-link.is-inverted:hover, .is-link.is-inverted.pg-button-light:hover, .is-link.is-inverted.pg-button-danger:hover, .is-link.is-inverted.pg-button-secondary:hover, .is-link.is-inverted.pg-button-primary:hover, .button.is-link.is-inverted.is-hovered, .is-link.is-inverted.is-hovered.pg-button-light, .is-link.is-inverted.is-hovered.pg-button-danger, .is-link.is-inverted.is-hovered.pg-button-secondary, .is-link.is-inverted.is-hovered.pg-button-primary {
   background-color: rgb(242.25, 242.25, 242.25);
@@ -1004,32 +1004,32 @@ a.box:active {
   background-color: #fff;
   border-color: transparent;
   box-shadow: none;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-link.is-loading::after, .button.is-link.pg-is-loading::after, .is-link.is-loading.pg-button-light::after, .is-link.pg-button-light.pg-is-loading::after, .is-link.is-loading.pg-button-danger::after, .is-link.pg-button-danger.pg-is-loading::after, .is-link.is-loading.pg-button-secondary::after, .is-link.pg-button-secondary.pg-is-loading::after, .is-link.is-loading.pg-button-primary::after, .is-link.pg-button-primary.pg-is-loading::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-link.is-outlined, .is-link.is-outlined.pg-button-light, .is-link.pg-button-danger, .is-link.pg-button-secondary, .is-link.is-outlined.pg-button-primary {
   background-color: transparent;
-  border-color: hsl(217, 71%, 53%);
-  color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-link.is-outlined:hover, .is-link.is-outlined.pg-button-light:hover, .is-link.pg-button-danger:hover, .is-link.pg-button-secondary:hover, .is-link.is-outlined.pg-button-primary:hover, .button.is-link.is-outlined.is-hovered, .is-link.is-outlined.is-hovered.pg-button-light, .is-link.is-hovered.pg-button-danger, .is-link.is-hovered.pg-button-secondary, .is-link.is-outlined.is-hovered.pg-button-primary, .button.is-link.is-outlined:focus, .is-link.is-outlined.pg-button-light:focus, .is-link.pg-button-danger:focus, .is-link.pg-button-secondary:focus, .is-link.is-outlined.pg-button-primary:focus, .button.is-link.is-outlined.is-focused, .is-link.is-outlined.is-focused.pg-button-light, .is-link.is-focused.pg-button-danger, .is-link.is-focused.pg-button-secondary, .is-link.is-outlined.is-focused.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .button.is-link.is-outlined.is-loading::after, .button.is-link.is-outlined.pg-is-loading::after, .is-link.is-outlined.is-loading.pg-button-light::after, .is-link.is-outlined.pg-button-light.pg-is-loading::after, .is-link.is-loading.pg-button-danger::after, .is-link.pg-button-danger.pg-is-loading::after, .is-link.is-loading.pg-button-secondary::after, .is-link.pg-button-secondary.pg-is-loading::after, .is-link.is-outlined.is-loading.pg-button-primary::after, .is-link.is-outlined.pg-button-primary.pg-is-loading::after {
-  border-color: transparent transparent hsl(217, 71%, 53%) hsl(217, 71%, 53%) !important;
+  border-color: transparent transparent hsl(217, 100%, 62%) hsl(217, 100%, 62%) !important;
 }
 .button.is-link.is-outlined.is-loading:hover::after, .button.is-link.is-outlined.pg-is-loading:hover::after, .is-link.is-outlined.is-loading.pg-button-light:hover::after, .is-link.is-outlined.pg-button-light.pg-is-loading:hover::after, .is-link.is-loading.pg-button-danger:hover::after, .is-link.pg-button-danger.pg-is-loading:hover::after, .is-link.is-loading.pg-button-secondary:hover::after, .is-link.pg-button-secondary.pg-is-loading:hover::after, .is-link.is-outlined.is-loading.pg-button-primary:hover::after, .is-link.is-outlined.pg-button-primary.pg-is-loading:hover::after, .button.is-link.is-outlined.is-loading.is-hovered::after, .button.is-link.is-outlined.is-hovered.pg-is-loading::after, .is-link.is-outlined.is-loading.is-hovered.pg-button-light::after, .is-link.is-outlined.is-hovered.pg-button-light.pg-is-loading::after, .is-link.is-loading.is-hovered.pg-button-danger::after, .is-link.is-hovered.pg-button-danger.pg-is-loading::after, .is-link.is-loading.is-hovered.pg-button-secondary::after, .is-link.is-hovered.pg-button-secondary.pg-is-loading::after, .is-link.is-outlined.is-loading.is-hovered.pg-button-primary::after, .is-link.is-outlined.is-hovered.pg-button-primary.pg-is-loading::after, .button.is-link.is-outlined.is-loading:focus::after, .button.is-link.is-outlined.pg-is-loading:focus::after, .is-link.is-outlined.is-loading.pg-button-light:focus::after, .is-link.is-outlined.pg-button-light.pg-is-loading:focus::after, .is-link.is-loading.pg-button-danger:focus::after, .is-link.pg-button-danger.pg-is-loading:focus::after, .is-link.is-loading.pg-button-secondary:focus::after, .is-link.pg-button-secondary.pg-is-loading:focus::after, .is-link.is-outlined.is-loading.pg-button-primary:focus::after, .is-link.is-outlined.pg-button-primary.pg-is-loading:focus::after, .button.is-link.is-outlined.is-loading.is-focused::after, .button.is-link.is-outlined.is-focused.pg-is-loading::after, .is-link.is-outlined.is-loading.is-focused.pg-button-light::after, .is-link.is-outlined.is-focused.pg-button-light.pg-is-loading::after, .is-link.is-loading.is-focused.pg-button-danger::after, .is-link.is-focused.pg-button-danger.pg-is-loading::after, .is-link.is-loading.is-focused.pg-button-secondary::after, .is-link.is-focused.pg-button-secondary.pg-is-loading::after, .is-link.is-outlined.is-loading.is-focused.pg-button-primary::after, .is-link.is-outlined.is-focused.pg-button-primary.pg-is-loading::after {
   border-color: transparent transparent #fff #fff !important;
 }
 .button.is-link.is-outlined[disabled], .is-link.is-outlined[disabled].pg-button-light, .is-link[disabled].pg-button-danger, .is-link[disabled].pg-button-secondary, .is-link.is-outlined[disabled].pg-button-primary, fieldset[disabled] .button.is-link.is-outlined, fieldset[disabled] .is-link.is-outlined.pg-button-light, fieldset[disabled] .is-link.pg-button-danger, fieldset[disabled] .is-link.pg-button-secondary, fieldset[disabled] .is-link.is-outlined.pg-button-primary {
   background-color: transparent;
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
   box-shadow: none;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-link.is-inverted.is-outlined, .is-link.is-inverted.is-outlined.pg-button-light, .is-link.is-inverted.pg-button-danger, .is-link.is-inverted.pg-button-secondary, .is-link.is-inverted.is-outlined.pg-button-primary {
   background-color: transparent;
@@ -1038,10 +1038,10 @@ a.box:active {
 }
 .button.is-link.is-inverted.is-outlined:hover, .is-link.is-inverted.is-outlined.pg-button-light:hover, .is-link.is-inverted.pg-button-danger:hover, .is-link.is-inverted.pg-button-secondary:hover, .is-link.is-inverted.is-outlined.pg-button-primary:hover, .button.is-link.is-inverted.is-outlined.is-hovered, .is-link.is-inverted.is-outlined.is-hovered.pg-button-light, .is-link.is-inverted.is-hovered.pg-button-danger, .is-link.is-inverted.is-hovered.pg-button-secondary, .is-link.is-inverted.is-outlined.is-hovered.pg-button-primary, .button.is-link.is-inverted.is-outlined:focus, .is-link.is-inverted.is-outlined.pg-button-light:focus, .is-link.is-inverted.pg-button-danger:focus, .is-link.is-inverted.pg-button-secondary:focus, .is-link.is-inverted.is-outlined.pg-button-primary:focus, .button.is-link.is-inverted.is-outlined.is-focused, .is-link.is-inverted.is-outlined.is-focused.pg-button-light, .is-link.is-inverted.is-focused.pg-button-danger, .is-link.is-inverted.is-focused.pg-button-secondary, .is-link.is-inverted.is-outlined.is-focused.pg-button-primary {
   background-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .button.is-link.is-inverted.is-outlined.is-loading:hover::after, .button.is-link.is-inverted.is-outlined.pg-is-loading:hover::after, .is-link.is-inverted.is-outlined.is-loading.pg-button-light:hover::after, .is-link.is-inverted.is-outlined.pg-button-light.pg-is-loading:hover::after, .is-link.is-inverted.is-loading.pg-button-danger:hover::after, .is-link.is-inverted.pg-button-danger.pg-is-loading:hover::after, .is-link.is-inverted.is-loading.pg-button-secondary:hover::after, .is-link.is-inverted.pg-button-secondary.pg-is-loading:hover::after, .is-link.is-inverted.is-outlined.is-loading.pg-button-primary:hover::after, .is-link.is-inverted.is-outlined.pg-button-primary.pg-is-loading:hover::after, .button.is-link.is-inverted.is-outlined.is-loading.is-hovered::after, .button.is-link.is-inverted.is-outlined.is-hovered.pg-is-loading::after, .is-link.is-inverted.is-outlined.is-loading.is-hovered.pg-button-light::after, .is-link.is-inverted.is-outlined.is-hovered.pg-button-light.pg-is-loading::after, .is-link.is-inverted.is-loading.is-hovered.pg-button-danger::after, .is-link.is-inverted.is-hovered.pg-button-danger.pg-is-loading::after, .is-link.is-inverted.is-loading.is-hovered.pg-button-secondary::after, .is-link.is-inverted.is-hovered.pg-button-secondary.pg-is-loading::after, .is-link.is-inverted.is-outlined.is-loading.is-hovered.pg-button-primary::after, .is-link.is-inverted.is-outlined.is-hovered.pg-button-primary.pg-is-loading::after, .button.is-link.is-inverted.is-outlined.is-loading:focus::after, .button.is-link.is-inverted.is-outlined.pg-is-loading:focus::after, .is-link.is-inverted.is-outlined.is-loading.pg-button-light:focus::after, .is-link.is-inverted.is-outlined.pg-button-light.pg-is-loading:focus::after, .is-link.is-inverted.is-loading.pg-button-danger:focus::after, .is-link.is-inverted.pg-button-danger.pg-is-loading:focus::after, .is-link.is-inverted.is-loading.pg-button-secondary:focus::after, .is-link.is-inverted.pg-button-secondary.pg-is-loading:focus::after, .is-link.is-inverted.is-outlined.is-loading.pg-button-primary:focus::after, .is-link.is-inverted.is-outlined.pg-button-primary.pg-is-loading:focus::after, .button.is-link.is-inverted.is-outlined.is-loading.is-focused::after, .button.is-link.is-inverted.is-outlined.is-focused.pg-is-loading::after, .is-link.is-inverted.is-outlined.is-loading.is-focused.pg-button-light::after, .is-link.is-inverted.is-outlined.is-focused.pg-button-light.pg-is-loading::after, .is-link.is-inverted.is-loading.is-focused.pg-button-danger::after, .is-link.is-inverted.is-focused.pg-button-danger.pg-is-loading::after, .is-link.is-inverted.is-loading.is-focused.pg-button-secondary::after, .is-link.is-inverted.is-focused.pg-button-secondary.pg-is-loading::after, .is-link.is-inverted.is-outlined.is-loading.is-focused.pg-button-primary::after, .is-link.is-inverted.is-outlined.is-focused.pg-button-primary.pg-is-loading::after {
-  border-color: transparent transparent hsl(217, 71%, 53%) hsl(217, 71%, 53%) !important;
+  border-color: transparent transparent hsl(217, 100%, 62%) hsl(217, 100%, 62%) !important;
 }
 .button.is-link.is-inverted.is-outlined[disabled], .is-link.is-inverted.is-outlined[disabled].pg-button-light, .is-link.is-inverted[disabled].pg-button-danger, .is-link.is-inverted[disabled].pg-button-secondary, .is-link.is-inverted.is-outlined[disabled].pg-button-primary, fieldset[disabled] .button.is-link.is-inverted.is-outlined, fieldset[disabled] .is-link.is-inverted.is-outlined.pg-button-light, fieldset[disabled] .is-link.is-inverted.pg-button-danger, fieldset[disabled] .is-link.is-inverted.pg-button-secondary, fieldset[disabled] .is-link.is-inverted.is-outlined.pg-button-primary {
   background-color: transparent;
@@ -1050,18 +1050,18 @@ a.box:active {
   color: #fff;
 }
 .button.is-link.is-light, .is-link.is-light.pg-button-light, .is-link.is-light.pg-button-danger, .is-link.is-light.pg-button-secondary, .is-link.is-light.pg-button-primary {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-link.is-light:hover, .is-link.is-light.pg-button-light:hover, .is-link.is-light.pg-button-danger:hover, .is-link.is-light.pg-button-secondary:hover, .is-link.is-light.pg-button-primary:hover, .button.is-link.is-light.is-hovered, .is-link.is-light.is-hovered.pg-button-light, .is-link.is-light.is-hovered.pg-button-danger, .is-link.is-light.is-hovered.pg-button-secondary, .is-link.is-light.is-hovered.pg-button-primary {
-  background-color: hsl(217, 71%, 93.5%);
+  background-color: hsl(217, 100%, 93.5%);
   border-color: transparent;
-  color: hsl(217, 71%, 45%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-link.is-light:active, .is-link.is-light.pg-button-light:active, .is-link.is-light.pg-button-danger:active, .is-link.is-light.pg-button-secondary:active, .is-link.is-light.pg-button-primary:active, .button.is-link.is-light.is-active, .pg-breadcrumbs li:not(:first-child) .button.is-link.is-light.pg-breadcrumb-active, .is-link.is-light.is-active.pg-button-light, .pg-breadcrumbs li:not(:first-child) .is-link.is-light.pg-button-light.pg-breadcrumb-active, .is-link.is-light.is-active.pg-button-danger, .pg-breadcrumbs li:not(:first-child) .is-link.is-light.pg-button-danger.pg-breadcrumb-active, .is-link.is-light.is-active.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .is-link.is-light.pg-button-secondary.pg-breadcrumb-active, .is-link.is-light.is-active.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .is-link.is-light.pg-button-primary.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 91%);
+  background-color: hsl(217, 100%, 91%);
   border-color: transparent;
-  color: hsl(217, 71%, 45%);
+  color: hsl(217, 100%, 41%);
 }
 .button.is-info, .is-info.pg-button-light, .is-info.pg-button-danger, .is-info.pg-button-secondary, .is-info.pg-button-primary {
   background-color: hsl(207, 61%, 53%);
@@ -2024,20 +2024,20 @@ div.icon-text {
   color: #fff;
 }
 .notification.is-primary, .notification.pg-button-secondary, .notification.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .notification.is-primary.is-light, .notification.is-light.pg-button-secondary, .notification.is-light.pg-button-primary {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .notification.is-link {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .notification.is-link.is-light {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .notification.is-info {
   background-color: hsl(207, 61%, 53%);
@@ -2145,28 +2145,28 @@ div.icon-text {
   background-image: linear-gradient(to right, hsl(0, 0%, 21%) 30%, hsl(0, 0%, 93%) 30%);
 }
 .progress.is-primary::-webkit-progress-value, .progress.pg-button-secondary::-webkit-progress-value, .progress.pg-button-primary::-webkit-progress-value {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-primary::-moz-progress-bar, .progress.pg-button-secondary::-moz-progress-bar, .progress.pg-button-primary::-moz-progress-bar {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-primary::-ms-fill, .progress.pg-button-secondary::-ms-fill, .progress.pg-button-primary::-ms-fill {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-primary:indeterminate, .progress.pg-button-secondary:indeterminate, .progress.pg-button-primary:indeterminate {
-  background-image: linear-gradient(to right, hsl(217, 71%, 53%) 30%, hsl(0, 0%, 93%) 30%);
+  background-image: linear-gradient(to right, hsl(217, 100%, 62%) 30%, hsl(0, 0%, 93%) 30%);
 }
 .progress.is-link::-webkit-progress-value {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-link::-moz-progress-bar {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-link::-ms-fill {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
 }
 .progress.is-link:indeterminate {
-  background-image: linear-gradient(to right, hsl(217, 71%, 53%) 30%, hsl(0, 0%, 93%) 30%);
+  background-image: linear-gradient(to right, hsl(217, 100%, 62%) 30%, hsl(0, 0%, 93%) 30%);
 }
 .progress.is-info::-webkit-progress-value {
   background-color: hsl(207, 61%, 53%);
@@ -2293,14 +2293,14 @@ div.icon-text {
 .table th.is-primary,
 .table th.pg-button-secondary,
 .table th.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .table td.is-link,
 .table th.is-link {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .table td.is-info,
@@ -2336,7 +2336,7 @@ div.icon-text {
 }
 .table td.is-selected,
 .table th.is-selected {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .table td.is-selected a,
@@ -2356,7 +2356,7 @@ div.icon-text {
   text-align: left;
 }
 .table tr.is-selected {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .table tr.is-selected a,
@@ -2514,20 +2514,20 @@ div.icon-text {
   color: #fff;
 }
 .tag:not(body).is-primary, .pg-badge-success:not(body).is-primary, .pg-badge-default:not(body).is-primary, .tag.pg-button-secondary:not(body), .pg-button-secondary.pg-badge-success:not(body), .pg-button-secondary.pg-badge-default:not(body), .tag.pg-button-primary:not(body), .pg-button-primary.pg-badge-success:not(body), .pg-button-primary.pg-badge-default:not(body) {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .tag:not(body).is-primary.is-light, .pg-badge-success:not(body).is-primary.is-light, .pg-badge-default:not(body).is-primary.is-light, .tag.pg-button-secondary:not(body).is-light, .pg-button-secondary.pg-badge-success:not(body).is-light, .pg-button-secondary.pg-badge-default:not(body).is-light, .tag.pg-button-primary:not(body).is-light, .pg-button-primary.pg-badge-success:not(body).is-light, .pg-button-primary.pg-badge-default:not(body).is-light {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .tag:not(body).is-link, .pg-badge-success:not(body).is-link, .pg-badge-default:not(body).is-link {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .tag:not(body).is-link.is-light, .pg-badge-success:not(body).is-link.is-light, .pg-badge-default:not(body).is-link.is-light {
-  background-color: hsl(217, 71%, 96%);
-  color: hsl(217, 71%, 45%);
+  background-color: hsl(217, 100%, 96%);
+  color: hsl(217, 100%, 41%);
 }
 .tag:not(body).is-info, .pg-badge-success:not(body).is-info, .pg-badge-default:not(body).is-info {
   background-color: hsl(207, 61%, 53%);
@@ -2770,8 +2770,8 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   border-color: hsl(0, 0%, 71%);
 }
 .select select:focus, .pg-select select:focus, .textarea:focus, .input:focus, .pg-control:focus, .select select.is-focused, .pg-select select.is-focused, .is-focused.textarea, .is-focused.input, .is-focused.pg-control, .select select:active, .pg-select select:active, .textarea:active, .input:active, .pg-control:active, .select select.is-active, .select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .select select.pg-breadcrumb-active, .pg-select select.is-active, .pg-select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .pg-select select.pg-breadcrumb-active, .is-active.textarea, .pg-breadcrumbs li:not(:first-child) .textarea.pg-breadcrumb-active, .is-active.input, .pg-breadcrumbs li:not(:first-child) .input.pg-breadcrumb-active, .is-active.pg-control, .pg-breadcrumbs li:not(:first-child) .pg-control.pg-breadcrumb-active {
-  border-color: hsl(217, 71%, 53%);
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  border-color: hsl(217, 100%, 62%);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .select select[disabled], .pg-select select[disabled], [disabled].textarea, [disabled].input, [disabled].pg-control, fieldset[disabled] .select select, fieldset[disabled] .pg-select select, .select fieldset[disabled] select, .pg-select fieldset[disabled] select, fieldset[disabled] .textarea, fieldset[disabled] .input, fieldset[disabled] .pg-control {
   background-color: hsl(0, 0%, 96%);
@@ -2825,16 +2825,16 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   box-shadow: 0 0 0 0.125em rgba(53.55, 53.55, 53.55, 0.25);
 }
 .is-primary.textarea, .textarea.pg-button-secondary, .textarea.pg-button-primary, .is-primary.input, .is-primary.pg-control, .input.pg-button-secondary, .pg-button-secondary.pg-control, .input.pg-button-primary, .pg-button-primary.pg-control {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .is-primary.textarea:focus, .textarea.pg-button-secondary:focus, .textarea.pg-button-primary:focus, .is-primary.input:focus, .is-primary.pg-control:focus, .input.pg-button-secondary:focus, .pg-button-secondary.pg-control:focus, .input.pg-button-primary:focus, .pg-button-primary.pg-control:focus, .is-primary.is-focused.textarea, .is-focused.textarea.pg-button-secondary, .is-focused.textarea.pg-button-primary, .is-primary.is-focused.input, .is-primary.is-focused.pg-control, .is-focused.input.pg-button-secondary, .is-focused.pg-button-secondary.pg-control, .is-focused.input.pg-button-primary, .is-focused.pg-button-primary.pg-control, .is-primary.textarea:active, .textarea.pg-button-secondary:active, .textarea.pg-button-primary:active, .is-primary.input:active, .is-primary.pg-control:active, .input.pg-button-secondary:active, .pg-button-secondary.pg-control:active, .input.pg-button-primary:active, .pg-button-primary.pg-control:active, .is-primary.is-active.textarea, .pg-breadcrumbs li:not(:first-child) .is-primary.textarea.pg-breadcrumb-active, .is-active.textarea.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .textarea.pg-button-secondary.pg-breadcrumb-active, .is-active.textarea.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .textarea.pg-button-primary.pg-breadcrumb-active, .is-primary.is-active.input, .pg-breadcrumbs li:not(:first-child) .is-primary.input.pg-breadcrumb-active, .is-primary.is-active.pg-control, .pg-breadcrumbs li:not(:first-child) .is-primary.pg-control.pg-breadcrumb-active, .is-active.input.pg-button-secondary, .pg-breadcrumbs li:not(:first-child) .input.pg-button-secondary.pg-breadcrumb-active, .is-active.pg-button-secondary.pg-control, .pg-breadcrumbs li:not(:first-child) .pg-button-secondary.pg-control.pg-breadcrumb-active, .is-active.input.pg-button-primary, .pg-breadcrumbs li:not(:first-child) .input.pg-button-primary.pg-breadcrumb-active, .is-active.pg-button-primary.pg-control, .pg-breadcrumbs li:not(:first-child) .pg-button-primary.pg-control.pg-breadcrumb-active {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .is-link.textarea, .is-link.input, .is-link.pg-control {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .is-link.textarea:focus, .is-link.input:focus, .is-link.pg-control:focus, .is-link.is-focused.textarea, .is-link.is-focused.input, .is-link.is-focused.pg-control, .is-link.textarea:active, .is-link.input:active, .is-link.pg-control:active, .is-link.is-active.textarea, .pg-breadcrumbs li:not(:first-child) .is-link.textarea.pg-breadcrumb-active, .is-link.is-active.input, .pg-breadcrumbs li:not(:first-child) .is-link.input.pg-breadcrumb-active, .is-link.is-active.pg-control, .pg-breadcrumbs li:not(:first-child) .is-link.pg-control.pg-breadcrumb-active {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .is-info.textarea, .is-info.input, .is-info.pg-control {
   border-color: hsl(207, 61%, 53%);
@@ -2943,7 +2943,7 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   height: 2.5em;
 }
 .select:not(.is-multiple):not(.is-loading):not(.pg-is-loading)::after, .pg-select:not(.is-multiple):not(.is-loading):not(.pg-is-loading)::after {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
   right: 1.125em;
   z-index: 4;
 }
@@ -3026,28 +3026,28 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   box-shadow: 0 0 0 0.125em rgba(53.55, 53.55, 53.55, 0.25);
 }
 .select.is-primary:not(:hover)::after, .is-primary.pg-select:not(:hover)::after, .select.pg-button-secondary:not(:hover)::after, .pg-button-secondary.pg-select:not(:hover)::after, .select.pg-button-primary:not(:hover)::after, .pg-button-primary.pg-select:not(:hover)::after {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .select.is-primary select, .is-primary.pg-select select, .select.pg-button-secondary select, .pg-button-secondary.pg-select select, .select.pg-button-primary select, .pg-button-primary.pg-select select {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .select.is-primary select:hover, .is-primary.pg-select select:hover, .select.pg-button-secondary select:hover, .pg-button-secondary.pg-select select:hover, .select.pg-button-primary select:hover, .pg-button-primary.pg-select select:hover, .select.is-primary select.is-hovered, .is-primary.pg-select select.is-hovered, .select.pg-button-secondary select.is-hovered, .pg-button-secondary.pg-select select.is-hovered, .select.pg-button-primary select.is-hovered, .pg-button-primary.pg-select select.is-hovered {
-  border-color: hsl(217, 71%, 48%);
+  border-color: hsl(217, 100%, 57%);
 }
 .select.is-primary select:focus, .is-primary.pg-select select:focus, .select.pg-button-secondary select:focus, .pg-button-secondary.pg-select select:focus, .select.pg-button-primary select:focus, .pg-button-primary.pg-select select:focus, .select.is-primary select.is-focused, .is-primary.pg-select select.is-focused, .select.pg-button-secondary select.is-focused, .pg-button-secondary.pg-select select.is-focused, .select.pg-button-primary select.is-focused, .pg-button-primary.pg-select select.is-focused, .select.is-primary select:active, .is-primary.pg-select select:active, .select.pg-button-secondary select:active, .pg-button-secondary.pg-select select:active, .select.pg-button-primary select:active, .pg-button-primary.pg-select select:active, .select.is-primary select.is-active, .select.is-primary .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .select.is-primary select.pg-breadcrumb-active, .is-primary.pg-select select.is-active, .is-primary.pg-select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .is-primary.pg-select select.pg-breadcrumb-active, .select.pg-button-secondary select.is-active, .select.pg-button-secondary .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .select.pg-button-secondary select.pg-breadcrumb-active, .pg-button-secondary.pg-select select.is-active, .pg-button-secondary.pg-select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .pg-button-secondary.pg-select select.pg-breadcrumb-active, .select.pg-button-primary select.is-active, .select.pg-button-primary .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .select.pg-button-primary select.pg-breadcrumb-active, .pg-button-primary.pg-select select.is-active, .pg-button-primary.pg-select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .pg-button-primary.pg-select select.pg-breadcrumb-active {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .select.is-link:not(:hover)::after, .is-link.pg-select:not(:hover)::after {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .select.is-link select, .is-link.pg-select select {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
 }
 .select.is-link select:hover, .is-link.pg-select select:hover, .select.is-link select.is-hovered, .is-link.pg-select select.is-hovered {
-  border-color: hsl(217, 71%, 48%);
+  border-color: hsl(217, 100%, 57%);
 }
 .select.is-link select:focus, .is-link.pg-select select:focus, .select.is-link select.is-focused, .is-link.pg-select select.is-focused, .select.is-link select:active, .is-link.pg-select select:active, .select.is-link select.is-active, .select.is-link .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .select.is-link select.pg-breadcrumb-active, .is-link.pg-select select.is-active, .is-link.pg-select .pg-breadcrumbs li:not(:first-child) select.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .is-link.pg-select select.pg-breadcrumb-active {
-  box-shadow: 0 0 0 0.125em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0 0.125em rgba(61.2, 135.49, 255, 0.25);
 }
 .select.is-info:not(:hover)::after, .is-info.pg-select:not(:hover)::after {
   border-color: hsl(207, 61%, 53%);
@@ -3221,42 +3221,42 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   color: #fff;
 }
 .file.is-primary .file-cta, .file.pg-button-secondary .file-cta, .file.pg-button-primary .file-cta {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   border-color: transparent;
   color: #fff;
 }
 .file.is-primary:hover .file-cta, .file.pg-button-secondary:hover .file-cta, .file.pg-button-primary:hover .file-cta, .file.is-primary.is-hovered .file-cta, .file.is-hovered.pg-button-secondary .file-cta, .file.is-hovered.pg-button-primary .file-cta {
-  background-color: hsl(217, 71%, 50.5%);
+  background-color: hsl(217, 100%, 59.5%);
   border-color: transparent;
   color: #fff;
 }
 .file.is-primary:focus .file-cta, .file.pg-button-secondary:focus .file-cta, .file.pg-button-primary:focus .file-cta, .file.is-primary.is-focused .file-cta, .file.is-focused.pg-button-secondary .file-cta, .file.is-focused.pg-button-primary .file-cta {
   border-color: transparent;
-  box-shadow: 0 0 0.5em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0.5em rgba(61.2, 135.49, 255, 0.25);
   color: #fff;
 }
 .file.is-primary:active .file-cta, .file.pg-button-secondary:active .file-cta, .file.pg-button-primary:active .file-cta, .file.is-primary.is-active .file-cta, .pg-breadcrumbs li:not(:first-child) .file.is-primary.pg-breadcrumb-active .file-cta, .file.is-active.pg-button-secondary .file-cta, .pg-breadcrumbs li:not(:first-child) .file.pg-button-secondary.pg-breadcrumb-active .file-cta, .file.is-active.pg-button-primary .file-cta, .pg-breadcrumbs li:not(:first-child) .file.pg-button-primary.pg-breadcrumb-active .file-cta {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   border-color: transparent;
   color: #fff;
 }
 .file.is-link .file-cta {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   border-color: transparent;
   color: #fff;
 }
 .file.is-link:hover .file-cta, .file.is-link.is-hovered .file-cta {
-  background-color: hsl(217, 71%, 50.5%);
+  background-color: hsl(217, 100%, 59.5%);
   border-color: transparent;
   color: #fff;
 }
 .file.is-link:focus .file-cta, .file.is-link.is-focused .file-cta {
   border-color: transparent;
-  box-shadow: 0 0 0.5em rgba(50.0565, 115.29485, 220.2435, 0.25);
+  box-shadow: 0 0 0.5em rgba(61.2, 135.49, 255, 0.25);
   color: #fff;
 }
 .file.is-link:active .file-cta, .file.is-link.is-active .file-cta, .pg-breadcrumbs li:not(:first-child) .file.is-link.pg-breadcrumb-active .file-cta {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   border-color: transparent;
   color: #fff;
 }
@@ -3536,10 +3536,10 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
   color: hsl(0, 0%, 21%);
 }
 .help.is-primary, .is-primary.pg-help, .help.pg-button-secondary, .pg-button-secondary.pg-help, .help.pg-button-primary, .pg-button-primary.pg-help {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .help.is-link, .is-link.pg-help {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .help.is-info, .is-info.pg-help {
   color: hsl(207, 61%, 53%);
@@ -3861,7 +3861,7 @@ a.tag:hover, a.pg-badge-success:hover, a.pg-badge-default:hover {
 }
 .breadcrumb a {
   align-items: center;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
   display: flex;
   justify-content: center;
   padding: 0 0.75em;
@@ -4086,7 +4086,7 @@ button.dropdown-item:hover {
 a.dropdown-item.is-active, .pg-breadcrumbs li:not(:first-child) a.dropdown-item.pg-breadcrumb-active,
 button.dropdown-item.is-active,
 .pg-breadcrumbs li:not(:first-child) button.dropdown-item.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 
@@ -4283,7 +4283,7 @@ button.dropdown-item.is-active,
   color: hsl(0, 0%, 21%);
 }
 .menu-list a.is-active, .menu-list .pg-breadcrumbs li:not(:first-child) a.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .menu-list a.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .menu-list li ul {
@@ -4367,26 +4367,26 @@ button.dropdown-item.is-active,
   border-color: hsl(0, 0%, 21%);
 }
 .message.is-primary, .message.pg-button-secondary, .message.pg-button-primary {
-  background-color: hsl(217, 71%, 96%);
+  background-color: hsl(217, 100%, 96%);
 }
 .message.is-primary .message-header, .message.pg-button-secondary .message-header, .message.pg-button-primary .message-header {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .message.is-primary .message-body, .message.pg-button-secondary .message-body, .message.pg-button-primary .message-body {
-  border-color: hsl(217, 71%, 53%);
-  color: hsl(217, 71%, 45%);
+  border-color: hsl(217, 100%, 62%);
+  color: hsl(217, 100%, 41%);
 }
 .message.is-link {
-  background-color: hsl(217, 71%, 96%);
+  background-color: hsl(217, 100%, 96%);
 }
 .message.is-link .message-header {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .message.is-link .message-body {
-  border-color: hsl(217, 71%, 53%);
-  color: hsl(217, 71%, 45%);
+  border-color: hsl(217, 100%, 62%);
+  color: hsl(217, 100%, 41%);
 }
 .message.is-info {
   background-color: hsl(207, 61%, 96%);
@@ -4837,7 +4837,7 @@ button.dropdown-item.is-active,
   }
 }
 .navbar.is-primary, .navbar.pg-button-secondary, .navbar.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .navbar.is-primary .navbar-brand > .navbar-item, .navbar.pg-button-secondary .navbar-brand > .navbar-item, .navbar.pg-button-primary .navbar-brand > .navbar-item,
@@ -4862,7 +4862,7 @@ button.dropdown-item.is-active,
 .navbar.pg-button-primary .navbar-brand .navbar-link.is-active,
 .navbar.pg-button-primary .navbar-brand .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
 .pg-breadcrumbs li:not(:first-child) .navbar.pg-button-primary .navbar-brand .navbar-link.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   color: #fff;
 }
 .navbar.is-primary .navbar-brand .navbar-link::after, .navbar.pg-button-secondary .navbar-brand .navbar-link::after, .navbar.pg-button-primary .navbar-brand .navbar-link::after {
@@ -4930,7 +4930,7 @@ button.dropdown-item.is-active,
   .navbar.pg-button-primary .navbar-end .navbar-link.is-active,
   .navbar.pg-button-primary .navbar-end .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
   .pg-breadcrumbs li:not(:first-child) .navbar.pg-button-primary .navbar-end .navbar-link.pg-breadcrumb-active {
-    background-color: hsl(217, 71%, 48%);
+    background-color: hsl(217, 100%, 57%);
     color: #fff;
   }
   .navbar.is-primary .navbar-start .navbar-link::after, .navbar.pg-button-secondary .navbar-start .navbar-link::after, .navbar.pg-button-primary .navbar-start .navbar-link::after,
@@ -4952,16 +4952,16 @@ button.dropdown-item.is-active,
   .navbar.pg-button-primary .navbar-item.has-dropdown.is-active .navbar-link,
   .navbar.pg-button-primary .pg-breadcrumbs li:not(:first-child) .navbar-item.has-dropdown.pg-breadcrumb-active .navbar-link,
   .pg-breadcrumbs li:not(:first-child) .navbar.pg-button-primary .navbar-item.has-dropdown.pg-breadcrumb-active .navbar-link {
-    background-color: hsl(217, 71%, 48%);
+    background-color: hsl(217, 100%, 57%);
     color: #fff;
   }
   .navbar.is-primary .navbar-dropdown a.navbar-item.is-active, .navbar.is-primary .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar.is-primary .navbar-dropdown a.navbar-item.pg-breadcrumb-active, .navbar.pg-button-secondary .navbar-dropdown a.navbar-item.is-active, .navbar.pg-button-secondary .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar.pg-button-secondary .navbar-dropdown a.navbar-item.pg-breadcrumb-active, .navbar.pg-button-primary .navbar-dropdown a.navbar-item.is-active, .navbar.pg-button-primary .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar.pg-button-primary .navbar-dropdown a.navbar-item.pg-breadcrumb-active {
-    background-color: hsl(217, 71%, 53%);
+    background-color: hsl(217, 100%, 62%);
     color: #fff;
   }
 }
 .navbar.is-link {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .navbar.is-link .navbar-brand > .navbar-item,
@@ -4974,7 +4974,7 @@ button.dropdown-item.is-active,
 .navbar.is-link .navbar-brand .navbar-link.is-active,
 .navbar.is-link .navbar-brand .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
 .pg-breadcrumbs li:not(:first-child) .navbar.is-link .navbar-brand .navbar-link.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   color: #fff;
 }
 .navbar.is-link .navbar-brand .navbar-link::after {
@@ -5006,7 +5006,7 @@ button.dropdown-item.is-active,
   .navbar.is-link .navbar-end .navbar-link.is-active,
   .navbar.is-link .navbar-end .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
   .pg-breadcrumbs li:not(:first-child) .navbar.is-link .navbar-end .navbar-link.pg-breadcrumb-active {
-    background-color: hsl(217, 71%, 48%);
+    background-color: hsl(217, 100%, 57%);
     color: #fff;
   }
   .navbar.is-link .navbar-start .navbar-link::after,
@@ -5018,11 +5018,11 @@ button.dropdown-item.is-active,
   .navbar.is-link .navbar-item.has-dropdown.is-active .navbar-link,
   .navbar.is-link .pg-breadcrumbs li:not(:first-child) .navbar-item.has-dropdown.pg-breadcrumb-active .navbar-link,
   .pg-breadcrumbs li:not(:first-child) .navbar.is-link .navbar-item.has-dropdown.pg-breadcrumb-active .navbar-link {
-    background-color: hsl(217, 71%, 48%);
+    background-color: hsl(217, 100%, 57%);
     color: #fff;
   }
   .navbar.is-link .navbar-dropdown a.navbar-item.is-active, .navbar.is-link .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar.is-link .navbar-dropdown a.navbar-item.pg-breadcrumb-active {
-    background-color: hsl(217, 71%, 53%);
+    background-color: hsl(217, 100%, 62%);
     color: #fff;
   }
 }
@@ -5479,7 +5479,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .navbar-link.is-active,
 .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active {
   background-color: hsl(0, 0%, 98%);
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 
 .navbar-item {
@@ -5503,14 +5503,14 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 .navbar-item.is-tab:focus, .navbar-item.is-tab:hover {
   background-color: transparent;
-  border-bottom-color: hsl(217, 71%, 53%);
+  border-bottom-color: hsl(217, 100%, 62%);
 }
 .navbar-item.is-tab.is-active, .pg-breadcrumbs li:not(:first-child) .navbar-item.is-tab.pg-breadcrumb-active {
   background-color: transparent;
-  border-bottom-color: hsl(217, 71%, 53%);
+  border-bottom-color: hsl(217, 100%, 62%);
   border-bottom-style: solid;
   border-bottom-width: 3px;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
   padding-bottom: calc(0.5rem - 3px);
 }
 
@@ -5523,7 +5523,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   padding-right: 2.5em;
 }
 .navbar-link:not(.is-arrowless)::after {
-  border-color: hsl(217, 71%, 53%);
+  border-color: hsl(217, 100%, 62%);
   margin-top: -0.375em;
   right: 1.125em;
 }
@@ -5634,7 +5634,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active, .navbar.is-transparent .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar.is-transparent .navbar-dropdown a.navbar-item.pg-breadcrumb-active {
     background-color: hsl(0, 0%, 96%);
-    color: hsl(217, 71%, 53%);
+    color: hsl(217, 100%, 62%);
   }
   .navbar-burger {
     display: none;
@@ -5705,7 +5705,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   }
   .navbar-dropdown a.navbar-item.is-active, .navbar-dropdown .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar-dropdown a.navbar-item.pg-breadcrumb-active {
     background-color: hsl(0, 0%, 96%);
-    color: hsl(217, 71%, 53%);
+    color: hsl(217, 100%, 62%);
   }
   .navbar.is-spaced .navbar-dropdown, .navbar-dropdown.is-boxed {
     border-radius: 6px;
@@ -5768,7 +5768,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   a.navbar-item.is-active, .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active,
   .navbar-link.is-active,
   .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active {
-    color: hsl(217, 71%, 53%);
+    color: hsl(217, 100%, 62%);
   }
   a.navbar-item.is-active:not(:focus):not(:hover), .pg-breadcrumbs li:not(:first-child) a.navbar-item.pg-breadcrumb-active:not(:focus):not(:hover),
   .navbar-link.is-active:not(:focus):not(:hover),
@@ -5871,8 +5871,8 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .pagination-link.is-current {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 
@@ -5997,24 +5997,24 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   color: hsl(0, 0%, 21%);
 }
 .panel.is-primary .panel-heading, .panel.pg-button-secondary .panel-heading, .panel.pg-button-primary .panel-heading {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .panel.is-primary .panel-tabs a.is-active, .panel.is-primary .panel-tabs .pg-breadcrumbs li:not(:first-child) a.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .panel.is-primary .panel-tabs a.pg-breadcrumb-active, .panel.pg-button-secondary .panel-tabs a.is-active, .panel.pg-button-secondary .panel-tabs .pg-breadcrumbs li:not(:first-child) a.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .panel.pg-button-secondary .panel-tabs a.pg-breadcrumb-active, .panel.pg-button-primary .panel-tabs a.is-active, .panel.pg-button-primary .panel-tabs .pg-breadcrumbs li:not(:first-child) a.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .panel.pg-button-primary .panel-tabs a.pg-breadcrumb-active {
-  border-bottom-color: hsl(217, 71%, 53%);
+  border-bottom-color: hsl(217, 100%, 62%);
 }
 .panel.is-primary .panel-block.is-active .panel-icon, .panel.is-primary .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active .panel-icon, .pg-breadcrumbs li:not(:first-child) .panel.is-primary .panel-block.pg-breadcrumb-active .panel-icon, .panel.pg-button-secondary .panel-block.is-active .panel-icon, .panel.pg-button-secondary .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active .panel-icon, .pg-breadcrumbs li:not(:first-child) .panel.pg-button-secondary .panel-block.pg-breadcrumb-active .panel-icon, .panel.pg-button-primary .panel-block.is-active .panel-icon, .panel.pg-button-primary .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active .panel-icon, .pg-breadcrumbs li:not(:first-child) .panel.pg-button-primary .panel-block.pg-breadcrumb-active .panel-icon {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .panel.is-link .panel-heading {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .panel.is-link .panel-tabs a.is-active, .panel.is-link .panel-tabs .pg-breadcrumbs li:not(:first-child) a.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .panel.is-link .panel-tabs a.pg-breadcrumb-active {
-  border-bottom-color: hsl(217, 71%, 53%);
+  border-bottom-color: hsl(217, 100%, 62%);
 }
 .panel.is-link .panel-block.is-active .panel-icon, .panel.is-link .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active .panel-icon, .pg-breadcrumbs li:not(:first-child) .panel.is-link .panel-block.pg-breadcrumb-active .panel-icon {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .panel.is-info .panel-heading {
   background-color: hsl(207, 61%, 53%);
@@ -6092,7 +6092,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   color: hsl(0, 0%, 29%);
 }
 .panel-list a:hover {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 
 .panel-block {
@@ -6114,11 +6114,11 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   flex-wrap: wrap;
 }
 .panel-block.is-active, .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active {
-  border-left-color: hsl(217, 71%, 53%);
+  border-left-color: hsl(217, 100%, 62%);
   color: hsl(0, 0%, 21%);
 }
 .panel-block.is-active .panel-icon, .pg-breadcrumbs li:not(:first-child) .panel-block.pg-breadcrumb-active .panel-icon {
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .panel-block:last-child {
   border-bottom-left-radius: 6px;
@@ -6180,8 +6180,8 @@ label.panel-block:hover {
   display: block;
 }
 .tabs li.is-active a, .tabs .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .tabs li.pg-breadcrumb-active a {
-  border-bottom-color: hsl(217, 71%, 53%);
-  color: hsl(217, 71%, 53%);
+  border-bottom-color: hsl(217, 100%, 62%);
+  color: hsl(217, 100%, 62%);
 }
 .tabs ul {
   align-items: center;
@@ -6259,8 +6259,8 @@ label.panel-block:hover {
   border-bottom-right-radius: 4px;
 }
 .tabs.is-toggle li.is-active a, .tabs.is-toggle .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .tabs.is-toggle li.pg-breadcrumb-active a {
-  background-color: hsl(217, 71%, 53%);
-  border-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
+  border-color: hsl(217, 100%, 62%);
   color: #fff;
   z-index: 1;
 }
@@ -8068,75 +8068,75 @@ a.has-text-dark:hover, a.has-text-dark:focus {
 }
 
 .has-text-primary, .pg-text-primary {
-  color: hsl(217, 71%, 53%) !important;
+  color: hsl(217, 100%, 62%) !important;
 }
 
 a.has-text-primary:hover, a.pg-text-primary:hover, a.has-text-primary:focus, a.pg-text-primary:focus {
-  color: hsl(217, 71%, 43%) !important;
+  color: hsl(217, 100%, 52%) !important;
 }
 
 .has-background-primary {
-  background-color: hsl(217, 71%, 53%) !important;
+  background-color: hsl(217, 100%, 62%) !important;
 }
 
 .has-text-primary-light {
-  color: hsl(217, 71%, 96%) !important;
+  color: hsl(217, 100%, 96%) !important;
 }
 
 a.has-text-primary-light:hover, a.has-text-primary-light:focus {
-  color: hsl(217, 71%, 86%) !important;
+  color: hsl(217, 100%, 86%) !important;
 }
 
 .has-background-primary-light {
-  background-color: hsl(217, 71%, 96%) !important;
+  background-color: hsl(217, 100%, 96%) !important;
 }
 
 .has-text-primary-dark {
-  color: hsl(217, 71%, 45%) !important;
+  color: hsl(217, 100%, 41%) !important;
 }
 
 a.has-text-primary-dark:hover, a.has-text-primary-dark:focus {
-  color: hsl(217, 71%, 55%) !important;
+  color: hsl(217, 100%, 51%) !important;
 }
 
 .has-background-primary-dark {
-  background-color: hsl(217, 71%, 45%) !important;
+  background-color: hsl(217, 100%, 41%) !important;
 }
 
 .has-text-link {
-  color: hsl(217, 71%, 53%) !important;
+  color: hsl(217, 100%, 62%) !important;
 }
 
 a.has-text-link:hover, a.has-text-link:focus {
-  color: hsl(217, 71%, 43%) !important;
+  color: hsl(217, 100%, 52%) !important;
 }
 
 .has-background-link {
-  background-color: hsl(217, 71%, 53%) !important;
+  background-color: hsl(217, 100%, 62%) !important;
 }
 
 .has-text-link-light {
-  color: hsl(217, 71%, 96%) !important;
+  color: hsl(217, 100%, 96%) !important;
 }
 
 a.has-text-link-light:hover, a.has-text-link-light:focus {
-  color: hsl(217, 71%, 86%) !important;
+  color: hsl(217, 100%, 86%) !important;
 }
 
 .has-background-link-light {
-  background-color: hsl(217, 71%, 96%) !important;
+  background-color: hsl(217, 100%, 96%) !important;
 }
 
 .has-text-link-dark {
-  color: hsl(217, 71%, 45%) !important;
+  color: hsl(217, 100%, 41%) !important;
 }
 
 a.has-text-link-dark:hover, a.has-text-link-dark:focus {
-  color: hsl(217, 71%, 55%) !important;
+  color: hsl(217, 100%, 51%) !important;
 }
 
 .has-background-link-dark {
-  background-color: hsl(217, 71%, 45%) !important;
+  background-color: hsl(217, 100%, 41%) !important;
 }
 
 .has-text-info, .pg-text-info {
@@ -10148,7 +10148,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   }
 }
 .hero.is-primary, .hero.pg-button-secondary, .hero.pg-button-primary {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .hero.is-primary a:not(.button):not(.pg-button-light):not(.pg-button-danger):not(.pg-button-secondary):not(.pg-button-primary):not(.dropdown-item):not(.tag):not(.pg-badge-success):not(.pg-badge-default):not(.pagination-link.is-current), .hero.pg-button-secondary a:not(.button):not(.pg-button-light):not(.pg-button-danger):not(.pg-button-secondary):not(.pg-button-primary):not(.dropdown-item):not(.tag):not(.pg-badge-success):not(.pg-badge-default):not(.pagination-link.is-current), .hero.pg-button-primary a:not(.button):not(.pg-button-light):not(.pg-button-danger):not(.pg-button-secondary):not(.pg-button-primary):not(.dropdown-item):not(.tag):not(.pg-badge-success):not(.pg-badge-default):not(.pagination-link.is-current),
@@ -10174,7 +10174,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (max-width: 1023px) {
   .hero.is-primary .navbar-menu, .hero.pg-button-secondary .navbar-menu, .hero.pg-button-primary .navbar-menu {
-    background-color: hsl(217, 71%, 53%);
+    background-color: hsl(217, 100%, 62%);
   }
 }
 .hero.is-primary .navbar-item, .hero.pg-button-secondary .navbar-item, .hero.pg-button-primary .navbar-item,
@@ -10196,7 +10196,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.pg-button-primary .navbar-link.is-active,
 .hero.pg-button-primary .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
 .pg-breadcrumbs li:not(:first-child) .hero.pg-button-primary .navbar-link.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   color: #fff;
 }
 .hero.is-primary .tabs a, .hero.pg-button-secondary .tabs a, .hero.pg-button-primary .tabs a {
@@ -10207,7 +10207,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   opacity: 1;
 }
 .hero.is-primary .tabs li.is-active a, .hero.is-primary .tabs .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-primary .tabs li.pg-breadcrumb-active a, .hero.pg-button-secondary .tabs li.is-active a, .hero.pg-button-secondary .tabs .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-secondary .tabs li.pg-breadcrumb-active a, .hero.pg-button-primary .tabs li.is-active a, .hero.pg-button-primary .tabs .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-primary .tabs li.pg-breadcrumb-active a {
-  color: hsl(217, 71%, 53%) !important;
+  color: hsl(217, 100%, 62%) !important;
   opacity: 1;
 }
 .hero.is-primary .tabs.is-boxed a, .hero.pg-button-secondary .tabs.is-boxed a, .hero.pg-button-primary .tabs.is-boxed a, .hero.is-primary .tabs.is-toggle a, .hero.pg-button-secondary .tabs.is-toggle a, .hero.pg-button-primary .tabs.is-toggle a {
@@ -10219,18 +10219,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-primary .tabs.is-boxed li.is-active a, .hero.is-primary .tabs.is-boxed .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-primary .tabs.is-boxed li.pg-breadcrumb-active a, .hero.pg-button-secondary .tabs.is-boxed li.is-active a, .hero.pg-button-secondary .tabs.is-boxed .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-secondary .tabs.is-boxed li.pg-breadcrumb-active a, .hero.pg-button-primary .tabs.is-boxed li.is-active a, .hero.pg-button-primary .tabs.is-boxed .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-primary .tabs.is-boxed li.pg-breadcrumb-active a, .hero.is-primary .tabs.is-boxed li.is-active a:hover, .hero.is-primary .tabs.is-toggle li.is-active a, .hero.is-primary .tabs.is-toggle .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-primary .tabs.is-toggle li.pg-breadcrumb-active a, .hero.pg-button-secondary .tabs.is-toggle li.is-active a, .hero.pg-button-secondary .tabs.is-toggle .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-secondary .tabs.is-toggle li.pg-breadcrumb-active a, .hero.pg-button-primary .tabs.is-toggle li.is-active a, .hero.pg-button-primary .tabs.is-toggle .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.pg-button-primary .tabs.is-toggle li.pg-breadcrumb-active a, .hero.is-primary .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .hero.is-primary.is-bold, .hero.is-bold.pg-button-secondary, .hero.is-bold.pg-button-primary {
-  background-image: linear-gradient(141deg, hsl(207, 81%, 43%) 0%, hsl(217, 71%, 53%) 71%, hsl(227, 76%, 58%) 100%);
+  background-image: linear-gradient(141deg, hsl(207, 100%, 52%) 0%, hsl(217, 100%, 62%) 71%, hsl(227, 100%, 67%) 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-primary.is-bold .navbar-menu, .hero.is-bold.pg-button-secondary .navbar-menu, .hero.is-bold.pg-button-primary .navbar-menu {
-    background-image: linear-gradient(141deg, hsl(207, 81%, 43%) 0%, hsl(217, 71%, 53%) 71%, hsl(227, 76%, 58%) 100%);
+    background-image: linear-gradient(141deg, hsl(207, 100%, 52%) 0%, hsl(217, 100%, 62%) 71%, hsl(227, 100%, 67%) 100%);
   }
 }
 .hero.is-link {
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   color: #fff;
 }
 .hero.is-link a:not(.button):not(.pg-button-light):not(.pg-button-danger):not(.pg-button-secondary):not(.pg-button-primary):not(.dropdown-item):not(.tag):not(.pg-badge-success):not(.pg-badge-default):not(.pagination-link.is-current),
@@ -10250,7 +10250,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 @media screen and (max-width: 1023px) {
   .hero.is-link .navbar-menu {
-    background-color: hsl(217, 71%, 53%);
+    background-color: hsl(217, 100%, 62%);
   }
 }
 .hero.is-link .navbar-item,
@@ -10262,7 +10262,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-link .navbar-link.is-active,
 .hero.is-link .pg-breadcrumbs li:not(:first-child) .navbar-link.pg-breadcrumb-active,
 .pg-breadcrumbs li:not(:first-child) .hero.is-link .navbar-link.pg-breadcrumb-active {
-  background-color: hsl(217, 71%, 48%);
+  background-color: hsl(217, 100%, 57%);
   color: #fff;
 }
 .hero.is-link .tabs a {
@@ -10273,7 +10273,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   opacity: 1;
 }
 .hero.is-link .tabs li.is-active a, .hero.is-link .tabs .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-link .tabs li.pg-breadcrumb-active a {
-  color: hsl(217, 71%, 53%) !important;
+  color: hsl(217, 100%, 62%) !important;
   opacity: 1;
 }
 .hero.is-link .tabs.is-boxed a, .hero.is-link .tabs.is-toggle a {
@@ -10285,14 +10285,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .hero.is-link .tabs.is-boxed li.is-active a, .hero.is-link .tabs.is-boxed .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-link .tabs.is-boxed li.pg-breadcrumb-active a, .hero.is-link .tabs.is-boxed li.is-active a:hover, .hero.is-link .tabs.is-toggle li.is-active a, .hero.is-link .tabs.is-toggle .pg-breadcrumbs li:not(:first-child) li.pg-breadcrumb-active a, .pg-breadcrumbs li:not(:first-child) .hero.is-link .tabs.is-toggle li.pg-breadcrumb-active a, .hero.is-link .tabs.is-toggle li.is-active a:hover {
   background-color: #fff;
   border-color: #fff;
-  color: hsl(217, 71%, 53%);
+  color: hsl(217, 100%, 62%);
 }
 .hero.is-link.is-bold {
-  background-image: linear-gradient(141deg, hsl(207, 81%, 43%) 0%, hsl(217, 71%, 53%) 71%, hsl(227, 76%, 58%) 100%);
+  background-image: linear-gradient(141deg, hsl(207, 100%, 52%) 0%, hsl(217, 100%, 62%) 71%, hsl(227, 100%, 67%) 100%);
 }
 @media screen and (max-width: 768px) {
   .hero.is-link.is-bold .navbar-menu {
-    background-image: linear-gradient(141deg, hsl(207, 81%, 43%) 0%, hsl(217, 71%, 53%) 71%, hsl(227, 76%, 58%) 100%);
+    background-image: linear-gradient(141deg, hsl(207, 100%, 52%) 0%, hsl(217, 100%, 62%) 71%, hsl(227, 100%, 67%) 100%);
   }
 }
 .hero.is-info {
@@ -10682,7 +10682,7 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 }
 
 :root {
-  --primary: hsl(217, 71%, 53%);
+  --primary: #65748D;
   --danger: hsl(348, 86%, 61%);
   --success: hsl(153, 53%, 53%);
   --gray: hsl(0, 0%, 71%);
@@ -10696,14 +10696,18 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --link: var(--bulma-link);
   --link-hover: var(--bulma-link-hover);
   --text-light: var(--bulma-text);
+  --text-dark: rgb(23, 23, 23);
+  --button-primary-background-color: rgb(55, 63, 77);
+  --button-primary-background-color-hover: rgb(45, 52, 64);
 }
 
+/*boiler plate overrides*/
 body {
-  background-image: linear-gradient(to bottom, var(--text-light), var(--body-background-color));
+  background-color: var(--body-background-color);
   color: var(--body-color);
 }
 
-a {
+a.navbar-item {
   color: var(--link);
 }
 
@@ -10721,17 +10725,27 @@ p {
 }
 
 .navbar-menu {
-  background-color: var(--body-background-color);
   color: var(--text-light);
 }
 
 .navbar {
-  background-color: var(--body-background-color);
   color: var(--text-light);
 }
 
 .container {
   background-color: var(--body-background-color);
+}
+
+.button.is-primary.is-outlined, .is-primary.is-outlined.pg-button-light, .is-primary.pg-button-danger, .pg-button-secondary, .is-outlined.pg-button-primary, .pg-button-primary.pg-button-danger {
+  background-color: var(--button-primary-background-color);
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-primary.is-outlined:hover, .is-primary.is-outlined.pg-button-light:hover, .is-primary.pg-button-danger:hover, .pg-button-secondary:hover, .is-outlined.pg-button-primary:hover, .pg-button-primary.pg-button-danger:hover {
+  background-color: var(--button-primary-background-color-hover);
+  border-color: var(--text-light);
+  color: var(--text-light);
 }
 
 .button.is-secondary.is-outlined, .is-secondary.is-outlined.pg-button-light, .is-secondary.pg-button-danger, .is-secondary.pg-button-secondary, .is-secondary.is-outlined.pg-button-primary {
@@ -10742,7 +10756,8 @@ p {
 
 .button.is-secondary.is-outlined:hover, .is-secondary.is-outlined.pg-button-light:hover, .is-secondary.pg-button-danger:hover, .is-secondary.pg-button-secondary:hover, .is-secondary.is-outlined.pg-button-primary:hover {
   background-color: var(--text-light);
-  color: var(--body-background-color);
+  border-color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .pg-subtitle {
@@ -10785,27 +10800,107 @@ select {
 }
 
 .homepage-logo {
-  max-width: 300px;
+  max-width: 150px;
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
   .homepage-logo {
-    max-width: 400px; /* Larger size for bigger screens */
+    max-width: 175px; /* Larger size for bigger screens */
   }
 }
 @media screen and (min-width: 1024px) {
   .homepage-logo {
-    max-width: 500px; /* Even larger for very big screens */
+    max-width: 200px; /* Even larger for very big screens */
   }
 }
 .navbar-item img {
   max-height: 3.5rem;
 }
 
+.dm-fullpage-form {
+  background-color: var(--body-background-color);
+  border-radius: 0.3rem;
+  margin: 2em;
+  padding: 2em;
+}
+
+/*Tailwind Overrides */
 .debug {
   background-color: rgb(255, 0, 0);
+}
+
+.rounded-lg {
+  border-radius: 3rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.w-full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.w-75 {
+  width: 75%;
+  max-width: 75%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.margin-16px {
+  margin: 16px;
+}
+
+.gradient-primary {
+  background: linear-gradient(to top, #65748D, #1C2027);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bg-transparent {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.navbar .navbar-item.is-active, .navbar .pg-breadcrumbs li:not(:first-child) .navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar .navbar-item.pg-breadcrumb-active {
+  border-bottom: none;
 }
 
 #fullpage-form-wrapper {
@@ -10820,7 +10915,6 @@ select {
 @media screen and (min-width: 769px) {
   #fullpage-form {
     border-radius: 0.3em;
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
     background-color: hsl(0, 0%, 100%);
   }
 }
@@ -10842,9 +10936,6 @@ select {
   margin-bottom: 1.5em;
 }
 
-.navbar {
-  box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
-}
 @media screen and (max-width: 1023px) {
   .navbar .navbar-item.is-active, .navbar .pg-breadcrumbs li:not(:first-child) .navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar .navbar-item.pg-breadcrumb-active {
     background-color: inherit;
@@ -10852,7 +10943,7 @@ select {
 }
 @media screen and (min-width: 1024px) {
   .navbar .navbar-item.is-active, .navbar .pg-breadcrumbs li:not(:first-child) .navbar-item.pg-breadcrumb-active, .pg-breadcrumbs li:not(:first-child) .navbar .navbar-item.pg-breadcrumb-active {
-    border-bottom: 3px solid hsl(217, 71%, 53%);
+    border-bottom: 3px solid hsl(217, 100%, 62%);
   }
 }
 
@@ -10895,7 +10986,6 @@ select {
   .app-card {
     padding: 2em;
     border-radius: 0.3em;
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
   }
   .app-card:not(.notification) {
     background-color: white;
@@ -10954,10 +11044,10 @@ select {
   color: hsl(0, 0%, 100%);
 }
 #pricing-page-head .navbar-item, #pricing-page-head .navbar-item .navbar-link {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(28, 32, 39, 0.7);
 }
 #pricing-page-head .navbar-item:hover, #pricing-page-head .navbar-item .navbar-link:hover {
-  color: hsl(0, 0%, 100%);
+  color: rgb(28, 32, 39);
   background-color: inherit;
 }
 
@@ -10997,7 +11087,6 @@ select {
   #plans #plan-wrapper .plan {
     max-width: 480px;
     background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 2px 4px rgba(55, 63, 67, 0.3);
   }
 }
 #plans #plan-wrapper .plan .plan-summary {
@@ -11056,7 +11145,7 @@ select {
   top: -8px;
   color: hsl(0, 0%, 100%);
   width: 100%;
-  background-color: hsl(217, 71%, 53%);
+  background-color: hsl(217, 100%, 62%);
   font-weight: bold;
 }
 @media screen and (min-width: 1024px) {

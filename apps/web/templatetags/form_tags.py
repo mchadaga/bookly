@@ -26,7 +26,7 @@ def render_field(form_field):
 @register.simple_tag
 def render_text_input(form_field):
     TEXT_INPUT_TEMPLATE = """<div class="field">
-      <label class="label">{{ form_field.label }}</label>
+      <label class="label has-text-white">{{ form_field.label }}</label>
       <div class="control">
         {{ form_field }}
       </div>

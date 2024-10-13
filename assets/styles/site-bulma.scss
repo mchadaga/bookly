@@ -2,7 +2,7 @@
 // any customizations you want to make to bulma should go here
 // see https://bulma.io/documentation/customize/ for more information
 
-$link: hsl(217, 71%, 53%);  // copied from bulma
+$link: hsl(217, 100%, 62%);  // copied from bulma
 $primary: $link;  // make link-blue the primary color
 $bg-grey: hsl(0, 0%, 98%);
 $bg-black: rgb(0,0,0);
@@ -16,7 +16,7 @@ $menu-item-active-background-color: $link;
 @import "~bulma/bulma";
 
 :root {
-  --primary: #{$primary};
+  --primary: #65748D;
   --danger: #{$danger};
   --success: #{$success};
   --gray: #{$grey-light};
@@ -34,14 +34,23 @@ $menu-item-active-background-color: $link;
   --link: var(--bulma-link);
   --link-hover: var(--bulma-link-hover);
   --text-light: var(--bulma-text);
+  --text-dark: rgb(23, 23, 23);
+
+
+  --button-primary-background-color: rgb(55, 63, 77);
+  --button-primary-background-color-hover: rgb(45, 52, 64); 
 }
+
+
+
+/*boiler plate overrides*/
 
 body {
   background-color: var(--body-background-color);
   color: var(--body-color);
 }
 
-a {
+a.navbar-item {
   color: var(--link);
 }
 
@@ -60,18 +69,33 @@ p {
 }
 
 .navbar-menu {
-  background-color: var(--body-background-color);
+  // background-color: var(--body-background-color);
   color: var(--text-light);
 }
 
 .navbar {
-  background-color: var(--body-background-color);
   color: var(--text-light);
 }
+
 
 .container {
   background-color: var(--body-background-color);
 }
+
+
+.button.is-primary.is-outlined {
+  background-color: var(--button-primary-background-color);
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-primary.is-outlined:hover {
+  background-color: var(--button-primary-background-color-hover);
+    border-color: var(--text-light);
+
+  color: var(--text-light);
+}
+
 
 
 .button.is-secondary.is-outlined {
@@ -82,7 +106,9 @@ p {
 
 .button.is-secondary.is-outlined:hover {
   background-color: var(--text-light);
-  color: var(--body-background-color);
+  border-color: var(--text-light);
+
+  color: var(--text-dark);
 }
 
 .pg-subtitle {
@@ -125,20 +151,20 @@ select {
 }
 
 .homepage-logo {
-  max-width: 300px;
+  max-width: 150px;
   width: 100%;
   height: auto;
 }
 
 @media screen and (min-width: 768px) {
   .homepage-logo {
-      max-width: 400px;  /* Larger size for bigger screens */
+      max-width: 175px;  /* Larger size for bigger screens */
   }
 }
 
 @media screen and (min-width: 1024px) {
   .homepage-logo {
-      max-width: 500px;  /* Even larger for very big screens */
+      max-width: 200px;  /* Even larger for very big screens */
   }
 }
 
@@ -146,9 +172,101 @@ select {
   max-height: 3.5rem;
 }
 
+
+
+.dm-fullpage-form {
+  background-color: var(--body-background-color); 
+  border-radius: 0.3rem;
+  margin: 2em;
+  padding: 2em;
+}
+
+
+
+
+/*Tailwind Overrides */
+
 .debug {
   background-color: rgb(255,0,0);
 }
+
+.rounded-lg {
+  border-radius: 3rem;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+
+
+.w-full {
+  width: 100%;    
+  max-width: 100%;
+}
+
+.w-75 {
+  width: 75%; 
+  max-width: 75%;
+}
+
+.flex {
+  display: flex;
+}
+
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.overflow-hidden{
+  overflow: hidden;
+}
+
+.items-center {
+  align-items: center;
+}
+
+
+.justify-center {
+  justify-content: center;
+}
+
+.margin-16px {
+  margin: 16px;
+}
+
+.gradient-primary {
+  background: linear-gradient(to top, #65748D, #1C2027);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bg-transparent {
+  background-color: rgba(0,0,0,0);
+}
+
+.min-h-screen {
+  min-height: 100vh;  
+}
+
+
+.navbar .navbar-item.is-active {
+  border-bottom: none; 
+}
+
 
 
 

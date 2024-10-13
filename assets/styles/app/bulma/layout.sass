@@ -1,6 +1,5 @@
 
 .navbar
-  box-shadow: $default-shadow
   .navbar-item
     &.is-active
       +until($desktop)
@@ -34,7 +33,6 @@
   +from($tablet)
     padding: 2em
     border-radius: .3em
-    box-shadow: $default-shadow
     // allow using "notification" class to override color styles
     &:not(.notification)
       background-color: white

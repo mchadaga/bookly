@@ -26,9 +26,10 @@ venv/
 
 #uncomment these lines after setting up the front-end build pipeline in dev and production
 #static/css/
-#static/js
+static/js
 ./static/js/** 
 static/js/app-bundle.js
 package-lock.json
 static/js/site-bulma-bundle.js
 static/css/site-bulma.css
+static/js/site-bulma-bundle.js

@@ -115,3 +115,9 @@ find . -name '*.py' | entr python ./manage.py test apps.utils.tests.test_slugs
 ```bash
 django-admin makemessages -l
 ```
+
+
+###Creating a Django Admin:
+```bash
+python manage.py createsuperuser
+```
