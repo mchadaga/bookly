@@ -375,6 +375,31 @@
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
                 entered.placeholder = "Congrats on finishing this story! 🎉 Press [Enter] to read your next story"
+
+                let test =fetch('{% url "app:question_handle" %}', {
+                    method: "POST",
+                    body: 'formData',
+                  })
+                    .then((response) => {
+                      if (!response.ok) {
+                        throw new Error("Network response was not ok");
+                      }
+                      return response.json();
+                    })
+                    .then((data) => data.ai_response)
+                    .catch((error) => {
+                      console.error("Error:", error);
+                      return "Sorry, I couldn't process your question. Please try again.";
+                    });
+
+
+                console.log(test);
+
+
+
+
+
+
                 triggerConfetti();
 
               // User has reached the last sentence

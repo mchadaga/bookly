@@ -181,7 +181,10 @@ def ask_ai_about_story(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
+@csrf_exempt
+@require_POST
 def question_handle(request):
+    print("hello world")
     if request.method == 'POST':
         # Extract question, answer, and user input from the request
         question = request.POST.get('question')
