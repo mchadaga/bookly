@@ -12,6 +12,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 import random
+import os
+import requests
+from django.views.decorators.csrf import csrf_exempt
 
 @login_and_team_required
 def get_random_textcontent(request):
@@ -124,3 +127,53 @@ def get_user_textcontents(request):
 #         return recommend_story(story_id, cosine_sim, df)
 #     else:
 #         return random.choice(mask{user_unseen, df['Filename'].to_list()})
+
+@csrf_exempt
+@require_POST
+def ask_ai_about_story(request):
+    textcontent_id = request.POST.get('textcontent_id')
+    current_sentence_index = int(request.POST.get('current_sentence_index', 0))
+    user_question = request.POST.get('user_question')
+
+    if not all([textcontent_id, user_question]):
+        return JsonResponse({'error': 'Missing required parameters'}, status=400)
+
+    try:
+        textcontent = TextContent.objects.get(id=textcontent_id)
+        sentences = Sentence.objects.filter(paragraph__textcontent=textcontent)[:current_sentence_index + 1]
+        story_context = " ".join([sentence.sentence_text for sentence in sentences])
+
+        data = {
+            "model": "gpt-4o-mini",
+            "messages": [
+                {
+                    "role": "system",
+                    "content": 'Write all your responses in 1-2 sentences, in the simplest language possible.'
+                },
+                {
+                    "role": "user",
+                    "content": f"Context: {story_context}\n\nQuestion: {user_question}"
+                }
+            ]
+        }
+
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {os.getenv("OPENAI_API_KEY")}'
+        }
+
+        url = 'https://api.openai.com/v1/chat/completions'
+
+        response = requests.post(url, headers=headers, json=data)
+        response_json = response.json()
+
+        if response.status_code == 200:
+            ai_response = response_json['choices'][0]['message']['content'].strip()
+            return JsonResponse({'ai_response': ai_response})
+        else:
+            return JsonResponse({'error': 'Failed to get response from AI'}, status=500)
+
+    except TextContent.DoesNotExist:
+        return JsonResponse({'error': 'TextContent not found'}, status=404)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
