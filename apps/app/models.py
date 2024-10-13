@@ -8,6 +8,7 @@ from django.contrib.contenttypes.models import ContentType
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import MinValueValidator, MaxValueValidator
+import json
 
 # Create your models here.
 
@@ -17,6 +18,18 @@ class Hook(models.Model):
     textcontent = models.ForeignKey(
         "TextContent", on_delete=models.CASCADE, related_name="hooks"
     )
+    hook_audio = models.URLField(max_length=500, null=True, blank=True)
+    hook_timestamps = models.TextField(null=True, blank=True)  # Changed to TextField
+    voice = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+        return f"Hook for {self.textcontent.name}: {self.hook_text[:50]}..."
+
+    def set_timestamps(self, timestamps_dict):
+        self.hook_timestamps = json.dumps(timestamps_dict)
+
+    def get_timestamps(self):
+        return json.loads(self.hook_timestamps) if self.hook_timestamps else None
 
 
 class TextContent(models.Model):
