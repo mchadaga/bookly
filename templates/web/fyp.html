@@ -132,7 +132,9 @@
 
 
     </style>
-
+    <script src="
+    https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js
+    "></script>
     <script>
       let currentSentenceIndex = -1;
       let currentTextContentId = null;
@@ -140,9 +142,7 @@
       let storyFinished = false;
       let chatInputFocused = false;
       let chatHistory = [];
-
-
-
+      let audioElement = new Audio();  // Add this line
 
       let enteredPlaceholder = document.getElementById("entered-placeholder");
       let entered = document.getElementById("entered");
@@ -152,7 +152,14 @@
       let trackerSpacer = document.querySelector(".tracker-spacer");    
 
 
-
+      function triggerConfetti() {
+        confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+        });
+        }
+        
 
 
 
@@ -168,7 +175,10 @@
           .then((response) => response.json())
           .then((data) => {
             currentTextContentId = data.id;
-            document.getElementById("hook-text").textContent = data.hook;
+            document.getElementById("hook-text").innerHTML = data.hook.split(' ').map((word, index) => 
+              `<span class="word" id="word-${index}">${word}</span>`
+            ).join(' ');
+            wordTimings = data.hook_timestamps;
             const paragraphsContainer = document.getElementById("paragraphs");
             paragraphsContainer.innerHTML = "";
             data.paragraphs.forEach((paragraph) => {
@@ -183,12 +193,66 @@
             currentSentenceIndex = -1;
             document.getElementById("text-content").style.display = "block";
 
-            speakHook(data.hook);
+            if (data.hook_audio) {
+              playHookAudio(data.hook_audio);
+            } else {
+              speakHook(data.hook);
+            }
+
+            prepareHookForHighlighting();
 
             // Reset enteredStory for the next fetch
             enteredStory = false;
           })
           .catch((error) => console.error("Error:", error));
+      }
+
+      function prepareHookForHighlighting() {
+        const hookElement = document.getElementById("hook-text");
+        const words = hookElement.textContent.split(' ');
+        hookElement.innerHTML = words.map((word, index) => `<span class="word" id="word-${index}">${word}</span>`).join(' ');
+    }
+    
+    function highlightWords() {
+        if (!wordTimings){
+            console.log("NO WORD TIMINGS")
+            return;
+        } 
+
+        console.log(wordTimings)
+    
+        const words = document.querySelectorAll('#hook-text .word');
+        const currentTime = audioElement.currentTime;
+        let wordIndex = 1;
+    
+        for (let i = 1; i < wordTimings.characters.length; i++) {
+            if (currentTime >= wordTimings.character_start_times_seconds[i]) {
+                if (wordTimings.characters[i] === ' ') {
+                    wordIndex++;
+                }
+            } else {
+                break;
+            }
+        }
+    
+        words.forEach((word, index) => {
+            if (index < wordIndex) {
+                word.classList.add('highlighted');
+            } else {
+                word.classList.remove('highlighted');
+            }
+        });
+    }
+    
+
+      function playHookAudio(audioUrl) {
+        audioElement.src = audioUrl;
+        audioElement.play().catch(error => console.error("Error playing audio:", error));
+        //document.getElementById("play-audio-button").style.display = "none";
+        
+        // Add these lines to start highlighting words
+        audioElement.addEventListener('timeupdate', highlightWords);
+        highlightWords(); // Call once immediately to highlight the first word
       }
 
       function speakHook(text) {
@@ -283,7 +347,6 @@
             entered.placeholder = "Press [Space] to read further, [Enter] for next story, or input in any questions you have for HookBook AI here."
             entered.style.display = 'block';
 
-
             event.preventDefault();
             const sentences = document.querySelectorAll(".sentence");
             if (currentSentenceIndex < sentences.length - 1) {
@@ -312,7 +375,7 @@
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
                 entered.placeholder = "Congrats on finishing this story! 🎉 Press [Enter] to read your next story"
-
+                triggerConfetti();
 
               // User has reached the last sentence
               storyFinished = true;
@@ -380,5 +443,16 @@
 
   </div>
 </div>
+<style>
+.word {
+    transition: background-color 0.3s ease;
+    display: none
+}
+.word.highlighted {
+    {% comment %} background-color: yellow; {% endcomment %}
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+}
+</style>
 {% endblock %}
-

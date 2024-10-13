@@ -58,6 +58,8 @@ def get_random_textcontent(request):
         data = {
             'id': textcontent.id,
             'hook': hook.hook_text if hook else '',
+            'hook_audio': hook.hook_audio if hook and hook.hook_audio else None,
+            'hook_timestamps': hook.get_timestamps() if hook else None,
             'paragraphs': [
                 {
                     'sentences': [
@@ -177,3 +179,65 @@ def ask_ai_about_story(request):
         return JsonResponse({'error': 'TextContent not found'}, status=404)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+@require_POST
+def question_handle(question, answer):
+    print(question)
+    messages = [
+        {
+            "role": "system", 
+            "content": (
+                "You are a reading assistant that helps students determine whether or not they are comprehending reading. "
+                "You have the question and answer key. Your goal is to tell the student whether or not they are correct. "
+                "If they are not correct, DO NOT TELL THEM THE CORRECT ANSWER and give more guesses but be lenient on correctness."
+            )
+        }
+    ]
+
+    while True:
+        userInput = input("Your answer: ")
+        
+        # Add the user message to the conversation memory
+        messages.append({"role": "user", "content": userInput})
+        
+        # Call the OpenAI API with the current conversation history
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=messages + [
+                {
+                    "role": "assistant",
+                    "content": (
+                        f"Based on the following student input: {userInput}, you are quizzing the user on the given question: {question}. "
+                        "ALWAYS provide your JSON on RESPONSE, STATUS of the user's built-up response, and NEXT QUESTION. "
+                        "From now on, you must respond in this JSON form no matter what the input is and respond only with the JSON."
+                        "- RESPONSE: array of all information provided by the user. "
+                        "- STATUS: complete and detailed, complete, incomplete, incorrect, or irrelevant. "
+                        "- NEXT QUESTION: should be written in the simplest language possible. Try to lead them towards the right answer, but keep conversation flowing naturally."
+                        f"ANSWER: {answer}"
+                    )
+                }
+            ],
+            response_format={ "type": "json_object" }
+        )
+
+        # Extract the response from the OpenAI API
+        evaluation = response.choices[0].message.content.strip()
+        
+        try:
+            json_data = json.loads(evaluation)
+            #print("Parsed JSON data:", json_data)
+        except json.JSONDecodeError as e:
+            print("Error decoding JSON:", e)
+            continue
+        
+        # Add the assistant's response to the conversation history
+        messages.append({"role": "assistant", "content": evaluation})
+        
+        # Check the status and provide feedback
+        if 'STATUS' in json_data:
+            status = json_data['STATUS'].lower() 
+            if status == "complete" or status == "complete and detailed":
+                print("Correct!")
+                break
+            else:
+                print(json_data['NEXT QUESTION'])
