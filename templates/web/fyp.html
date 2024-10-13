@@ -5,6 +5,7 @@
   <div id="text-content" class="text-content" style="display: none; width: 75%">
     <h1 id="hook-text"></h1>
       <div id="paragraphs"></div>
+      <div class="tracker-spacer"></div>
       <div class="spacer"></div>
     </div>
   </div>
@@ -95,8 +96,12 @@
         line-height: 1.6;
         margin-bottom: 1rem;
       }
+      .trackerspacer {
+        height: 0rem;
+      }
+
       .spacer {
-        height: 40vh;
+        height: 50vh;
       }
       #chat-container {
         position: fixed;
@@ -122,6 +127,10 @@
       .ai-message {
         background-color: #f0f0f0;
       }
+
+
+
+
     </style>
 
     <script>
@@ -139,6 +148,12 @@
       let entered = document.getElementById("entered");
       let endStoryMsg = document.getElementById("endstorymsg"); 
       let spacer = document.querySelector(".spacer");
+
+      let trackerSpacer = document.querySelector(".tracker-spacer");    
+
+
+
+
 
 
       function fetchRandomTextContent() {
@@ -280,18 +295,12 @@
 
 
 
+             trackerSpacer.scrollIntoView({
+                    behavior: "smooth", // Optional, smooth scrolling
+                    block: "center",       // Align the bottom of the element with the bottom of the viewport
+                    inline: "nearest"   // Keep the nearest horizontal alignment, typically you won't need to modify this
+                  });
 
-              let offset = 250; // The offset in pixels
-              let elementPosition = spacer.getBoundingClientRect().top;
-              let offsetPosition = elementPosition - offset;
-
-              console.log(elementPosition)
-              window.scrollBy({
-                top: 60,
-                behavior: "smooth" // Use "smooth" or "auto"
-              });
-            
-              
 
 
               if (currentSentenceIndex === 0) {
@@ -303,6 +312,8 @@
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
                 entered.placeholder = "Congrats on finishing this story! 🎉 Press [Enter] to read your next story"
+
+
               // User has reached the last sentence
               storyFinished = true;
               // Optionally, you can display a message here to prompt the user to press Enter
