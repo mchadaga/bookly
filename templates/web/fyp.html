@@ -331,6 +331,9 @@
             enteredPlaceholder.style.display = 'block';
             entered.style.display = 'none';
 
+            //Scroll to top
+            window.scrollTo({ top: 0, behavior: 'auto' });
+
             if (storyFinished) {
               // User finished the story and wants to move to the next one
               storyFinished = false;
