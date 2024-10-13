@@ -1,29 +1,51 @@
+{% extends "web/base.html" %} {% load i18n %} {% load static %} {% block body %}
 {% comment %} {{hooks}} {% endcomment %}
 
-<div id="text-content" class="text-content" style="display: none;">
+<div class="flex flex-col items-center justify-center w-full min-h-screen">
+  <div id="text-content" class="text-content" style="display: none; width: 75%">
     <h1 id="hook-text"></h1>
-    <div id="paragraphs"></div>
-    <div class="spacer"></div>
-</div>
+      <div id="paragraphs"></div>
+      <div class="spacer"></div>
+    </div>
+  </div>
 
-{% comment %} <div id="clicked-textcontents" style="font-size: 0.8em; margin-top: 20px;"></div> {% endcomment %}
+  <input
+  id="entered"
+  style="
+    font-size: 16px;
+    padding-left: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 75%;
+    rounded:2.5rem; 
+    height: 50px;
+  "
+/>
+  <div>
+    {% comment %}
+    <div
+      id="clicked-textcontents"
+      style="font-size: 0.8em; margin-top: 20px"
+    ></div>
+    {% endcomment %}
 
-<input id="entered" style="font-size:16px; padding-left:15px; position: fixed; bottom: 0; left: 0; width:100%;height:50px">
 
-<style>
-    .text-content h1 {
+
+    <style>
+      .text-content h1 {
         font-size: 2.5rem;
         margin-bottom: 1rem;
-    }
-    .sentence {
+      }
+      .sentence {
         font-size: 1.5rem;
         line-height: 1.6;
         margin-bottom: 1rem;
-    }
-    .spacer {
+      }
+      .spacer {
         height: 25vw;
-    }
-    #chat-container {
+      }
+      #chat-container {
         position: fixed;
         top: 60px;
         right: 20px;
@@ -34,202 +56,219 @@
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
-    }
-    .chat-message {
+      }
+      .chat-message {
         margin: 1rem 0;
         padding: 0.5rem;
         border-radius: 5px;
-    }
-    .user-message {
+      }
+      .user-message {
         background-color: #e6f2ff;
-    }
-    .ai-message {
+      }
+      .ai-message {
         background-color: #f0f0f0;
-    }
-</style>
+      }
+    </style>
 
-<script>
-    let currentSentenceIndex = -1;
-    let currentTextContentId = null;
-    let enteredStory = false;
-    let storyFinished = false;
-    let chatInputFocused = false;
-    let chatHistory = [];
+    <script>
+      let currentSentenceIndex = -1;
+      let currentTextContentId = null;
+      let enteredStory = false;
+      let storyFinished = false;
+      let chatInputFocused = false;
+      let chatHistory = [];
 
-    function fetchRandomTextContent() {
-        const url = new URL('{% url "app:get_random_textcontent" %}', window.location.origin);
+      function fetchRandomTextContent() {
+        const url = new URL(
+          '{% url "app:get_random_textcontent" %}',
+          window.location.origin
+        );
         console.log(enteredStory);
-        url.searchParams.append('entered', enteredStory);
+        url.searchParams.append("entered", enteredStory);
 
         fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                currentTextContentId = data.id;
-                document.getElementById('hook-text').textContent = data.hook;
-                const paragraphsContainer = document.getElementById('paragraphs');
-                paragraphsContainer.innerHTML = '';
-                data.paragraphs.forEach(paragraph => {
-                    paragraph.sentences.forEach(sentence => {
-                        const p = document.createElement('p');
-                        p.className = 'sentence';
-                        p.style.display = 'none';
-                        p.textContent = sentence.sentence_text;
-                        paragraphsContainer.appendChild(p);
-                    });
-                });
-                currentSentenceIndex = -1;
-                document.getElementById('text-content').style.display = 'block';
-                
-                speakHook(data.hook);
-                
-                // Reset enteredStory for the next fetch
-                enteredStory = false;
-            })
-            .catch(error => console.error('Error:', error));
-    }
+          .then((response) => response.json())
+          .then((data) => {
+            currentTextContentId = data.id;
+            document.getElementById("hook-text").textContent = data.hook;
+            const paragraphsContainer = document.getElementById("paragraphs");
+            paragraphsContainer.innerHTML = "";
+            data.paragraphs.forEach((paragraph) => {
+              paragraph.sentences.forEach((sentence) => {
+                const p = document.createElement("p");
+                p.className = "sentence";
+                p.style.display = "none";
+                p.textContent = sentence.sentence_text;
+                paragraphsContainer.appendChild(p);
+              });
+            });
+            currentSentenceIndex = -1;
+            document.getElementById("text-content").style.display = "block";
 
-    function speakHook(text) {
+            speakHook(data.hook);
+
+            // Reset enteredStory for the next fetch
+            enteredStory = false;
+          })
+          .catch((error) => console.error("Error:", error));
+      }
+
+      function speakHook(text) {
         setTimeout(() => {
-            const utterance = new SpeechSynthesisUtterance(text);
-            window.speechSynthesis.speak(utterance);
+          const utterance = new SpeechSynthesisUtterance(text);
+          window.speechSynthesis.speak(utterance);
         }, 100);
-    }
+      }
 
-    function trackTextContentClick() {
+      function trackTextContentClick() {
         if (currentTextContentId) {
-            fetch('{% url "app:track_textcontent_click" %}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': '{{ csrf_token }}'
-                },
-                body: `textcontent_id=${currentTextContentId}`
+          fetch('{% url "app:track_textcontent_click" %}', {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              "X-CSRFToken": "{{ csrf_token }}",
+            },
+            body: `textcontent_id=${currentTextContentId}`,
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              if (data.status === "success") {
+                updateClickedTextContents();
+              }
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === 'success') {
-                    updateClickedTextContents();
-                }
-            })
-            .catch(error => console.error('Error:', error));
+            .catch((error) => console.error("Error:", error));
         }
-    }
+      }
 
-    function updateClickedTextContents() {
+      function updateClickedTextContents() {
         fetch('{% url "app:get_user_textcontents" %}')
-            .then(response => response.json())
-            .then(data => {
-                const container = document.getElementById('clicked-textcontents');
-                container.innerHTML = 'Clicked TextContents: ' + data.map(tc => tc.name).join(', ');
-            })
-            .catch(error => console.error('Error:', error));
-    }
+          .then((response) => response.json())
+          .then((data) => {
+            const container = document.getElementById("clicked-textcontents");
+            container.innerHTML =
+              "Clicked TextContents: " + data.map((tc) => tc.name).join(", ");
+          })
+          .catch((error) => console.error("Error:", error));
+      }
 
-    function askAI(userMessage) {
+      function askAI(userMessage) {
         const formData = new FormData();
-        formData.append('textcontent_id', currentTextContentId);
-        formData.append('current_sentence_index', currentSentenceIndex);
-        formData.append('user_question', userMessage);
-        console.log("hi")
+        formData.append("textcontent_id", currentTextContentId);
+        formData.append("current_sentence_index", currentSentenceIndex);
+        formData.append("user_question", userMessage);
+        console.log("hi");
 
         return fetch('{% url "app:ask_ai_about_story" %}', {
-            method: 'POST',
-            body: formData
+          method: "POST",
+          body: formData,
         })
-        .then(response => {
+          .then((response) => {
             if (!response.ok) {
-                throw new Error('Network response was not ok');
+              throw new Error("Network response was not ok");
             }
             return response.json();
-        })
-        .then(data => data.ai_response)
-        .catch(error => {
-            console.error('Error:', error);
+          })
+          .then((data) => data.ai_response)
+          .catch((error) => {
+            console.error("Error:", error);
             return "Sorry, I couldn't process your question. Please try again.";
-        });
-    }
+          });
+      }
 
-    document.addEventListener('keydown', function(event) {
-        const chatInput = document.getElementById('entered');
+      document.addEventListener("keydown", function (event) {
+        const chatInput = document.getElementById("entered");
 
-        if (event.key === '`') {
-            event.preventDefault();
-            chatInput.focus();
+        if (event.key === "`") {
+          event.preventDefault();
+          chatInput.focus();
         }
 
         if (document.activeElement !== chatInput) {
-            if (event.key === 'Enter') {
-                if (storyFinished) {
-                    // User finished the story and wants to move to the next one
-                    storyFinished = false;
-                    enteredStory = true;
-                    fetchRandomTextContent();
-                } else {
-                    // User is skipping the current story
-                    window.speechSynthesis.cancel();
-                    enteredStory = false;
-                    fetchRandomTextContent();
-                }
-            } else if (event.code === 'Space') {
-                event.preventDefault();
-                const sentences = document.querySelectorAll('.sentence');
-                if (currentSentenceIndex < sentences.length - 1) {
-                    currentSentenceIndex++;
-                    sentences[currentSentenceIndex].style.display = 'block';
-                    if (currentSentenceIndex === 0) {
-                        // User entered the story
-                        enteredStory = true;
-                        trackTextContentClick();
-                    }
-                } else if (currentSentenceIndex === sentences.length - 1) {
-                    // User has reached the last sentence
-                    storyFinished = true;
-                    // Optionally, you can display a message here to prompt the user to press Enter
-                    console.log("Story finished. Press Enter to continue to the next story.");
-                }
+          if (event.key === "Enter") {
+            if (storyFinished) {
+              // User finished the story and wants to move to the next one
+              storyFinished = false;
+              enteredStory = true;
+              fetchRandomTextContent();
+            } else {
+              // User is skipping the current story
+              window.speechSynthesis.cancel();
+              enteredStory = false;
+              fetchRandomTextContent();
             }
-        } else if (document.activeElement === chatInput && event.key === 'Enter' && chatInput.value.trim() !== '') {
+          } else if (event.code === "Space") {
             event.preventDefault();
-            const userMessage = chatInput.value.trim();
-            chatInput.value = '';
-            
-            // Use the askAI function to get the AI response
-            askAI(userMessage).then(aiResponse => {
-                updateChatDisplay(userMessage, aiResponse);
-                
-                // Auto-unfocus the input after sending a message
-                chatInput.blur();
-            });
-        }
-    });
+            const sentences = document.querySelectorAll(".sentence");
+            if (currentSentenceIndex < sentences.length - 1) {
+              currentSentenceIndex++;
+              sentences[currentSentenceIndex].style.display = "block";
+              if (currentSentenceIndex === 0) {
+                // User entered the story
+                enteredStory = true;
+                trackTextContentClick();
+              }
+            } else if (currentSentenceIndex === sentences.length - 1) {
+              // User has reached the last sentence
+              storyFinished = true;
+              // Optionally, you can display a message here to prompt the user to press Enter
+              console.log(
+                "Story finished. Press Enter to continue to the next story."
+              );
+            }
+          }
+        } else if (
+          document.activeElement === chatInput &&
+          event.key === "Enter" &&
+          chatInput.value.trim() !== ""
+        ) {
+          event.preventDefault();
+          const userMessage = chatInput.value.trim();
+          chatInput.value = "";
 
-    function updateChatDisplay(userMessage, aiResponse) {
-        const paragraphsContainer = document.getElementById('paragraphs');
-        const visibleSentences = Array.from(paragraphsContainer.children).filter(el => el.style.display !== 'none');
-        const lastVisibleSentence = visibleSentences[visibleSentences.length - 1];
-        
+          // Use the askAI function to get the AI response
+          askAI(userMessage).then((aiResponse) => {
+            updateChatDisplay(userMessage, aiResponse);
+
+            // Auto-unfocus the input after sending a message
+            chatInput.blur();
+          });
+        }
+      });
+
+      function updateChatDisplay(userMessage, aiResponse) {
+        const paragraphsContainer = document.getElementById("paragraphs");
+        const visibleSentences = Array.from(
+          paragraphsContainer.children
+        ).filter((el) => el.style.display !== "none");
+        const lastVisibleSentence =
+          visibleSentences[visibleSentences.length - 1];
+
         if (lastVisibleSentence) {
-            const chatContainer = document.createElement('div');
-            chatContainer.className = 'chat-container';
+          const chatContainer = document.createElement("div");
+          chatContainer.className = "chat-container";
 
-            const userMessageElement = document.createElement('div');
-            userMessageElement.className = 'chat-message user-message';
-            userMessageElement.textContent = userMessage;
-            chatContainer.appendChild(userMessageElement);
+          const userMessageElement = document.createElement("div");
+          userMessageElement.className = "chat-message user-message";
+          userMessageElement.textContent = userMessage;
+          chatContainer.appendChild(userMessageElement);
 
-            const aiMessageElement = document.createElement('div');
-            aiMessageElement.className = 'chat-message ai-message';
-            aiMessageElement.textContent = aiResponse;
-            chatContainer.appendChild(aiMessageElement);
+          const aiMessageElement = document.createElement("div");
+          aiMessageElement.className = "chat-message ai-message";
+          aiMessageElement.textContent = aiResponse;
+          chatContainer.appendChild(aiMessageElement);
 
-            lastVisibleSentence.insertAdjacentElement('afterend', chatContainer);
+          lastVisibleSentence.insertAdjacentElement("afterend", chatContainer);
         }
-    }
+      }
 
-    document.getElementById('entered').addEventListener('blur', function() {
+      document.getElementById("entered").addEventListener("blur", function () {
         chatInputFocused = false;
-    });
+      });
 
-    fetchRandomTextContent();
-    updateClickedTextContents();
-</script>
+      fetchRandomTextContent();
+      updateClickedTextContents();
+    </script>
+
+    {% endblock %}
+  </div>
+</div>
