@@ -69,7 +69,7 @@ class Command(BaseCommand):
                     for i in range(1, 4):
                         hook_text = row[f'Hook{i}']
                         if hook_text:
-                            Hook.objects.create(textcontent=text_content, hook_text=hook_text)
+                            Hook.objects.create(textcontent=text_content, hook_text=hook_text, hook_audio=row[f'HookAudio{i}'], voice=row[f'Voice{i}'], hook_timestamps=row[f'HookTimestamps{i}'])
                             total_hooks_created += 1
 
                     # Create Questions
