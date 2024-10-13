@@ -10,7 +10,7 @@
   </div>
 
   <input
-  placeholder = "Press [Space] to read further; Enter in any questions you have for HookBook AI here."
+  placeholder = "Press [Space] to read further, [Enter] for next story, or input in any questions you have for HookBook AI here."
   id="entered"
   style="
     font-size: 16px;
@@ -96,7 +96,7 @@
         margin-bottom: 1rem;
       }
       .spacer {
-        height: 25vw;
+        height: 40vh;
       }
       #chat-container {
         position: fixed;
@@ -262,14 +262,37 @@
             }
           } else if (event.code === "Space") {
             enteredPlaceholder.style.display = 'none';
+            entered.placeholder = "Press [Space] to read further, [Enter] for next story, or input in any questions you have for HookBook AI here."
             entered.style.display = 'block';
 
 
             event.preventDefault();
             const sentences = document.querySelectorAll(".sentence");
             if (currentSentenceIndex < sentences.length - 1) {
+
+
               currentSentenceIndex++;
               sentences[currentSentenceIndex].style.display = "block";
+            
+
+
+              spacer = document.getElementById("spacer");
+
+
+              const spacer = document.getElementById("spacer");
+              const offset = 250; // The offset in pixels
+              
+              const elementPosition = spacer.getBoundingClientRect().top + window.pageYOffset;
+              const offsetPosition = elementPosition - offset;
+              
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth" // Use "smooth" or "auto"
+              });
+            
+              
+
+
               if (currentSentenceIndex === 0) {
                 // User entered the story
              
@@ -278,8 +301,7 @@
                 trackTextContentClick();
               }
             } else if (currentSentenceIndex === sentences.length - 1) {
-                endStoryMsg.style.display = 'block'; 
-                entered.style.display = 'none';   
+                entered.placeholder = "Congrats on finishing this story! 🎉 Press [Enter] to read your next story"
               // User has reached the last sentence
               storyFinished = true;
               // Optionally, you can display a message here to prompt the user to press Enter
