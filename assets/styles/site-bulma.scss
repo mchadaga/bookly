@@ -34,7 +34,16 @@ $menu-item-active-background-color: $link;
   --link: var(--bulma-link);
   --link-hover: var(--bulma-link-hover);
   --text-light: var(--bulma-text);
+  --text-dark: rgb(23, 23, 23);
+
+
+  --button-primary-background-color: rgb(55, 63, 77);
+  --button-primary-background-color-hover: rgb(45, 52, 64); 
 }
+
+
+
+/*boiler plate overrides*/
 
 body {
   background-color: var(--body-background-color);
@@ -74,6 +83,21 @@ p {
 }
 
 
+.button.is-primary.is-outlined {
+  background-color: var(--button-primary-background-color);
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-primary.is-outlined:hover {
+  background-color: var(--button-primary-background-color-hover);
+    border-color: var(--text-light);
+
+  color: var(--text-light);
+}
+
+
+
 .button.is-secondary.is-outlined {
   background-color: transparent;
   border-color: var(--text-light);
@@ -82,7 +106,9 @@ p {
 
 .button.is-secondary.is-outlined:hover {
   background-color: var(--text-light);
-  color: var(--body-background-color);
+  border-color: var(--text-light);
+
+  color: var(--text-dark);
 }
 
 .pg-subtitle {
@@ -146,14 +172,23 @@ select {
   max-height: 3.5rem;
 }
 
-.debug {
-  background-color: rgb(255,0,0);
+
+
+.dm-fullpage-form {
+  background-color: var(--body-background-color); 
+  border-radius: 0.3rem;
+  margin: 2em;
+  padding: 2em;
 }
 
 
 
 
+/*Tailwind Overrides */
 
+.debug {
+  background-color: rgb(255,0,0);
+}
 
 .rounded-lg {
   border-radius: 3rem;
@@ -231,6 +266,11 @@ select {
 .navbar .navbar-item.is-active {
   border-bottom: none; 
 }
+
+
+
+
+
 
 @import "app/bulma/_all";
 @import "pegasus/bulma";

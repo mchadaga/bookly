@@ -10696,8 +10696,12 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   --link: var(--bulma-link);
   --link-hover: var(--bulma-link-hover);
   --text-light: var(--bulma-text);
+  --text-dark: rgb(23, 23, 23);
+  --button-primary-background-color: rgb(55, 63, 77);
+  --button-primary-background-color-hover: rgb(45, 52, 64);
 }
 
+/*boiler plate overrides*/
 body {
   background-color: var(--body-background-color);
   color: var(--body-color);
@@ -10732,6 +10736,18 @@ p {
   background-color: var(--body-background-color);
 }
 
+.button.is-primary.is-outlined, .is-primary.is-outlined.pg-button-light, .is-primary.pg-button-danger, .pg-button-secondary, .is-outlined.pg-button-primary, .pg-button-primary.pg-button-danger {
+  background-color: var(--button-primary-background-color);
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
+.button.is-primary.is-outlined:hover, .is-primary.is-outlined.pg-button-light:hover, .is-primary.pg-button-danger:hover, .pg-button-secondary:hover, .is-outlined.pg-button-primary:hover, .pg-button-primary.pg-button-danger:hover {
+  background-color: var(--button-primary-background-color-hover);
+  border-color: var(--text-light);
+  color: var(--text-light);
+}
+
 .button.is-secondary.is-outlined, .is-secondary.is-outlined.pg-button-light, .is-secondary.pg-button-danger, .is-secondary.pg-button-secondary, .is-secondary.is-outlined.pg-button-primary {
   background-color: transparent;
   border-color: var(--text-light);
@@ -10740,7 +10756,8 @@ p {
 
 .button.is-secondary.is-outlined:hover, .is-secondary.is-outlined.pg-button-light:hover, .is-secondary.pg-button-danger:hover, .is-secondary.pg-button-secondary:hover, .is-secondary.is-outlined.pg-button-primary:hover {
   background-color: var(--text-light);
-  color: var(--body-background-color);
+  border-color: var(--text-light);
+  color: var(--text-dark);
 }
 
 .pg-subtitle {
@@ -10802,6 +10819,14 @@ select {
   max-height: 3.5rem;
 }
 
+.dm-fullpage-form {
+  background-color: var(--body-background-color);
+  border-radius: 0.3rem;
+  margin: 2em;
+  padding: 2em;
+}
+
+/*Tailwind Overrides */
 .debug {
   background-color: rgb(255, 0, 0);
 }
