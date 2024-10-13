@@ -15,6 +15,7 @@ import random
 import os
 import requests
 from django.views.decorators.csrf import csrf_exempt
+import json
 
 @login_and_team_required
 def get_random_textcontent(request):
@@ -180,64 +181,80 @@ def ask_ai_about_story(request):
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
 
-@require_POST
-def question_handle(question, answer):
-    print(question)
-    messages = [
-        {
-            "role": "system", 
-            "content": (
-                "You are a reading assistant that helps students determine whether or not they are comprehending reading. "
-                "You have the question and answer key. Your goal is to tell the student whether or not they are correct. "
-                "If they are not correct, DO NOT TELL THEM THE CORRECT ANSWER and give more guesses but be lenient on correctness."
-            )
+def question_handle(request):
+    if request.method == 'POST':
+        # Extract question, answer, and user input from the request
+        question = request.POST.get('question')
+        answer = request.POST.get('answer')
+        user_input = request.POST.get('user_input')
+
+        # Initialize the messages list
+        messages = [
+            {
+                "role": "system", 
+                "content": (
+                    "You are a reading assistant that helps students determine whether or not they are comprehending reading. "
+                    "You have the question and answer key. Your goal is to tell the student whether or not they are correct. "
+                    "If they are not correct, DO NOT TELL THEM THE CORRECT ANSWER and give more guesses but be lenient on correctness."
+                )
+            },
+            {"role": "user", "content": user_input},
+            {
+                "role": "assistant",
+                "content": (
+                    f"Based on the following student input: {user_input}, you are quizzing the user on the given question: {question}. "
+                    "ALWAYS provide your JSON on RESPONSE, STATUS of the user's built-up response, and NEXT QUESTION. "
+                    "- RESPONSE: array of all information provided by the user. "
+                    "- STATUS: complete and detailed, complete, incomplete, incorrect, or irrelevant. "
+                    "- NEXT QUESTION: should be written in the simplest language possible. "
+                    f"ANSWER: {answer}"
+                )
+            }
+        ]
+
+        # Prepare the data for the API request
+        data = {
+            "model": "gpt-4o",
+            "messages": messages,
+            "response_format": {"type": "json_object"}
         }
-    ]
 
-    while True:
-        userInput = input("Your answer: ")
-        
-        # Add the user message to the conversation memory
-        messages.append({"role": "user", "content": userInput})
-        
-        # Call the OpenAI API with the current conversation history
-        response = client.chat.completions.create(
-            model="gpt-4o",
-            messages=messages + [
-                {
-                    "role": "assistant",
-                    "content": (
-                        f"Based on the following student input: {userInput}, you are quizzing the user on the given question: {question}. "
-                        "ALWAYS provide your JSON on RESPONSE, STATUS of the user's built-up response, and NEXT QUESTION. "
-                        "From now on, you must respond in this JSON form no matter what the input is and respond only with the JSON."
-                        "- RESPONSE: array of all information provided by the user. "
-                        "- STATUS: complete and detailed, complete, incomplete, incorrect, or irrelevant. "
-                        "- NEXT QUESTION: should be written in the simplest language possible. Try to lead them towards the right answer, but keep conversation flowing naturally."
-                        f"ANSWER: {answer}"
-                    )
-                }
-            ],
-            response_format={ "type": "json_object" }
-        )
+        # Set up the headers for the API request
+        headers = {
+            'Content-Type': 'application/json',
+            'Authorization': f'Bearer {os.getenv("OPENAI_API_KEY")}'
+        }
 
-        # Extract the response from the OpenAI API
-        evaluation = response.choices[0].message.content.strip()
-        
+        # Set the URL for the API request
+        url = 'https://api.openai.com/v1/chat/completions'
+
         try:
+            # Make the API request
+            response = requests.post(url, headers=headers, json=data)
+            response.raise_for_status()  # Raise an exception for bad status codes
+
+            # Extract the response and parse JSON
+            evaluation = response.json()['choices'][0]['message']['content'].strip()
             json_data = json.loads(evaluation)
-            #print("Parsed JSON data:", json_data)
+
+            # Check if the conversation should end based on the STATUS
+            conversation_ended = False
+            if 'STATUS' in json_data:
+                status = json_data['STATUS'].lower() 
+                if status == "complete" or status == "complete and detailed":
+                    conversation_ended = True
+
+            # Return the response as a JSON object, including whether to end the conversation
+            return JsonResponse({
+                "response": json_data,
+                "conversation_ended": conversation_ended  # Indicate to the frontend if the conversation should stop
+            })
+        
+        except requests.exceptions.RequestException as e:
+            return JsonResponse({"error": f"API request failed: {str(e)}"}, status=500)
         except json.JSONDecodeError as e:
-            print("Error decoding JSON:", e)
-            continue
-        
-        # Add the assistant's response to the conversation history
-        messages.append({"role": "assistant", "content": evaluation})
-        
-        # Check the status and provide feedback
-        if 'STATUS' in json_data:
-            status = json_data['STATUS'].lower() 
-            if status == "complete" or status == "complete and detailed":
-                print("Correct!")
-                break
-            else:
-                print(json_data['NEXT QUESTION'])
+            return JsonResponse({"error": f"Failed to parse JSON response: {str(e)}"}, status=500)
+        except Exception as e:
+            return JsonResponse({"error": f"An unexpected error occurred: {str(e)}"}, status=500)
+
+    return JsonResponse({"error": "Invalid request method"}, status=400)
